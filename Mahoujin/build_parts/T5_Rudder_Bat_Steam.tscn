@@ -1,0 +1,68 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+[ext_resource path="res://models/movement/Batrudder_T10_Flap-6203936653042364535.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://models/movement/Batrudder_T108925737440076638961.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://models/movement/RC_Rudder_Arrow_L104594838380313149548.obj" type="ArrayMesh" id=4]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.025, 0.64, 0.69 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.095, 0.05, 0.393055 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.055, 0.48, 0.165 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.055, 1.01968, 0.165 )
+
+[node name="T5_Rudder_Bat_Steam" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="T5_Rudder_Bat_Steam" type="Spatial" parent="."]
+
+[node name="RC_BatRudder_T10_Base" type="MeshInstance" parent="T5_Rudder_Bat_Steam"]
+transform = Transform( 0, -0.2, -1.74846e-08, -0.2, 0, 0, 0, 1.74846e-08, -0.2, 0, -0.1, 0 )
+cast_shadow = 0
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="RC_BatRudder_T10_Arrow" type="MeshInstance" parent="T5_Rudder_Bat_Steam/RC_BatRudder_T10_Base"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.23047e-06, -4.02111e-09, 0 )
+cast_shadow = 0
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="RC_BatRudder_T10_Tip" type="MeshInstance" parent="T5_Rudder_Bat_Steam/RC_BatRudder_T10_Base"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.14967, 0, 1 )
+cast_shadow = 0
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="Extents" type="Area" parent="T5_Rudder_Bat_Steam"]
+transform = Transform( 1, 0, 0, 0, 1.00725, 0, 0, 0, 0.689946, 0, 0.039846, -0.200592 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Rudder_Bat_Steam/Extents"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.54, 0 )
+shape = SubResource( 1 )
+
+[node name="BuildCollision" type="Area" parent="T5_Rudder_Bat_Steam"]
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Rudder_Bat_Steam/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.048, -0.298055 )
+shape = SubResource( 2 )
+
+[node name="BuildCollision2" type="Area" parent="T5_Rudder_Bat_Steam"]
+transform = Transform( 1, 0, 0, 0, 0.930211, 0, 0, 0, 1.4602, 0, 0.036, -0.473 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Rudder_Bat_Steam/BuildCollision2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39, 0.03 )
+shape = SubResource( 3 )
+
+[node name="BuildCollision3" type="Area" parent="T5_Rudder_Bat_Steam"]
+transform = Transform( 1, 0, 0, 0, 0.60807, 0.238009, 0, -0.169229, 0.85521, 0, 0.65615, -0.320668 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Rudder_Bat_Steam/BuildCollision3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.149655, 0.0299467 )
+shape = SubResource( 4 )

@@ -1,0 +1,93 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+[ext_resource path="res://models/weapons/arrows_1807436882598541710283.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://models/weapons/Sphere018549428625916171429.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://models/weapons/SMG_H_Arm_T77711886797743896733.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://models/weapons/SMG_H_Barrel_T7-266622069692807332.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://models/weapons/SMG_H_Base_T73851486805022525999.obj" type="ArrayMesh" id=6]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.45, 0.2, 0.45 )
+
+[sub_resource type="SphereShape" id=2]
+radius = 0.8
+
+[sub_resource type="CapsuleShape" id=3]
+radius = 0.41
+height = 3.05
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.5, 0.5, 0.5 )
+
+[sub_resource type="ConvexPolygonShape" id=5]
+points = PoolVector3Array( 0.010077, 0.0138697, 0.0242597, 7.49392e-10, 0.0171441, 0.0242597, 0, 4.95484e-21, 0.0298303, 0.0163049, 0.0224419, 0.00967633, 1.21252e-09, 0.0277394, 0.00967633, 0.0263818, 0.00857205, 0.00967633, 0.0163049, 0.00529779, 0.0242597, 0, 4.95484e-21, 0.0298303, 0.0263818, -0.00857204, 0.00967633, 0.0163049, -0.00529779, 0.0242597, 0, 4.95484e-21, 0.0298303, 0.0163049, -0.0224419, 0.00967632, 0.010077, -0.0138697, 0.0242597, 0, 4.95484e-21, 0.0298303, -3.30789e-10, -0.0277394, 0.00967633, -2.0444e-10, -0.0171441, 0.0242597, 0, 4.95484e-21, 0.0298303, -0.0163049, -0.0224419, 0.00967632, -0.010077, -0.0138697, 0.0242597, 0, 4.95484e-21, 0.0298303, -0.0263818, -0.00857202, 0.00967633, -0.0163049, -0.00529777, 0.0242597, 0, 4.95484e-21, 0.0298303, -0.0263818, 0.00857205, 0.00967633, -0.0163049, 0.00529783, 0.0242597, 0, 4.95484e-21, 0.0298303, -0.0163049, 0.0224419, 0.00967633, -0.010077, 0.0138697, 0.0242597, 0, 4.95484e-21, 0.0298303, 1.21252e-09, 0.0277394, 0.00967633, 7.49392e-10, 0.0171441, 0.0242597, 0, 4.95484e-21, 0.0298303, -0.0263818, -0.00857202, 0.0010745, -0.0163049, -0.0224419, 0.0010745, -0.0263818, 0.00857205, 0.0010745, -0.0163049, 0.0224419, 0.0010745, 1.21252e-09, 0.0277394, 0.0010745, -0.0263818, -0.00857202, 0.0010745, -0.0263818, -0.00857202, 0.0010745, -0.0163049, -0.0224419, 0.0010745, -3.30789e-10, -0.0277394, 0.0010745, -3.30789e-10, -0.0277394, 0.0010745, 0.0163049, -0.0224419, 0.0010745, 0.0263818, -0.00857204, 0.0010745, 0.0263818, 0.00857205, 0.0010745, 0.0163049, 0.0224419, 0.0010745, 1.21252e-09, 0.0277394, 0.0010745, 0.0163049, 0.0224419, 0.0010745, 0.0163049, 0.0224419, 0.0010745, 1.21252e-09, 0.0277394, 0.0010745, 1.21252e-09, 0.0277394, 0.0010745, 0.0263818, 0.00857205, 0.0010745, 0.0163049, 0.0224419, 0.0010745, 0.0263818, -0.00857205, 0.0010745, 0.0163049, -0.0224419, 0.0010745, 0.0163049, -0.0224419, 0.0010745, 0.0263818, -0.00857204, 0.0010745, -3.30789e-10, -0.0277394, 0.0010745, -0.0263818, 0.00857205, 0.0010745, -0.0263818, -0.00857202, 0.0010745, -0.0163049, 0.0224419, 0.0010745, -0.0163049, 0.0224419, 0.0010745, 1.21252e-09, 0.0277394, 0.0010745, 1.21252e-09, 0.0277394, 0.0010745, 1.21252e-09, 0.0277394, 0.0010745, 0.0163049, 0.0224419, 0.0010745, 0, -1.53264e-19, 0.0010745, 0.0163049, 0.0224419, 0.0010745, 0.0263818, 0.00857205, 0.0010745, 0, -1.53264e-19, 0.0010745, 0.0263818, 0.00857205, 0.0010745, 0.0263818, -0.00857205, 0.0010745, 0, -1.53264e-19, 0.0010745, 0.0263818, -0.00857205, 0.0010745, 0.0163049, -0.0224419, 0.0010745, 0, -1.53264e-19, 0.0010745, 0.0163049, -0.0224419, 0.0010745, -3.30789e-10, -0.0277394, 0.0010745, 0, -1.53264e-19, 0.0010745, -3.30789e-10, -0.0277394, 0.0010745, -0.0163049, -0.0224419, 0.0010745, 0, -1.53264e-19, 0.0010745, -0.0163049, -0.0224419, 0.0010745, -0.0263818, -0.00857202, 0.0010745, 0, -1.53264e-19, 0.0010745, -0.0263818, -0.00857202, 0.0010745, -0.0263818, 0.00857205, 0.0010745, 0, -1.53264e-19, 0.0010745, -0.0263818, 0.00857205, 0.0010745, -0.0163049, 0.0224419, 0.0010745, 0, -1.53264e-19, 0.0010745, -0.0163049, 0.0224419, 0.0010745, 1.21252e-09, 0.0277394, 0.0010745, 0, -1.53264e-19, 0.0010745 )
+
+[node name="T3_Front_Laser" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="T3_Front_Laser" type="Spatial" parent="."]
+
+[node name="SMG_H_T7" type="MeshInstance" parent="T3_Front_Laser"]
+transform = Transform( -0.2, 0, 0, 0, 0, 0.2, 0, 0.2, 0, 0, -0.1, 0 )
+cast_shadow = 0
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="SMG_H_Arm_T7" type="MeshInstance" parent="T3_Front_Laser/SMG_H_T7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.13023 )
+cast_shadow = 0
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="SMG_H_Barrel_T7" type="MeshInstance" parent="T3_Front_Laser/SMG_H_T7/SMG_H_Arm_T7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.68434e-16, 5.68434e-15, 1.28432 )
+cast_shadow = 0
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="BuildCollision" type="Spatial" parent="T3_Front_Laser"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
+
+[node name="Base" type="Area" parent="T3_Front_Laser/BuildCollision"]
+
+[node name="CollisionShape" type="CollisionShape" parent="T3_Front_Laser/BuildCollision/Base"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0 )
+shape = SubResource( 1 )
+
+[node name="Hull" type="Area" parent="T3_Front_Laser/BuildCollision"]
+transform = Transform( 1, -8.74228e-08, 0, 8.74228e-08, 1, 0, 0, 0, 1, -8.01003e-08, 0.916241, -2.20983e-07 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T3_Front_Laser/BuildCollision/Hull"]
+shape = SubResource( 2 )
+
+[node name="Barrel" type="Area" parent="T3_Front_Laser/BuildCollision"]
+transform = Transform( 1, -8.74228e-08, 0, 8.74228e-08, 1, 0, 0, 0, 1, -2.74177e-07, 3.13622, -4.68201e-06 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T3_Front_Laser/BuildCollision/Barrel"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.06, 0 )
+shape = SubResource( 3 )
+
+[node name="Extents" type="Area" parent="T3_Front_Laser"]
+transform = Transform( 0.2, 0, -3.49691e-08, 0, 0.2, 0, 3.49691e-08, 0, 0.2, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T3_Front_Laser/Extents"]
+shape = SubResource( 4 )
+
+[node name="RC_Hemisphere" type="MeshInstance" parent="T3_Front_Laser/Extents"]
+transform = Transform( 115, -2.01072e-05, -1.39002e-05, 1.00536e-05, 0, 159, -2.01072e-05, -115, 0, 0, -0.05, 0 )
+cast_shadow = 0
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="T3_Front_Laser/Extents/RC_Hemisphere"]
+shape = SubResource( 5 )
+
+[node name="RC_Laser_mk4_HorizontalMount_arrows" type="Spatial" parent="T3_Front_Laser"]
+transform = Transform( -0.2, -1.74846e-08, 0, 0, 0, 0.2, -1.74845e-08, 0.2, 0, 0, 0, 0 )
+
+[node name="RC_Laser_mk4_H_arrows" type="MeshInstance" parent="T3_Front_Laser/RC_Laser_mk4_HorizontalMount_arrows"]
+transform = Transform( 1.47908, 0, 0, 0, 1.47908, 0, 0, 0, 1.47908, 0.00080944, 0.03, 0 )
+cast_shadow = 0
+mesh = ExtResource( 2 )
+material/0 = null

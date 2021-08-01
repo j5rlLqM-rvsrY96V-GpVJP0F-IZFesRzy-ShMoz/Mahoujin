@@ -1,0 +1,104 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+[ext_resource path="res://models/special/Mega_Module-2601339374763947026.obj" type="ArrayMesh" id=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.245, 0.175, 0.175 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.0899996, 0.381859, 0.17 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.095, 0.095, 0.095 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.095, 0.095, 0.095 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 0.095, 0.095, 0.095 )
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 0.095, 0.095, 0.095 )
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 0.095, 0.095, 0.095 )
+
+[sub_resource type="BoxShape" id=8]
+extents = Vector3( 0.095, 0.095, 0.095 )
+
+[sub_resource type="BoxShape" id=9]
+extents = Vector3( 0.5, 0.5, 0.5 )
+
+[node name="T5_Weapon_Energy_Module" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="T5_Weapon_Energy_Module" type="Spatial" parent="."]
+
+[node name="TX_Mega_Module" type="MeshInstance" parent="T5_Weapon_Energy_Module"]
+transform = Transform( 0, 0, -0.2, 0, 0.2, 0, 0.2, 0, 0, 0, -0.1, 0 )
+cast_shadow = 0
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="Colliders" type="Spatial" parent="T5_Weapon_Energy_Module"]
+
+[node name="NormalCollider" type="Area" parent="T5_Weapon_Energy_Module/Colliders"]
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Weapon_Energy_Module/Colliders/NormalCollider"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0 )
+shape = SubResource( 1 )
+
+[node name="NormalCollider2" type="Area" parent="T5_Weapon_Energy_Module/Colliders"]
+transform = Transform( 1.00468, 0, 0, 0, 6.03301e-07, -0.486441, 0, 0.259531, 1.13077e-06, 0, 0.246193, -0.270211 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Weapon_Energy_Module/Colliders/NormalCollider2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.302549, 0.1 )
+shape = SubResource( 2 )
+
+[node name="Base" type="Area" parent="T5_Weapon_Energy_Module/Colliders"]
+transform = Transform( 1, 0, 0, 0, 0.2, 0, 0, 0, 1, 0, -0.08, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Weapon_Energy_Module/Colliders/Base"]
+shape = SubResource( 3 )
+
+[node name="BaseFL" type="Area" parent="T5_Weapon_Energy_Module/Colliders"]
+transform = Transform( 1, 0, 0, 0, 0.2, 0, 0, 0, 1, 0, -0.0800004, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Weapon_Energy_Module/Colliders/BaseFL"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, 0.2 )
+shape = SubResource( 4 )
+
+[node name="BaseFR" type="Area" parent="T5_Weapon_Energy_Module/Colliders"]
+transform = Transform( 1, 0, 0, 0, 0.2, 0, 0, 0, 1, 0, -0.0800004, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Weapon_Energy_Module/Colliders/BaseFR"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, 0.2 )
+shape = SubResource( 5 )
+
+[node name="BaseBL" type="Area" parent="T5_Weapon_Energy_Module/Colliders"]
+transform = Transform( 1, 0, 0, 0, 0.2, 0, 0, 0, 1, 0, -0.0800004, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Weapon_Energy_Module/Colliders/BaseBL"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, -0.2 )
+shape = SubResource( 6 )
+
+[node name="BaseBR" type="Area" parent="T5_Weapon_Energy_Module/Colliders"]
+transform = Transform( 1, 0, 0, 0, 0.2, 0, 0, 0, 1, 0, -0.0800004, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Weapon_Energy_Module/Colliders/BaseBR"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -0.2 )
+shape = SubResource( 7 )
+
+[node name="BaseBack" type="Area" parent="T5_Weapon_Energy_Module/Colliders"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.2, 0, 0.2, -0.28 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Weapon_Energy_Module/Colliders/BaseBack"]
+shape = SubResource( 8 )
+
+[node name="NormalCollider (1)" type="Area" parent="T5_Weapon_Energy_Module/Colliders"]
+transform = Transform( 0.381931, 0, 0, 0, 0.325776, 0, 0, 0, 0.351968, 0, 0.2, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Weapon_Energy_Module/Colliders/NormalCollider (1)"]
+shape = SubResource( 9 )

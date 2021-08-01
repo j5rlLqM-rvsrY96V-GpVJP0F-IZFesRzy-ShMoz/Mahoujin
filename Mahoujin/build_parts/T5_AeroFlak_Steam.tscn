@@ -1,0 +1,167 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+[ext_resource path="res://models/weapons/RC_TX1_Plasma_Arrows8836421020038223295.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://models/weapons/Aeroflak_Arm-5589632418808064827.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://models/weapons/Aeroflak_Base-739230101599263820.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://models/weapons/Aeroflak_Body-1651478074096712927.obj" type="ArrayMesh" id=5]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.5, 0.5, 0.5 )
+
+[sub_resource type="ConvexPolygonShape" id=2]
+points = PoolVector3Array( -0.213388, 0.0956708, -0.0883887, -0.16332, 0.0956708, -0.16332, -0.23097, 0, -0.0956702, -0.176777, 0, -0.176776, -0.0883884, 0.0956708, -0.213389, -0.095671, 0, -0.230969, -1.14441e-07, 0.0956708, -0.230969, -1.14441e-07, 0, -0.25, 0.0883882, 0.0956708, -0.213389, 0.0956707, 0, -0.23097, 0.16332, 0.0956708, -0.16332, 0.176777, 0, -0.176777, 0.213388, 0.0956708, -0.0883887, 0.23097, 0, -0.0956714, 0.23097, 0.0956708, 0, 0.25, 0, 0, 0.213388, 0.0956708, 0.0883887, 0.23097, 0, 0.0956714, 0.16332, 0.0956708, 0.16332, 0.176777, 0, 0.176776, 0.0883884, 0.0956708, 0.213389, 0.0956709, 0, 0.23097, 3.8147e-08, 0.0956708, 0.23097, 3.8147e-08, 0, 0.25, -0.0883883, 0.0956708, 0.213389, -0.0956708, 0, 0.23097, -0.16332, 0.0956708, 0.16332, -0.176777, 0, 0.176776, -0.213388, 0.0956708, 0.0883887, -0.23097, 0, 0.0956714, -0.23097, 0.0956708, 0, -0.25, 0, 0, -0.213388, 0.0956708, -0.0883887, -0.23097, 0, -0.0956702, 0.0676495, 0.176777, 0.16332, 3.8147e-08, 0.176777, 0.176776, -0.0676495, 0.176777, 0.16332, -0.125, 0.176777, 0.125, -0.16332, 0.176777, 0.0676489, -0.176777, 0.176777, 0, -0.176777, 0.176777, 0, -0.16332, 0.176777, -0.0676489, 0, 0.23097, 0.0956714, 0.0366117, 0.23097, 0.0883887, 0.125, 0.176777, 0.125, 0.16332, 0.176777, 0.0676489, 0.176777, 0.176777, 0, 0.16332, 0.176777, -0.0676501, 0.176777, 0.176777, 0, 0.125, 0.176777, -0.125, 0.0676494, 0.176777, -0.16332, -7.62939e-08, 0.176777, -0.176776, -0.0676496, 0.176777, -0.16332, -0.125, 0.176777, -0.125, -0.16332, 0.176777, -0.0676489, -0.0676495, 0.23097, -0.0676489, -0.0883884, 0.23097, -0.0366113, -0.0366117, 0.23097, -0.0883887, -3.8147e-08, 0.23097, -0.0956714, 0.0366116, 0.23097, -0.0883887, 0.0676495, 0.23097, -0.0676501, 0.0883883, 0.23097, -0.0366113, 0.0956708, 0.23097, 0, 0.176777, 0.176777, 0, 0.0883884, 0.23097, 0.0366113, 0.0676495, 0.23097, 0.0676489, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, -0.0366116, 0.23097, 0.0883887, -0.0676495, 0.23097, 0.0676489, -0.0883884, 0.23097, 0.0366113, -0.0956708, 0.23097, 0, -0.176777, 0.176777, 0, -0.0883884, 0.23097, -0.0366113, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, -0.176777, -0.0784903, -0.176776, -0.23097, -0.0784903, -0.0956702, -0.095671, -0.0784903, -0.230969, -1.14441e-07, -0.0784903, -0.25, 0.0956707, -0.0784903, -0.23097, 0.176777, -0.0784903, -0.176777, 0.23097, -0.0784903, -0.0956714, 0.25, -0.0784903, 0, 0.23097, -0.0784903, 0.0956714, 0.176777, -0.0784903, 0.176776, 0.0956709, -0.0784903, 0.23097, 3.8147e-08, -0.0784903, 0.25, -0.0956708, -0.0784903, 0.23097, -0.176777, -0.0784903, 0.176776, -0.23097, -0.0784903, 0.0956714, -0.25, -0.0784903, 0, -0.23097, -0.0784903, -0.0956702 )
+
+[sub_resource type="CapsuleShape" id=3]
+radius = 1.58
+height = 10.7032
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 5, 1.5, 2 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 0.45, 1.815, 0.45 )
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 0.45, 0.15, 0.45 )
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 0.45, 0.15, 0.45 )
+
+[sub_resource type="CapsuleShape" id=8]
+radius = 1.58
+height = 10.7032
+
+[sub_resource type="BoxShape" id=9]
+extents = Vector3( 0.45, 0.15, 0.45 )
+
+[sub_resource type="BoxShape" id=10]
+extents = Vector3( 0.45, 0.15, 0.45 )
+
+[sub_resource type="BoxShape" id=11]
+extents = Vector3( 5.45, 0.495, 0.45 )
+
+[sub_resource type="BoxShape" id=12]
+extents = Vector3( 5.45, 0.495, 0.45 )
+
+[sub_resource type="BoxShape" id=13]
+extents = Vector3( 2.6, 0.495, 2.6 )
+
+[node name="T5_AeroFlak_Steam" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="T5_AeroFlak_Steam" type="Spatial" parent="."]
+
+[node name="Extents" type="Area" parent="T5_AeroFlak_Steam"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_AeroFlak_Steam/Extents"]
+shape = SubResource( 1 )
+
+[node name="RC_HemispherePlus_Collision (1)" type="Area" parent="T5_AeroFlak_Steam/Extents"]
+transform = Transform( 32.5126, 0, 0, 0, 32.5126, -1.51662e-05, 0, 1.45343e-05, 33.9262, 0, 2.66, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_AeroFlak_Steam/Extents/RC_HemispherePlus_Collision (1)"]
+shape = SubResource( 2 )
+
+[node name="BuildCollision" type="Spatial" parent="T5_AeroFlak_Steam"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
+
+[node name="Barrel" type="Area" parent="T5_AeroFlak_Steam/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 0, -1, 0, 1, 0, 3.61, 2.24, -0.15 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_AeroFlak_Steam/BuildCollision/Barrel"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.06, -0.65 )
+shape = SubResource( 3 )
+
+[node name="collision" type="Area" parent="T5_AeroFlak_Steam/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.96, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_AeroFlak_Steam/BuildCollision/collision"]
+shape = SubResource( 4 )
+
+[node name="ConnectPoint" type="Area" parent="T5_AeroFlak_Steam/BuildCollision"]
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_AeroFlak_Steam/BuildCollision/ConnectPoint"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.36, 0 )
+shape = SubResource( 5 )
+
+[node name="ConnectPoint2" type="Area" parent="T5_AeroFlak_Steam/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_AeroFlak_Steam/BuildCollision/ConnectPoint2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.32, 0 )
+shape = SubResource( 6 )
+
+[node name="ConnectPoint3" type="Area" parent="T5_AeroFlak_Steam/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_AeroFlak_Steam/BuildCollision/ConnectPoint3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.32, 0 )
+shape = SubResource( 7 )
+
+[node name="Barrel (1)" type="Area" parent="T5_AeroFlak_Steam/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 0, -1, 0, 1, 0, -3.74, 2.24, -0.15 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_AeroFlak_Steam/BuildCollision/Barrel (1)"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.06, -0.65 )
+shape = SubResource( 8 )
+
+[node name="ConnectPoint4" type="Area" parent="T5_AeroFlak_Steam/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_AeroFlak_Steam/BuildCollision/ConnectPoint4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.32, 0 )
+shape = SubResource( 9 )
+
+[node name="ConnectPoint5" type="Area" parent="T5_AeroFlak_Steam/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_AeroFlak_Steam/BuildCollision/ConnectPoint5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.32, 0 )
+shape = SubResource( 10 )
+
+[node name="ConnectPoint (1)" type="Area" parent="T5_AeroFlak_Steam/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_AeroFlak_Steam/BuildCollision/ConnectPoint (1)"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0 )
+shape = SubResource( 11 )
+
+[node name="ConnectPoint (2)" type="Area" parent="T5_AeroFlak_Steam/BuildCollision"]
+transform = Transform( 3.57628e-07, 0, 1, 0, 1, 0, -1, 0, 3.57628e-07, 0, 0.4, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_AeroFlak_Steam/BuildCollision/ConnectPoint (2)"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0 )
+shape = SubResource( 12 )
+
+[node name="ConnectPoint (3)" type="Area" parent="T5_AeroFlak_Steam/BuildCollision"]
+transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0.4, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_AeroFlak_Steam/BuildCollision/ConnectPoint (3)"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0 )
+shape = SubResource( 13 )
+
+[node name="TX1_Plasma_Arrows" type="MeshInstance" parent="T5_AeroFlak_Steam"]
+transform = Transform( 0.22064, 0, 9.29928e-08, 0, 0.22064, 0, -9.29928e-08, 0, 0.22064, 0, 0.03, 0.64419 )
+cast_shadow = 0
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="Aeroflak" type="MeshInstance" parent="T5_AeroFlak_Steam"]
+transform = Transform( -2.38419e-08, 0, -0.2, 0, 0.2, 0, 0.2, 0, -2.38419e-08, 0, -0.1, 0 )
+cast_shadow = 0
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="Aeroflak_Body" type="MeshInstance" parent="T5_AeroFlak_Steam/Aeroflak"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.59132e-24, 1.3483, 1.95312e-05 )
+cast_shadow = 0
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="Aeroflak_Arm" type="MeshInstance" parent="T5_AeroFlak_Steam/Aeroflak/Aeroflak_Body"]
+transform = Transform( 0, 0, 1, 0, 1, 0, -1, 0, 0, -1.14441e-07, 1.62782, -1.95312e-05 )
+cast_shadow = 0
+mesh = ExtResource( 3 )
+material/0 = null

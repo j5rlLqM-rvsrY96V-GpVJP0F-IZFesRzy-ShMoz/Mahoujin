@@ -1,0 +1,141 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+[ext_resource path="res://models/weapons/Tesla_Blade_Base_T9-1083465695033703003.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://models/weapons/Tesla_Blade_Arm_L1-1035221855308313401.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://models/weapons/Tesla_Blade_Arm_R1-7400868707401135687.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://models/weapons/Tesla_Blade_Arm_L2-4594446047951627869.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://models/weapons/Tesla_Blade_Arm_R2-1411863505179709133.obj" type="ArrayMesh" id=6]
+[ext_resource path="res://models/weapons/Tesla_Blade_Blade1-8614394644560477284.obj" type="ArrayMesh" id=7]
+[ext_resource path="res://models/weapons/Tesla_Blade_Blade2-273744184576865856.obj" type="ArrayMesh" id=8]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.155355, 0.5, 0.5 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.133318, 0.095, 0.510455 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( -0.0267385, 0.095, 0.660374 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( -0.0282797, 0.095, 0.63537 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( -0.0279389, 0.095, 0.864461 )
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( -0.0279389, 0.095, 0.897587 )
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 0.068, 0.095, 0.375 )
+
+[sub_resource type="BoxShape" id=8]
+extents = Vector3( 0.068, 0.095, 0.375 )
+
+[node name="T3_Tesla" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="T3_Tesla" type="Spatial" parent="."]
+
+[node name="Tesla_Blade_T9" type="MeshInstance" parent="T3_Tesla"]
+transform = Transform( -4.76837e-08, -0.2, 0, 0.2, -4.76837e-08, 0, 0, 0, 0.2, 0, -0.1, 0 )
+cast_shadow = 0
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="Tesla_Blade_Arm_L1" type="MeshInstance" parent="T3_Tesla/Tesla_Blade_T9"]
+transform = Transform( 0.707108, 1.2574e-07, -0.707106, 6.98948e-08, 1, 2.47719e-07, 0.707106, -2.24587e-07, 0.707108, -1.84348, 6.59278e-07, 4.76837e-06 )
+cast_shadow = 0
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="Tesla_Blade_Arm_L2" type="MeshInstance" parent="T3_Tesla/Tesla_Blade_T9/Tesla_Blade_Arm_L1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.65654, -1, -242.5 )
+cast_shadow = 0
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="Tesla_Blade_Arm_R1" type="MeshInstance" parent="T3_Tesla/Tesla_Blade_T9"]
+transform = Transform( 0.707108, 8.51007e-08, 0.707106, 9.82616e-08, 1, -2.18613e-07, -0.707106, 2.24064e-07, 0.707108, -1.84351, 6.59292e-07, 4.76837e-06 )
+cast_shadow = 0
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="Tesla_Blade_Arm_R2" type="MeshInstance" parent="T3_Tesla/Tesla_Blade_T9/Tesla_Blade_Arm_R1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.65654, -1, -242.5 )
+cast_shadow = 0
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="Tesla_Blade_Blade1" type="MeshInstance" parent="T3_Tesla/Tesla_Blade_T9"]
+transform = Transform( 1, 1.68587e-07, 0, -1.68587e-07, 1, 0, 0, 0, 1, -2.5, 0.500003, 0 )
+cast_shadow = 0
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Tesla_Blade_Blade2" type="MeshInstance" parent="T3_Tesla/Tesla_Blade_T9/Tesla_Blade_Blade1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.47383e-12 )
+cast_shadow = 0
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="BaseBoxCollision" type="Area" parent="T3_Tesla"]
+transform = Transform( 0, -0.19721, 0, 1, 0, 0, 0, 0, 0.197295, 0, -0.144478, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T3_Tesla/BaseBoxCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.200298, -1.21076e-07, 0 )
+shape = SubResource( 1 )
+
+[node name="BaseCollision (1)" type="Area" parent="T3_Tesla"]
+transform = Transform( 0, -1, 0, 1, 0, 0, 0, 0, 1, 0, -0.116249, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T3_Tesla/BaseCollision (1)"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.188523, 0, 0 )
+shape = SubResource( 2 )
+
+[node name="blade1Collision (1)" type="Spatial" parent="T3_Tesla"]
+transform = Transform( 0, -1, 0, 1, 0, 0, 0, 0, 1, 0, -0.0999999, 0 )
+
+[node name="Collision" type="Area" parent="T3_Tesla/blade1Collision (1)"]
+transform = Transform( 6.4498, 0, -0.199791, 0, 1, 0, 2.34754, 0, 0.548921, -0.386, 0, 0.184 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T3_Tesla/blade1Collision (1)/Collision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125601, 0, -0.316346 )
+shape = SubResource( 3 )
+
+[node name="Collision2" type="Area" parent="T3_Tesla/blade1Collision (1)"]
+transform = Transform( 6.80525, 0, 0.198135, 0, 1, 0, -2.47691, 0, 0.544372, -0.368, 0.005, -0.124 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T3_Tesla/blade1Collision (1)/Collision2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.120942, 0, 0.206495 )
+shape = SubResource( 4 )
+
+[node name="blade2Collision (1)" type="Spatial" parent="T3_Tesla"]
+transform = Transform( 0, -1, 0, 1, 0, 0, 0, 0, 1.13939, 0, -0.134279, 0 )
+
+[node name="Collision" type="Area" parent="T3_Tesla/blade2Collision (1)"]
+transform = Transform( 4.56317, -3.67396e-09, -0.18601, 1.58593e-09, 1, -4.8369e-09, 1.76123, 8.61841e-09, 0.481935, -0.0943062, 3.88588e-08, 0.0294944 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T3_Tesla/blade2Collision (1)/Collision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.197478, 0, -0.0272404 )
+shape = SubResource( 5 )
+
+[node name="Collision2" type="Area" parent="T3_Tesla/blade2Collision (1)"]
+transform = Transform( 4.60033, 1.02764e-09, 0.178762, 1.58396e-10, 1, -1.58619e-09, -1.6926, 2.88662e-09, 0.48586, -0.146387, 6.03187e-08, -0.192758 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T3_Tesla/blade2Collision (1)/Collision2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.197463, 0, 0.274392 )
+shape = SubResource( 6 )
+
+[node name="BaseCollisionArm (1)" type="Area" parent="T3_Tesla"]
+transform = Transform( -1.19209e-07, -1, 2.68221e-07, -0.707107, -1.19209e-07, -0.707107, 0.707107, -2.68221e-07, -0.707107, 0, 0.3, 0.8 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T3_Tesla/BaseCollisionArm (1)"]
+shape = SubResource( 7 )
+
+[node name="BaseCollisionArm (2)" type="Area" parent="T3_Tesla"]
+transform = Transform( 4.76837e-07, -1, 2.08616e-07, -0.707107, -2.38419e-07, 0.707107, -0.707107, -5.06639e-07, -0.707107, 0, 0.3, -0.8 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T3_Tesla/BaseCollisionArm (2)"]
+shape = SubResource( 8 )
