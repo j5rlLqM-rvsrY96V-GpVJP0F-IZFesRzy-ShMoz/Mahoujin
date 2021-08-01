@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+[ext_resource path="res://models/chassis/glass_cube5538095871099465828.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://models/chassis/glass_cube_frame-8460414470111069719.obj" type="ArrayMesh" id=3]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.1, 0.1, 0.1 )
+
+[node name="Glass_Cube" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Glass_Cube" type="Spatial" parent="."]
+
+[node name="BuildCollision" type="Area" parent="Glass_Cube"]
+transform = Transform( 0.99, 0, 0, 0, 0.99, 0, 0, 0, 0.99, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Glass_Cube/BuildCollision"]
+shape = SubResource( 1 )
+
+[node name="Glass_Cube" type="MeshInstance" parent="Glass_Cube"]
+transform = Transform( 0, 0, 0.2, 0, 0.2, 0, -0.2, 0, 0, 0, 0, 0 )
+cast_shadow = 0
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="glass_cube_frame" type="MeshInstance" parent="Glass_Cube/Glass_Cube"]
+cast_shadow = 0
+mesh = ExtResource( 3 )
+material/0 = null

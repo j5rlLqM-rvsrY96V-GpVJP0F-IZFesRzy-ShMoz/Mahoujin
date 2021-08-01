@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://models/chassis/Glass_RoundCorner7557925133011667830.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://cube_implementation.gd" type="Script" id=2]
+[ext_resource path="res://models/chassis/Glass_RoundCorner_frame99305442853981130.obj" type="ArrayMesh" id=3]
+
+[sub_resource type="ConvexPolygonShape" id=1]
+points = PoolVector3Array( 0.1, 0.1, 0.1, -0.1, 0.1, 0.1, -0.1, -0.1, 0.1, -0.1, 0.1, -0.1, -0.1, 0.1, 0.1, 0.1, 0.1, 0.1, -0.1, 0.1, 0.1, -0.1, 0.1, -0.1, -0.1, -0.1, 0.1, 0.1, 0.1, 0.1, -0.1, -0.1, 0.1, -0.1, 0.1, -0.1 )
+
+[node name="Glass_Corner_Round" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="Glass_Corner_Round" type="Spatial" parent="."]
+
+[node name="Glass_RoundCorner" type="MeshInstance" parent="Glass_Corner_Round"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
+cast_shadow = 0
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="Glass_RoundCorner_frame" type="MeshInstance" parent="Glass_Corner_Round/Glass_RoundCorner"]
+cast_shadow = 0
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="BuildCollision" type="Area" parent="Glass_Corner_Round"]
+transform = Transform( 0.99, 0, 0, 0, -0.99, 8.65485e-08, 0, -8.65485e-08, -0.99, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Glass_Corner_Round/BuildCollision"]
+shape = SubResource( 1 )

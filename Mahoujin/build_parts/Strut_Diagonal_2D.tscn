@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+[ext_resource path="res://models/chassis/strut_diagonal_2D-7911888066757107709.obj" type="ArrayMesh" id=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.45, 0.45, 0.0891738 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.45, 0.45, 0.0864906 )
+
+[sub_resource type="ConvexPolygonShape" id=3]
+points = PoolVector3Array( 0.471357, 0.130292, 2.44092, 0.471357, -0.13598, 2.44092, 1.45817, 0.441493, 2.44092, 1.45817, -0.437845, 2.44092, -0.465808, 0.441493, -0.445053, -1.45262, 0.130292, -0.445053, -0.465808, -0.437845, -0.445053, -1.45262, -0.13598, -0.445053, 1.45817, -0.437845, 2.44092, 0.471357, -0.13598, 2.44092, -1.45262, 0.130292, -0.445053, -1.45262, -0.13598, -0.445053, 2.45925, -0.437845, 2.44092, 0.535274, -0.437845, -0.445053, 1.52019, -0.13598, -0.445053, 3.44417, -0.13598, 2.44092, 1.52019, 0.130292, -0.445053, 0.535274, 0.441493, -0.445053, 3.44417, 0.130292, 2.44092, 2.45925, 0.441493, 2.44092, 3.44417, -0.13598, 2.44092, 1.52019, -0.13598, -0.445053, 1.52019, 0.130292, -0.445053, 2.45925, -0.437845, 2.44092 )
+
+[node name="Strut_Diagonal_2D" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Strut_Diagonal_2D" type="Spatial" parent="."]
+
+[node name="strut_diagonal_2D" type="MeshInstance" parent="Strut_Diagonal_2D"]
+transform = Transform( 0.2, 0, 0, 0, 0, 0.2, 0, -0.2, 0, 0, 0, 0 )
+cast_shadow = 0
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="Collision" type="Area" parent="Strut_Diagonal_2D"]
+transform = Transform( 0.2, 0, 0, 0, 0, 0.2, 0, -0.2, 0, 0, -0.1, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Strut_Diagonal_2D/Collision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.11022e-15, 0.095 )
+shape = SubResource( 1 )
+
+[node name="Collision2" type="Area" parent="Strut_Diagonal_2D"]
+transform = Transform( 0.2, 0, 0, 0, 0, 0.2, 0, -0.2, 0, 0, -0.1, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Strut_Diagonal_2D/Collision2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2.905 )
+shape = SubResource( 2 )
+
+[node name="Collision3" type="Area" parent="Strut_Diagonal_2D"]
+transform = Transform( 0.2, 0, 0, 0, 0, 0.2, 0, -0.2, 0, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Strut_Diagonal_2D/Collision3"]
+shape = SubResource( 3 )

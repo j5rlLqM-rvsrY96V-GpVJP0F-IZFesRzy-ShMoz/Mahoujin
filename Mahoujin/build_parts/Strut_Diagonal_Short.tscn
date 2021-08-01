@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+[ext_resource path="res://models/chassis/Strut_Diagonal_Short1142547193223959906.obj" type="ArrayMesh" id=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.45, 0.45, 0.0891738 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.45, 0.45, 0.0864906 )
+
+[sub_resource type="ConvexPolygonShape" id=3]
+points = PoolVector3Array( -0.486409, 0.128467, 1.5, -0.486409, -0.137804, 1.5, 0.500406, 0.439669, 1.5, 0.500406, -0.439669, 1.5, -0.465808, 0.441493, -0.445053, -1.45262, 0.130292, -0.445053, -0.465808, -0.437845, -0.445053, -1.45262, -0.13598, -0.445053, 0.500406, -0.439669, 1.5, -0.486409, -0.137804, 1.5, -1.45262, 0.130292, -0.445053, -1.45262, -0.13598, -0.445053, 1.50149, -0.439669, 1.5, 0.535274, -0.437845, -0.445053, 1.52019, -0.13598, -0.445053, 2.48641, -0.137804, 1.5, 1.52019, 0.130292, -0.445053, 0.535274, 0.441493, -0.445053, 2.48641, 0.128467, 1.5, 1.50149, 0.439669, 1.5, 2.48641, -0.137804, 1.5, 1.52019, -0.13598, -0.445053, 1.52019, 0.130292, -0.445053, 1.50149, -0.439669, 1.5 )
+
+[node name="Strut_Diagonal_Short" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Strut_Diagonal_Short" type="Spatial" parent="."]
+
+[node name="Strut_Diagonal_Short" type="MeshInstance" parent="Strut_Diagonal_Short"]
+transform = Transform( 0.2, 0, 0, 0, 0, 0.2, 0, -0.2, 0, 0, 0, 0 )
+cast_shadow = 0
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="Collision" type="Area" parent="Strut_Diagonal_Short"]
+transform = Transform( 0.2, 0, 0, 0, 0, 0.2, 0, -0.2, 0, 0, -0.1, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Strut_Diagonal_Short/Collision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.11022e-15, 0.095 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="Strut_Diagonal_Short/Collision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1.9 )
+shape = SubResource( 2 )
+
+[node name="Collision2" type="Area" parent="Strut_Diagonal_Short"]
+transform = Transform( 0.2, 0, 0, 0, 0, 0.2, 0, -0.2, 0, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Strut_Diagonal_Short/Collision2"]
+shape = SubResource( 3 )

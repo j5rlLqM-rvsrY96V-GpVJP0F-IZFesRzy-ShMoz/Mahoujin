@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+[ext_resource path="res://models/chassis/Strut_Short9032404937470446709.obj" type="ArrayMesh" id=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.425, 0.425, 0.990016 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 1.4, 0.3, 0.946502 )
+
+[node name="Strut_Short" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Strut_Short" type="Spatial" parent="."]
+
+[node name="Strut_Short" type="MeshInstance" parent="Strut_Short"]
+transform = Transform( 0.2, 0, 0, 0, 0, 0.2, 0, -0.2, 0, 0, 0, 0 )
+cast_shadow = 0
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="Collision" type="Area" parent="Strut_Short"]
+transform = Transform( 0.2, 0, 0, 0, 0, 0.2, 0, -0.2, 0, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Strut_Short/Collision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.43039e-15, 0.497515 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="Strut_Short/Collision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.521e-15, 0.501499 )
+shape = SubResource( 2 )
