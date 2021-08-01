@@ -1,0 +1,82 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+[ext_resource path="res://models/chassis/Rod_Arc_Short-5930814009787189134.obj" type="ArrayMesh" id=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.1, 0.45, 0.45 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.395, 0.155, 0.31 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.45, 0.45, 0.1 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.31, 0.155, 0.395 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 0.19, 0.095, 0.25 )
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 0.19, 0.095, 0.25 )
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 0.19, 0.095, 0.25 )
+
+[node name="Rod_Arc_Short" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Rod_Arc_Short" type="Spatial" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance" parent="Rod_Arc_Short"]
+transform = Transform( 2.38419e-08, 1.54972e-06, -0.2, -0.2, -1.43051e-07, -2.38419e-08, -1.43051e-07, 0.2, 1.54972e-06, 0, 0, 0 )
+cast_shadow = 0
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="Collision (2)" type="Area" parent="Rod_Arc_Short"]
+transform = Transform( 0.2, 0, 0, 0, 0, 0.2, 0, -0.2, 0, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Rod_Arc_Short/Collision (2)"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.39, 0, 1 )
+shape = SubResource( 1 )
+
+[node name="Collision (3)" type="Area" parent="Rod_Arc_Short"]
+transform = Transform( 0.2, 0, 0, 0, 0, 0.2, 0, -0.2, 0, -0.00100708, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Rod_Arc_Short/Collision (3)"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.85, 0, 1 )
+shape = SubResource( 2 )
+
+[node name="Collision (1)" type="Area" parent="Rod_Arc_Short"]
+transform = Transform( 0.2, 0, 0, 0, 0, 0.2, 0, -0.2, 0, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Rod_Arc_Short/Collision (1)"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.39 )
+shape = SubResource( 3 )
+
+[node name="Collision (4)" type="Area" parent="Rod_Arc_Short"]
+transform = Transform( 0.2, 0, 0, 0, 0, 0.2, 0, -0.2, 0, -0.00100708, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Rod_Arc_Short/Collision (4)"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.15 )
+shape = SubResource( 4 )
+
+[node name="Collision (5)" type="Area" parent="Rod_Arc_Short"]
+transform = Transform( 0.172489, -0.00034172, 0.10123, -0.101228, 0.000832988, 0.172489, -0.00071634, -0.199998, 0.000545455, 0.019, 0.079, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Rod_Arc_Short/Collision (5)"]
+shape = SubResource( 5 )
+
+[node name="Collision (7)" type="Area" parent="Rod_Arc_Short"]
+transform = Transform( 0.138765, -0.000104183, 0.144029, -0.144027, 0.00089444, 0.138764, -0.000716418, -0.199998, 0.000545562, 0.069, 0.144, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Rod_Arc_Short/Collision (7)"]
+shape = SubResource( 6 )
+
+[node name="Collision (6)" type="Area" parent="Rod_Arc_Short"]
+transform = Transform( 0.0927575, 0.00015105, 0.177189, -0.177188, 0.000887704, 0.0927561, -0.000716406, -0.199998, 0.000545526, 0.133, 0.189, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Rod_Arc_Short/Collision (6)"]
+shape = SubResource( 7 )

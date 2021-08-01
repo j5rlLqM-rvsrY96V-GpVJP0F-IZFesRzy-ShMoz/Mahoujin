@@ -1,0 +1,106 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+[ext_resource path="res://models/cosmetic/Receiver_Large6860407303474294403.obj" type="ArrayMesh" id=2]
+
+[sub_resource type="SphereShape" id=1]
+radius = 0.302766
+
+[sub_resource type="CapsuleShape" id=2]
+radius = 0.0111449
+height = 0.810331
+
+[sub_resource type="CapsuleShape" id=3]
+radius = 0.00711304
+height = 0.534703
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.0985, 0.162178, 0.0985 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 0.08, 0.196212, 0.141735 )
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 0.14, 0.0245983, 0.127644 )
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 0.0558445, 0.0723593, 0.133183 )
+
+[sub_resource type="BoxShape" id=8]
+extents = Vector3( 0.075, 0.1078, 0.1825 )
+
+[sub_resource type="BoxShape" id=9]
+extents = Vector3( 0.075, 0.1078, 0.1825 )
+
+[node name="Receiver_Large" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Receiver_Large" type="Spatial" parent="."]
+
+[node name="Receiver_Large_Mesh" type="MeshInstance" parent="Receiver_Large"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, -0.1, 0 )
+cast_shadow = 0
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="Build_Collision_Sphere" type="Area" parent="Receiver_Large"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.149, 0.004 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Receiver_Large/Build_Collision_Sphere"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.149919, -0.00430554 )
+shape = SubResource( 1 )
+
+[node name="Build_Collision_Cylinder" type="Area" parent="Receiver_Large"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.591, -0.719 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Receiver_Large/Build_Collision_Cylinder"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0755488, 0.359966 )
+shape = SubResource( 2 )
+
+[node name="Build_Collision_Cylinder2" type="Area" parent="Receiver_Large"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.591, -0.719 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Receiver_Large/Build_Collision_Cylinder2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0861693, 0.444061 )
+shape = SubResource( 3 )
+
+[node name="Build_Collision_ConnectionPoint" type="Area" parent="Receiver_Large"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Receiver_Large/Build_Collision_ConnectionPoint"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.163672, 0 )
+shape = SubResource( 4 )
+
+[node name="Build_Collision" type="Area" parent="Receiver_Large"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Receiver_Large/Build_Collision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.311653, -0.267067 )
+shape = SubResource( 5 )
+
+[node name="Build_Collision2" type="Area" parent="Receiver_Large"]
+transform = Transform( 1, 0, 0, 0, 0.964741, -0.2632, 0, 0.2632, 0.964741, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Receiver_Large/Build_Collision2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0414308, -0.180093 )
+shape = SubResource( 6 )
+
+[node name="Build_Collision3" type="Area" parent="Receiver_Large"]
+transform = Transform( 0.608762, 0, -0.793354, 0, 1, 0, 0.793354, 0, 0.608762, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Receiver_Large/Build_Collision3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00400288, 0.0188814, 0.201282 )
+shape = SubResource( 7 )
+
+[node name="Build_Collision4" type="Area" parent="Receiver_Large"]
+transform = Transform( 0.608762, 0, 0.793354, 0, 1, 0, -0.793354, 0, 0.608762, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Receiver_Large/Build_Collision4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00400325, 0.085, 0.266001 )
+shape = SubResource( 8 )
+
+[node name="Build_Collision5" type="Area" parent="Receiver_Large"]
+transform = Transform( 0.608762, 0, -0.793354, 0, 1, 0, 0.793354, 0, 0.608762, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Receiver_Large/Build_Collision5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00400325, 0.085, 0.266001 )
+shape = SubResource( 9 )

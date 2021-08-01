@@ -1,0 +1,69 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+[ext_resource path="res://models/chassis/Rod_Cross1181125238403345400.obj" type="ArrayMesh" id=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.45, 0.45, 0.16 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.45, 0.45, 0.16 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.15, 0.07, 1.7 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.15, 0.07, 1.7 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 0.45, 0.45, 0.16 )
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 0.45, 0.45, 0.16 )
+
+[node name="Rod_Cross" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Rod_Cross" type="Spatial" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance" parent="Rod_Cross"]
+transform = Transform( 0, 1.54972e-07, 0.2, -0.2, -1.90735e-07, 1.19209e-08, 1.78814e-07, -0.2, 1.43051e-07, 0, 0, 0 )
+cast_shadow = 0
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="Collision" type="Area" parent="Rod_Cross"]
+transform = Transform( 0.2, 1.93876e-07, 2.52882e-08, -2.52881e-08, 1.1921e-08, 0.2, 1.93876e-07, -0.2, 1.1921e-08, 0, -0.1, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Rod_Cross/Collision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.18 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="Rod_Cross/Collision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2.82 )
+shape = SubResource( 2 )
+
+[node name="Collision2" type="Area" parent="Rod_Cross"]
+transform = Transform( 0.141422, 1.72854e-07, 0.141422, -0.141422, -2.38419e-08, 0.141422, 1.37091e-07, -0.200001, 9.53677e-08, 0.104095, 0.2655, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Rod_Cross/Collision2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.58, 0, 0.09 )
+shape = SubResource( 3 )
+
+[node name="Collision3" type="Area" parent="Rod_Cross"]
+transform = Transform( -0.141422, 0, -0.141422, -0.141422, 0, 0.141422, 0, 0.2, 0, 0.295, 0.2655, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Rod_Cross/Collision3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.58, 0, 0.09 )
+shape = SubResource( 4 )
+
+[node name="Collision4" type="Area" parent="Rod_Cross"]
+transform = Transform( -0.200001, -2.52882e-08, 2.52882e-08, 2.52882e-08, 2.38419e-08, 0.200001, -2.52882e-08, 0.200001, -4.76839e-08, 0.399094, -0.0999999, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Rod_Cross/Collision4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.18 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="Rod_Cross/Collision4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2.82 )
+shape = SubResource( 6 )

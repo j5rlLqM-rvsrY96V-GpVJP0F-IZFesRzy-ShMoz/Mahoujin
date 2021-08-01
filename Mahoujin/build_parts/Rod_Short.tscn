@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+[ext_resource path="res://models/chassis/Rod_Short-3990521132952520084.obj" type="ArrayMesh" id=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.45, 0.45, 0.1 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.45, 0.45, 0.1 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.125, 0.125, 0.804186 )
+
+[node name="Rod_Short" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Rod_Short" type="Spatial" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance" parent="Rod_Short"]
+transform = Transform( 0, -4.29153e-07, 0.2, -0.2, -1.43051e-07, 0, 1.43051e-07, -0.2, -4.29153e-07, 0, 0, 0 )
+cast_shadow = 0
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="Collision" type="Area" parent="Rod_Short"]
+transform = Transform( 0.2, 0, 0, 0, 0, 0.2, 0, -0.2, 0, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Rod_Short/Collision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.39 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="Rod_Short/Collision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.39 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="Rod_Short/Collision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.58205e-15, 0.504185 )
+shape = SubResource( 3 )
