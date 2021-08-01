@@ -1,0 +1,176 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.0985, 0.0985, 0.0985 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=8]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=9]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=10]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=11]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=12]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=13]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=14]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=15]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=16]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=17]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[node name="CatEye_Right" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="CatEye_Right" type="Spatial" parent="."]
+
+[node name="Collision" type="Area" parent="CatEye_Right"]
+
+[node name="CollisionShape" type="CollisionShape" parent="CatEye_Right/Collision"]
+shape = SubResource( 1 )
+
+[node name="Collision2" type="Area" parent="CatEye_Right"]
+transform = Transform( 0.0303122, 0, -0.0731804, 0, 0.115446, 0, 0.0731802, 0, 0.0303123, -0.0020505, 0.11114, 0.015067 )
+
+[node name="CollisionShape" type="CollisionShape" parent="CatEye_Right/Collision2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 2 )
+
+[node name="Collision3" type="Area" parent="CatEye_Right"]
+transform = Transform( 0.0303122, 0, 0.0731803, 0, 0.115446, 0, -0.0731802, 0, 0.0303123, -0.0020505, 0.11114, 0.015067 )
+
+[node name="CollisionShape" type="CollisionShape" parent="CatEye_Right/Collision3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 3 )
+
+[node name="Collision4" type="Area" parent="CatEye_Right"]
+transform = Transform( 0.0731801, 0, -0.0303122, 0, 0.115446, 0, 0.0303122, 0, 0.0731801, -0.0020505, 0.11114, 0.015067 )
+
+[node name="CollisionShape" type="CollisionShape" parent="CatEye_Right/Collision4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 4 )
+
+[node name="Collision5" type="Area" parent="CatEye_Right"]
+transform = Transform( 0.0731801, 0, 0.0303122, 0, 0.115446, 0, -0.0303122, 0, 0.0731801, -0.0020505, 0.11114, 0.015067 )
+
+[node name="CollisionShape" type="CollisionShape" parent="CatEye_Right/Collision5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 5 )
+
+[node name="Collision6" type="Area" parent="CatEye_Right"]
+transform = Transform( -0.0560096, 0, 0.0560098, 0, 0.115446, 0, -0.0560096, 0, -0.0560098, -0.0020505, 0.11114, 0.015067 )
+
+[node name="CollisionShape" type="CollisionShape" parent="CatEye_Right/Collision6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 6 )
+
+[node name="Collision7" type="Area" parent="CatEye_Right"]
+transform = Transform( 0.0560096, 0, 0.0560098, 0, 0.115446, 0, -0.0560096, 0, 0.0560098, -0.0020505, 0.11114, 0.015067 )
+
+[node name="CollisionShape" type="CollisionShape" parent="CatEye_Right/Collision7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 7 )
+
+[node name="Collision8" type="Area" parent="CatEye_Right"]
+transform = Transform( 0.0792096, 0, 0, 0, 0.115446, 0, 0, 0, 0.0792096, -0.0020505, 0.11114, 0.015067 )
+
+[node name="CollisionShape" type="CollisionShape" parent="CatEye_Right/Collision8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 8 )
+
+[node name="Collision9" type="Area" parent="CatEye_Right"]
+transform = Transform( 0, 0, 0.0792098, 0, 0.115446, 0, -0.0792097, 0, 0, -0.0020505, 0.11114, 0.015067 )
+
+[node name="CollisionShape" type="CollisionShape" parent="CatEye_Right/Collision9"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 9 )
+
+[node name="Collision10" type="Area" parent="CatEye_Right"]
+transform = Transform( 0.0329169, 1.41988e-09, -0.0794686, 1.42419e-09, 0.0857557, 2.13146e-09, 0.0794684, -2.125e-09, 0.032917, -0.0021526, -0.01933, 0.0068 )
+
+[node name="CollisionShape" type="CollisionShape" parent="CatEye_Right/Collision10"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 10 )
+
+[node name="Collision11" type="Area" parent="CatEye_Right"]
+transform = Transform( 0.0329169, -2.125e-09, 0.0794686, 2.13145e-09, 0.0857557, 1.42419e-09, -0.0794685, 1.41988e-09, 0.032917, -0.0021526, -0.01933, 0.0068 )
+
+[node name="CollisionShape" type="CollisionShape" parent="CatEye_Right/Collision11"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 11 )
+
+[node name="Collision12" type="Area" parent="CatEye_Right"]
+transform = Transform( 0.0794684, 0, -0.0329169, 0, 0.0857557, 0, 0.0329169, 0, 0.0794684, -0.0021526, -0.01933, 0.0068 )
+
+[node name="CollisionShape" type="CollisionShape" parent="CatEye_Right/Collision12"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 12 )
+
+[node name="Collision13" type="Area" parent="CatEye_Right"]
+transform = Transform( 0.0794684, 0, 0.0329169, 0, 0.0857557, 0, -0.0329169, 0, 0.0794684, -0.0021526, -0.01933, 0.0068 )
+
+[node name="CollisionShape" type="CollisionShape" parent="CatEye_Right/Collision13"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 13 )
+
+[node name="Collision14" type="Area" parent="CatEye_Right"]
+transform = Transform( -0.0608225, 0, 0.0608226, 0, 0.0857557, 0, -0.0608225, 0, -0.0608226, -0.0021526, -0.01933, 0.0068 )
+
+[node name="CollisionShape" type="CollisionShape" parent="CatEye_Right/Collision14"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 14 )
+
+[node name="Collision15" type="Area" parent="CatEye_Right"]
+transform = Transform( 0.0608225, 0, 0.0608226, 0, 0.0857557, 0, -0.0608225, 0, 0.0608226, -0.0021526, -0.01933, 0.0068 )
+
+[node name="CollisionShape" type="CollisionShape" parent="CatEye_Right/Collision15"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 15 )
+
+[node name="Collision16" type="Area" parent="CatEye_Right"]
+transform = Transform( 0.086016, 0, 0, 0, 0.0857557, 0, 0, 0, 0.086016, -0.0021526, -0.01933, 0.0068 )
+
+[node name="CollisionShape" type="CollisionShape" parent="CatEye_Right/Collision16"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 16 )
+
+[node name="Collision17" type="Area" parent="CatEye_Right"]
+transform = Transform( 0, 0, 0.0860162, 0, 0.0857557, 0, -0.0860161, 0, 0, -0.0021526, -0.01933, 0.0068 )
+
+[node name="CollisionShape" type="CollisionShape" parent="CatEye_Right/Collision17"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 17 )

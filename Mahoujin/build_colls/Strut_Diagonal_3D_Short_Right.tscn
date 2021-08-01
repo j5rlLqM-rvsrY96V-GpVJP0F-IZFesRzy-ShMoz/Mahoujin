@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.475, 0.225, 0.475 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.475, 0.225, 0.475 )
+
+[sub_resource type="ConvexPolygonShape" id=3]
+points = PoolVector3Array( -1.43062, 0.122623, 0.465004, -0.5, 0.502469, 0.465004, -1.43062, -0.142912, 0.465004, -0.5, -0.545253, 0.465004, 0.5, 0.502469, 0.465004, 0.5, -0.545253, 0.465004, 1.43062, 0.122623, 0.465004, 1.43062, -0.142912, 0.465004, -0.430615, -1.10792, -1.465, -1.43062, -0.142912, 0.465004, 0.5, -1.51026, -1.465, -0.5, -0.545253, 0.465004, 1.5, -1.51026, -1.465, 0.5, -0.545253, 0.465004, 1.43062, -0.142912, 0.465004, 2.43062, -1.10792, -1.465, -1.43062, -0.142912, 0.465004, -0.430615, -1.10792, -1.465, -1.43062, 0.122623, 0.465004, -1.43062, 0.122623, 0.465004, -0.430615, -1.10792, -1.465, -0.430615, -0.842382, -1.465, -1.43062, 0.122623, 0.465004, -0.430615, -0.842382, -1.465, -0.5, 0.502469, 0.465004, 0.5, -0.462535, -1.465, 1.5, -0.462534, -1.465, -0.5, 0.502469, 0.465004, 1.5, -0.462534, -1.465, 0.5, 0.502469, 0.465004, 1.5, -1.51026, -1.465, 2.43062, -1.10792, -1.465, 1.5, -0.462534, -1.465, 2.43062, -0.84238, -1.465, 0.5, -0.462535, -1.465, 0.5, -1.51026, -1.465, -0.430615, -1.10792, -1.465, -0.430615, -0.842382, -1.465, 1.43062, 0.122623, 0.465004, 2.43062, -0.84238, -1.465, 1.43062, -0.142912, 0.465004, 1.43062, -0.142912, 0.465004, 2.43062, -0.84238, -1.465, 2.43062, -1.10792, -1.465, 2.43062, -0.84238, -1.465, 1.43062, 0.122623, 0.465004 )
+
+[node name="Strut_Diagonal_3D_Short_Right" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Strut_Diagonal_3D_Short_Right" type="Spatial" parent="."]
+
+[node name="Collision" type="Area" parent="Strut_Diagonal_3D_Short_Right"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, -0.1, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Strut_Diagonal_3D_Short_Right/Collision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.235, 0 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="Strut_Diagonal_3D_Short_Right/Collision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.765, -1 )
+shape = SubResource( 2 )
+
+[node name="Collision2" type="Area" parent="Strut_Diagonal_3D_Short_Right"]
+transform = Transform( -0.2, -2.14024e-07, -5.1392e-09, 5.1392e-09, 0, -0.2, -2.14024e-07, 0.2, 0, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Strut_Diagonal_3D_Short_Right/Collision2"]
+shape = SubResource( 3 )

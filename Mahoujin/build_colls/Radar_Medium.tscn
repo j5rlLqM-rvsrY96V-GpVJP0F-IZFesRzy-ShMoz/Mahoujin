@@ -1,0 +1,149 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.0985, 0.00858244, 0.0985 )
+
+[sub_resource type="CapsuleShape" id=2]
+radius = 0.0823439
+height = 1.20453
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.25, 0.108482, 0.25 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.095, 0.682266, 0.095 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 0.08, 0.494173, 0.141766 )
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 0.08, 0.213108, 0.260312 )
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 0.08, 0.108662, 0.193637 )
+
+[sub_resource type="BoxShape" id=8]
+extents = Vector3( 0.08, 0.09441, 0.203094 )
+
+[sub_resource type="BoxShape" id=9]
+extents = Vector3( 0.575, 0.152748, 0.05 )
+
+[sub_resource type="BoxShape" id=10]
+extents = Vector3( 0.575, 0.190467, 0.05 )
+
+[sub_resource type="BoxShape" id=11]
+extents = Vector3( 0.575, 0.313904, 0.05 )
+
+[sub_resource type="BoxShape" id=12]
+extents = Vector3( 0.45, 0.0950357, 0.05 )
+
+[sub_resource type="BoxShape" id=13]
+extents = Vector3( 0.45, 0.091794, 0.05 )
+
+[sub_resource type="BoxShape" id=14]
+extents = Vector3( 0.1325, 0.0939293, 0.0999711 )
+
+[node name="Radar_Medium" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Radar_Medium" type="Spatial" parent="."]
+
+[node name="Build_Collision_ConnectionPoint" type="Area" parent="Radar_Medium"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Radar_Medium/Build_Collision_ConnectionPoint"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0100769, 0 )
+shape = SubResource( 1 )
+
+[node name="Build_Collision_Capsule" type="Area" parent="Radar_Medium"]
+transform = Transform( 0.2, 0, 0, 0, 0.180622, 0.0858817, 0, -0.0858816, 0.180622, 0, -0.1, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Radar_Medium/Build_Collision_Capsule"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0075, 1.3311 )
+shape = SubResource( 2 )
+
+[node name="Build_Collision" type="Area" parent="Radar_Medium"]
+transform = Transform( 0, 0, 0.2, 0, 0.2, 0, -0.2, 0, 0, 0, -0.1, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Radar_Medium/Build_Collision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.158483, 0 )
+shape = SubResource( 3 )
+
+[node name="Build_Collision2" type="Area" parent="Radar_Medium"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, -0.1, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Radar_Medium/Build_Collision2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.732266, 0 )
+shape = SubResource( 4 )
+
+[node name="Build_Collision3" type="Area" parent="Radar_Medium"]
+transform = Transform( 0.208, 0, 0, 0, 0.187873, 0.0892613, 0, -0.0892613, 0.187873, 0, -0.0747917, -0.0177893 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Radar_Medium/Build_Collision3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.823933, 0.707195 )
+shape = SubResource( 5 )
+
+[node name="Build_Collision4" type="Area" parent="Radar_Medium"]
+transform = Transform( 0.208, 0, 0, 0, 0.187873, 0.0892613, 0, -0.0892613, 0.187873, 0, -0.0747917, -0.0177893 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Radar_Medium/Build_Collision4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83849, 0.545642 )
+shape = SubResource( 6 )
+
+[node name="Build_Collision5" type="Area" parent="Radar_Medium"]
+transform = Transform( 0.208, 0, 0, 0, 0.0759595, 0.193634, 0, -0.193634, 0.0759595, 0, -0.0731, -0.0375 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Radar_Medium/Build_Collision5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.371528, 1.14705 )
+shape = SubResource( 7 )
+
+[node name="Build_Collision6" type="Area" parent="Radar_Medium"]
+transform = Transform( 0.208, 0, 0, 0, -0.193411, 0.0765259, 0, -0.0765259, -0.193411, 0, 0.0573125, 0.2694 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Radar_Medium/Build_Collision6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.367515, 1.10948 )
+shape = SubResource( 8 )
+
+[node name="Build_Collision7" type="Area" parent="Radar_Medium"]
+transform = Transform( 0.227301, 0, 0, 0, 0.157386, 0.163997, 0, -0.163997, 0.157386, 0, -0.0887, -0.0191 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Radar_Medium/Build_Collision7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00274156, 0.923514 )
+shape = SubResource( 9 )
+
+[node name="Build_Collision8" type="Area" parent="Radar_Medium"]
+transform = Transform( 0.227301, 0, 0, 0, 0.225767, 0.0263556, 0, -0.0263556, 0.225767, 0, -0.0887, -0.0191 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Radar_Medium/Build_Collision8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4493, 0.420007 )
+shape = SubResource( 10 )
+
+[node name="Build_Collision9" type="Area" parent="Radar_Medium"]
+transform = Transform( 0.227301, 0, 0, 0, 0.203985, 0.100278, 0, -0.100278, 0.203985, 0, -0.0887, -0.0191 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Radar_Medium/Build_Collision9"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75194, 0.819941 )
+shape = SubResource( 11 )
+
+[node name="Build_Collision10" type="Area" parent="Radar_Medium"]
+transform = Transform( 0.2273, 0, 0, 0, 0.157386, 0.163997, 0, -0.163997, 0.157386, 0, -0.1242, 0.0179 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Radar_Medium/Build_Collision10"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.55681e-05, 0.923515 )
+shape = SubResource( 12 )
+
+[node name="Build_Collision11" type="Area" parent="Radar_Medium"]
+transform = Transform( 0.2273, 0, 0, 0, 0.22722, -0.00601758, 0, 0.00601758, 0.22722, 0, -0.0296, -0.0716 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Radar_Medium/Build_Collision11"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.51212, 0.420005 )
+shape = SubResource( 13 )
+
+[node name="Build_Collision12" type="Area" parent="Radar_Medium"]
+transform = Transform( 0.208, 0, 0, 0, -0.187234, 0.0905957, 0, -0.0905957, -0.187234, 0, 0.0394696, 0.26764 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Radar_Medium/Build_Collision12"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.451765, 1.18415 )
+shape = SubResource( 14 )

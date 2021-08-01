@@ -1,0 +1,234 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.0975, 0.00741953, 0.0975 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.0975, 0.293216, -0.0125 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.0975, 0.0126842, -0.0360135 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.1, 0.1, 0.1 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 0.1, 0.1, 0.1 )
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 0.1, 0.1, 0.1 )
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 0.1, 0.1, 0.1 )
+
+[sub_resource type="BoxShape" id=8]
+extents = Vector3( 0.1, 0.1, 0.1 )
+
+[sub_resource type="BoxShape" id=9]
+extents = Vector3( 0.1, 0.1, 0.0968647 )
+
+[sub_resource type="BoxShape" id=10]
+extents = Vector3( 0.1, 0.1, 0.1 )
+
+[sub_resource type="BoxShape" id=11]
+extents = Vector3( 0.1, 0.125579, 0.116154 )
+
+[sub_resource type="BoxShape" id=12]
+extents = Vector3( 0.1, 0.1, 0.1 )
+
+[sub_resource type="BoxShape" id=13]
+extents = Vector3( 0.1, 0.1, 0.1 )
+
+[sub_resource type="BoxShape" id=14]
+extents = Vector3( 0.1, 0.1, 0.1 )
+
+[sub_resource type="BoxShape" id=15]
+extents = Vector3( 0.1, 0.1, 0.1 )
+
+[sub_resource type="BoxShape" id=16]
+extents = Vector3( 0.1, 0.1, 0.1 )
+
+[sub_resource type="BoxShape" id=17]
+extents = Vector3( 0.1, 0.1, 0.1 )
+
+[sub_resource type="BoxShape" id=18]
+extents = Vector3( 0.1, 0.0952446, 0.1 )
+
+[sub_resource type="BoxShape" id=19]
+extents = Vector3( 0.1, 0.0952446, 0.1 )
+
+[sub_resource type="BoxShape" id=20]
+extents = Vector3( 0.1, 0.0952446, 0.1 )
+
+[sub_resource type="BoxShape" id=21]
+extents = Vector3( 0.1, 0.0952446, 0.1 )
+
+[sub_resource type="BoxShape" id=22]
+extents = Vector3( 0.1, 0.0952446, 0.1 )
+
+[sub_resource type="BoxShape" id=23]
+extents = Vector3( 0.0975, 0.00681186, -0.198697 )
+
+[sub_resource type="BoxShape" id=24]
+extents = Vector3( 0.0975, 0.0833218, -0.0832548 )
+
+[node name="RC_Cube_PilotSeat_Cray" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="RC_Cube_PilotSeat_Cray" type="Spatial" parent="."]
+
+[node name="Colliders" type="Spatial" parent="RC_Cube_PilotSeat_Cray"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0.2 )
+
+[node name="ConnectionPoint" type="Area" parent="RC_Cube_PilotSeat_Cray/Colliders"]
+
+[node name="CollisionShape" type="CollisionShape" parent="RC_Cube_PilotSeat_Cray/Colliders/ConnectionPoint"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00865454, -0.2 )
+shape = SubResource( 1 )
+
+[node name="BuildCollision" type="Area" parent="RC_Cube_PilotSeat_Cray/Colliders"]
+
+[node name="CollisionShape" type="CollisionShape" parent="RC_Cube_PilotSeat_Cray/Colliders/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.305116, -0.286 )
+shape = SubResource( 2 )
+
+[node name="BuildCollision2" type="Area" parent="RC_Cube_PilotSeat_Cray/Colliders"]
+
+[node name="CollisionShape" type="CollisionShape" parent="RC_Cube_PilotSeat_Cray/Colliders/BuildCollision2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.585648, -0.262486 )
+shape = SubResource( 3 )
+
+[node name="BuildCollision3" type="Area" parent="RC_Cube_PilotSeat_Cray/Colliders"]
+transform = Transform( 0.083072, 0, 0, 0, 0.381923, 0, 0, 0, 0.0803319, 0.0816, 0.3593, 0.0893 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RC_Cube_PilotSeat_Cray/Colliders/BuildCollision3"]
+shape = SubResource( 4 )
+
+[node name="BuildCollision4" type="Area" parent="RC_Cube_PilotSeat_Cray/Colliders"]
+transform = Transform( 0.084375, 0, 0, 0, 0.0571068, -0.998435, 0, 0.0571068, 0.998435, 0.0817, 0.4908, -0.008 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RC_Cube_PilotSeat_Cray/Colliders/BuildCollision4"]
+shape = SubResource( 5 )
+
+[node name="BuildCollision5" type="Area" parent="RC_Cube_PilotSeat_Cray/Colliders"]
+transform = Transform( 0.084375, 0, 0, 0, 0.0571068, -0.998435, 0, 0.0571068, 0.998435, -0.0817, 0.4908, -0.008 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RC_Cube_PilotSeat_Cray/Colliders/BuildCollision5"]
+shape = SubResource( 6 )
+
+[node name="BuildCollision6" type="Area" parent="RC_Cube_PilotSeat_Cray/Colliders"]
+transform = Transform( 0.0812053, 0, 0, 0, 0.136284, 0, 0, 0, 0.823919, 0.0814, 0.5832, -0.1838 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RC_Cube_PilotSeat_Cray/Colliders/BuildCollision6"]
+shape = SubResource( 7 )
+
+[node name="BuildCollision7" type="Area" parent="RC_Cube_PilotSeat_Cray/Colliders"]
+transform = Transform( 0.0812053, 0, 0, 0, 0.136284, 0, 0, 0, 0.823919, -0.0814, 0.5832, -0.1838 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RC_Cube_PilotSeat_Cray/Colliders/BuildCollision7"]
+shape = SubResource( 8 )
+
+[node name="BuildCollision8" type="Area" parent="RC_Cube_PilotSeat_Cray/Colliders"]
+transform = Transform( 0.34191, 0, 0, 0, 0.928792, -0.0996307, 0, 0.116433, 0.794762, 0, 0.4279, -0.2071 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RC_Cube_PilotSeat_Cray/Colliders/BuildCollision8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.12002e-09, -0.00313522 )
+shape = SubResource( 9 )
+
+[node name="BuildCollision9" type="Area" parent="RC_Cube_PilotSeat_Cray/Colliders"]
+transform = Transform( 0.623886, 0, 0, 0, 0.814178, 0.175116, 0, -0.376909, 0.378277, 0, 0.3003, -0.1587 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RC_Cube_PilotSeat_Cray/Colliders/BuildCollision9"]
+shape = SubResource( 10 )
+
+[node name="BuildCollision10" type="Area" parent="RC_Cube_PilotSeat_Cray/Colliders"]
+transform = Transform( 0.623886, 0, 0, 0, 0.412068, -0.100338, 0, 0.0567781, 0.728206, 0, 0.2181, -0.0619 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RC_Cube_PilotSeat_Cray/Colliders/BuildCollision10"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0255823, -0.016154 )
+shape = SubResource( 11 )
+
+[node name="BuildCollision11" type="Area" parent="RC_Cube_PilotSeat_Cray/Colliders"]
+transform = Transform( 0.167411, -0.0538191, 0.000321044, 0.011043, 0.799978, 0.0241302, -0.00170815, -0.10288, 0.187464, 0.059, 0.1668, 0.0116 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RC_Cube_PilotSeat_Cray/Colliders/BuildCollision11"]
+shape = SubResource( 12 )
+
+[node name="BuildCollision12" type="Area" parent="RC_Cube_PilotSeat_Cray/Colliders"]
+transform = Transform( 0.167411, 0.0538191, -0.000321044, -0.011043, 0.799978, 0.0241302, 0.00170815, -0.10288, 0.187464, -0.059, 0.1668, 0.0116 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RC_Cube_PilotSeat_Cray/Colliders/BuildCollision12"]
+shape = SubResource( 13 )
+
+[node name="BuildCollision13" type="Area" parent="RC_Cube_PilotSeat_Cray/Colliders"]
+transform = Transform( 0.961875, 0, 0, 0, 0.136621, 0.203395, 0, -0.0613531, 0.452922, 0, 0.101, 0.0492 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RC_Cube_PilotSeat_Cray/Colliders/BuildCollision13"]
+shape = SubResource( 14 )
+
+[node name="BuildCollision14" type="Area" parent="RC_Cube_PilotSeat_Cray/Colliders"]
+transform = Transform( 0.961875, 0, 0, 0, 0.225894, 0.416956, 0, -0.220555, 0.42705, 0, 0.0652, 0.0266 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RC_Cube_PilotSeat_Cray/Colliders/BuildCollision14"]
+shape = SubResource( 15 )
+
+[node name="BuildCollision15" type="Area" parent="RC_Cube_PilotSeat_Cray/Colliders"]
+transform = Transform( 0.184206, 0, 0, 0, 0.201871, 0.156546, 0, -1.07629, 0.0293619, 0.0715, 0.3326, -0.0764 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RC_Cube_PilotSeat_Cray/Colliders/BuildCollision15"]
+shape = SubResource( 16 )
+
+[node name="BuildCollision16" type="Area" parent="RC_Cube_PilotSeat_Cray/Colliders"]
+transform = Transform( 0.184206, 0, 0, 0, 0.201871, 0.156546, 0, -1.07629, 0.0293619, -0.0715, 0.3326, -0.0764 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RC_Cube_PilotSeat_Cray/Colliders/BuildCollision16"]
+shape = SubResource( 17 )
+
+[node name="BuildCollision17" type="Area" parent="RC_Cube_PilotSeat_Cray/Colliders"]
+transform = Transform( 0.688681, 0, 0, 0, 1.37335, 0.140096, 0, -0.687424, 0.279887, 0, 0.3071, -0.2012 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RC_Cube_PilotSeat_Cray/Colliders/BuildCollision17"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00475373, -1.52944e-06 )
+shape = SubResource( 18 )
+
+[node name="BuildCollision18" type="Area" parent="RC_Cube_PilotSeat_Cray/Colliders"]
+transform = Transform( 0.163562, 0, 0, 0, 0.806451, -0.349428, 0, 0.740819, 0.380385, 0.0773, 0.1358, -0.1456 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RC_Cube_PilotSeat_Cray/Colliders/BuildCollision18"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00475373, -1.52944e-06 )
+shape = SubResource( 19 )
+
+[node name="BuildCollision19" type="Area" parent="RC_Cube_PilotSeat_Cray/Colliders"]
+transform = Transform( 0.163562, 0, 0, 0, 0.806451, -0.349428, 0, 0.740819, 0.380385, -0.0773, 0.1358, -0.1456 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RC_Cube_PilotSeat_Cray/Colliders/BuildCollision19"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00475373, -1.52944e-06 )
+shape = SubResource( 20 )
+
+[node name="BuildCollision20" type="Area" parent="RC_Cube_PilotSeat_Cray/Colliders"]
+transform = Transform( 0.163562, 0, 0, 0, 0.678875, -0.145698, 0, 0.507199, 0.195014, 0.0823, 0.2473, -0.0247 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RC_Cube_PilotSeat_Cray/Colliders/BuildCollision20"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00475373, -1.52944e-06 )
+shape = SubResource( 21 )
+
+[node name="BuildCollision21" type="Area" parent="RC_Cube_PilotSeat_Cray/Colliders"]
+transform = Transform( 0.163562, 0, 0, 0, 0.678875, -0.145698, 0, 0.507199, 0.195014, -0.0823, 0.2473, -0.0247 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RC_Cube_PilotSeat_Cray/Colliders/BuildCollision21"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00475373, -1.52944e-06 )
+shape = SubResource( 22 )
+
+[node name="BuildCollision22" type="Area" parent="RC_Cube_PilotSeat_Cray/Colliders"]
+
+[node name="CollisionShape" type="CollisionShape" parent="RC_Cube_PilotSeat_Cray/Colliders/BuildCollision22"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0187113, -0.0998032 )
+shape = SubResource( 23 )
+
+[node name="BuildCollision23" type="Area" parent="RC_Cube_PilotSeat_Cray/Colliders"]
+
+[node name="CollisionShape" type="CollisionShape" parent="RC_Cube_PilotSeat_Cray/Colliders/BuildCollision23"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0952213, -0.215245 )
+shape = SubResource( 24 )

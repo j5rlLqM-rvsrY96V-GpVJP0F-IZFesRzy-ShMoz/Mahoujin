@@ -1,0 +1,166 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.0985, 0.0985, 0.0985 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.200119, 0.105445, 0.197955 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=8]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=9]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=10]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=11]
+extents = Vector3( 0.80764, 0.61849, 0.943028 )
+
+[sub_resource type="BoxShape" id=12]
+extents = Vector3( 0.782579, 0.621563, 0.948335 )
+
+[sub_resource type="BoxShape" id=13]
+extents = Vector3( 0.545816, 0.513396, 1.06601 )
+
+[sub_resource type="BoxShape" id=14]
+extents = Vector3( 0.545816, 0.441884, 1.35495 )
+
+[sub_resource type="BoxShape" id=15]
+extents = Vector3( 0.545816, 0.441884, 1.35495 )
+
+[sub_resource type="BoxShape" id=16]
+extents = Vector3( 0.545816, 0.513396, 1.06601 )
+
+[node name="Cyborg_Eyes" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Cyborg_Eyes" type="Spatial" parent="."]
+
+[node name="Collision" type="Area" parent="Cyborg_Eyes"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Cyborg_Eyes/Collision"]
+shape = SubResource( 1 )
+
+[node name="Collision2" type="Area" parent="Cyborg_Eyes"]
+transform = Transform( 0.8625, 0, 0, 0, 1.1, 0, 0, 0, 1, 0.0463, 0.1166, 0.1497 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Cyborg_Eyes/Collision2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0662984, -0.0560806, -0.143896 )
+shape = SubResource( 2 )
+
+[node name="Collision3" type="Area" parent="Cyborg_Eyes"]
+transform = Transform( 0.0329169, 0, -0.0794685, 0, 0.192931, 0, 0.0794684, 0, 0.0329169, -0.0083462, 0.0539, -0.0069249 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Cyborg_Eyes/Collision3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 3 )
+
+[node name="Collision4" type="Area" parent="Cyborg_Eyes"]
+transform = Transform( 0.0329169, 0, 0.0794687, 0, 0.192931, 0, -0.0794685, 0, 0.032917, -0.0083462, 0.0539, -0.0069249 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Cyborg_Eyes/Collision4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 4 )
+
+[node name="Collision5" type="Area" parent="Cyborg_Eyes"]
+transform = Transform( 0.0794684, 0, -0.0329169, 0, 0.192931, 0, 0.0329169, 0, 0.0794684, -0.0083462, 0.0539, -0.0069249 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Cyborg_Eyes/Collision5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 5 )
+
+[node name="Collision6" type="Area" parent="Cyborg_Eyes"]
+transform = Transform( 0.0794684, 0, 0.0329169, 0, 0.192931, 0, -0.0329169, 0, 0.0794684, -0.0083462, 0.0539, -0.0069249 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Cyborg_Eyes/Collision6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 6 )
+
+[node name="Collision7" type="Area" parent="Cyborg_Eyes"]
+transform = Transform( -0.0608225, 0, 0.0608226, 0, 0.192931, 0, -0.0608225, 0, -0.0608226, -0.0083462, 0.0539, -0.0069249 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Cyborg_Eyes/Collision7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 7 )
+
+[node name="Collision8" type="Area" parent="Cyborg_Eyes"]
+transform = Transform( 0.0608225, 0, 0.0608226, 0, 0.192931, 0, -0.0608225, 0, 0.0608226, -0.0083462, 0.0539, -0.0069249 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Cyborg_Eyes/Collision8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 8 )
+
+[node name="Collision9" type="Area" parent="Cyborg_Eyes"]
+transform = Transform( 0.086016, 0, 0, 0, 0.192931, 0, 0, 0, 0.086016, -0.0083462, 0.0539, -0.0069249 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Cyborg_Eyes/Collision9"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 9 )
+
+[node name="Collision10" type="Area" parent="Cyborg_Eyes"]
+transform = Transform( 0, 0, -0.0860162, 0, 0.192931, 0, 0.086016, 0, 0, -0.0074967, 0.0539, -0.0054352 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Cyborg_Eyes/Collision10"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 10 )
+
+[node name="Collision11" type="Area" parent="Cyborg_Eyes"]
+transform = Transform( 0.08602, 0, 0, 0, 0.192929, 0, 0, 0, 0.08602, -0.048, 0.0539, -0.0069249 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Cyborg_Eyes/Collision11"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9761, -0.0215096, -0.351873 )
+shape = SubResource( 11 )
+
+[node name="Collision " type="Area" parent="Cyborg_Eyes"]
+transform = Transform( 0.08602, 0, 0, 0, 0.192929, 0, 0, 0, 0.08602, 0.373, 0.0539, -0.0069249 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Cyborg_Eyes/Collision "]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.00116, -0.0184368, -0.325338 )
+shape = SubResource( 12 )
+
+[node name="Collision12" type="Area" parent="Cyborg_Eyes"]
+transform = Transform( 0.0809981, 0, -0.0289611, 0, 0.19293, 0, 0.0289611, 0, 0.0809981, 0.3052, 0.0539, 0.1959 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Cyborg_Eyes/Collision12"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8955, 0.0252089, -0.38346 )
+shape = SubResource( 13 )
+
+[node name="Collision13" type="Area" parent="Cyborg_Eyes"]
+transform = Transform( 0.0529999, 0, -0.0141026, 0, 0.123007, 0, 0.0141026, 0, 0.0529999, 0.294446, 0.0446, 0.166552 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Cyborg_Eyes/Collision13"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.89549, 0.0548933, -0.447139 )
+shape = SubResource( 14 )
+
+[node name="Collision14" type="Area" parent="Cyborg_Eyes"]
+transform = Transform( -0.0530516, 0, -0.0138907, 0, 0.12301, 0, 0.0138907, 0, -0.0530516, -0.3236, 0.0446, 0.1196 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Cyborg_Eyes/Collision14"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.89549, 0.0548933, -0.447139 )
+shape = SubResource( 15 )
+
+[node name="Collision15" type="Area" parent="Cyborg_Eyes"]
+transform = Transform( -0.0828968, 0, -0.0229688, 0, 0.19293, 0, 0.0229688, 0, -0.0828968, -0.346339, 0.0539, 0.1217 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Cyborg_Eyes/Collision15"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8955, 0.0252089, -0.38346 )
+shape = SubResource( 16 )
