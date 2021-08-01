@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+
+[sub_resource type="ConvexPolygonShape" id=1]
+points = PoolVector3Array( -0.499988, -0.499639, -0.500361, -0.499988, -0.499639, 0.499639, -0.117302, -0.499639, 0.424965, 0.207122, -0.499639, 0.208192, 0.423894, -0.499639, -0.116232, 0.500012, -0.499639, -0.500361, -0.499988, 0.500361, -0.500361, -0.499988, -0.499639, -0.500361, 0.500012, -0.499639, -0.500361, -0.499988, -0.499639, 0.499639, -0.499988, -0.499639, -0.500361, -0.499988, 0.500361, -0.500361, 0.423894, -0.499639, -0.116232, -0.499988, 0.500361, -0.500361, 0.500012, -0.499639, -0.500361, 0.207122, -0.499639, 0.208192, -0.117302, -0.499639, 0.424965, -0.499988, -0.499639, 0.499639 )
+
+[node name="Light_Cone" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Light_Cone" type="Spatial" parent="."]
+
+[node name="Collision" type="Area" parent="Light_Cone"]
+transform = Transform( 0.195, 0, 0, 0, 0.195, 0, 0, 0, 0.195, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Light_Cone/Collision"]
+shape = SubResource( 1 )
