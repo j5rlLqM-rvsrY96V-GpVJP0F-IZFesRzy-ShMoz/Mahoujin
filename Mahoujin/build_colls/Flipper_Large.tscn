@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 1.05712, 0.115104, 0.122461 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.619728, 0.155761, 0.122461 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.0985, 0.0187608, 0.0985 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.727809, 0.115104, 0.376484 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 0.379883, 0.0632843, 0.638313 )
+
+[node name="Flipper_Large" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Flipper_Large" type="Spatial" parent="."]
+
+[node name="Build_Collision" type="Area" parent="Flipper_Large"]
+transform = Transform( 0, 0, 0.2, 0, 0.2, 0, -0.2, 0, 0, 0, -0.1, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Flipper_Large/Build_Collision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00303999, 0.165104, -1.33825e-19 )
+shape = SubResource( 1 )
+
+[node name="Build_Collision2" type="Area" parent="Flipper_Large"]
+transform = Transform( 0, 0, 0.2, 0, 0.2, 0, -0.2, 0, 0, 0, -0.1, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Flipper_Large/Build_Collision2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00303998, 0.205761, -1.33762e-19 )
+shape = SubResource( 2 )
+
+[node name="Build_Collision_ConnectionPoint" type="Area" parent="Flipper_Large"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Flipper_Large/Build_Collision_ConnectionPoint"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0202553, 0 )
+shape = SubResource( 3 )
+
+[node name="Build_Collision3" type="Area" parent="Flipper_Large"]
+transform = Transform( 0, 0, 0.2, 0, 0.2, 0, -0.2, 0, 0, 0, -0.1, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Flipper_Large/Build_Collision3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00303999, 0.165104, -1.33825e-19 )
+shape = SubResource( 4 )
+
+[node name="Build_Collision4" type="Area" parent="Flipper_Large"]
+transform = Transform( 0, 0, 0.2, 0, 0.2, 0, -0.2, 0, 0, 0, -0.1, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Flipper_Large/Build_Collision4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00303998, 0.137714, -1.33805e-19 )
+shape = SubResource( 5 )
