@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+[ext_resource path="res://models/cosmetic/LeagueBadge_Projector-493483301902169341.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://models/cosmetic/LeagueBadge2117409306042079406.obj" type="ArrayMesh" id=3]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 3.48, 0.495, 0.495 )
+
+[node name="Bronze_League_Badge" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Bronze_League_Badge" type="Spatial" parent="."]
+
+[node name="BuildCollision" type="Area" parent="Bronze_League_Badge"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, -0.1, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Bronze_League_Badge/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0 )
+shape = SubResource( 1 )
+
+[node name="Orientation" type="Spatial" parent="Bronze_League_Badge"]
+transform = Transform( 0, 0, 0.2, 0, 0.2, 0, -0.2, 0, 0, 0, -0.1, 0 )
+
+[node name="LeagueBadge_Projector" type="MeshInstance" parent="Bronze_League_Badge/Orientation"]
+cast_shadow = 0
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="Base" type="MeshInstance" parent="Bronze_League_Badge/Orientation"]
+cast_shadow = 0
+mesh = ExtResource( 3 )
+material/0 = null
