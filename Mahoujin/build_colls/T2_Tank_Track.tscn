@@ -1,0 +1,73 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.4, 0.4975, 0.4 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.4975, 0.4, 0.4 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.4, 0.4975, 0.4 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.865, 1.55, 3.335 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 0.865, 1.93, 0.795 )
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 0.355, 1.55, 1.74 )
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 0.355, 1.55, 1.74 )
+
+[node name="T2_Tank_Track" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="T2_Tank_Track" type="Spatial" parent="."]
+
+[node name="Colliders" type="Spatial" parent="T2_Tank_Track"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
+
+[node name="Base" type="Area" parent="T2_Tank_Track/Colliders"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T2_Tank_Track/Colliders/Base"]
+shape = SubResource( 1 )
+
+[node name="Base2" type="Area" parent="T2_Tank_Track/Colliders"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T2_Tank_Track/Colliders/Base2"]
+shape = SubResource( 2 )
+
+[node name="Base3" type="Area" parent="T2_Tank_Track/Colliders"]
+
+[node name="CollisionShape" type="CollisionShape" parent="T2_Tank_Track/Colliders/Base3"]
+shape = SubResource( 3 )
+
+[node name="BuildSize" type="Area" parent="T2_Tank_Track/Colliders"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.600271, 1.51306, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T2_Tank_Track/Colliders/BuildSize"]
+shape = SubResource( 4 )
+
+[node name="BuildSize2" type="Area" parent="T2_Tank_Track/Colliders"]
+transform = Transform( 1, 0, 0, 0, 0.97244, 0, 0, 0, 1, -0.530563, 1.51306, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T2_Tank_Track/Colliders/BuildSize2"]
+shape = SubResource( 5 )
+
+[node name="BuildSize3" type="Area" parent="T2_Tank_Track/Colliders"]
+transform = Transform( 0.939873, 0, 0.341524, 0, 1, 0, -0.341524, 0, 0.939873, 0.251413, 1.48887, -1.58804 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T2_Tank_Track/Colliders/BuildSize3"]
+shape = SubResource( 6 )
+
+[node name="BuildSize_mirrored" type="Area" parent="T2_Tank_Track/Colliders"]
+transform = Transform( 0.939873, 0, -0.341524, 0, 1, 0, 0.341524, 0, 0.939873, 0.251413, 1.48887, 1.58892 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T2_Tank_Track/Colliders/BuildSize_mirrored"]
+shape = SubResource( 7 )

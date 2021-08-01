@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.0925, 0.0975, 0.099 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.109565, 0.0815459, 0.645794 )
+
+[node name="T2_Ski" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="T2_Ski" type="Spatial" parent="."]
+
+[node name="Collision" type="Area" parent="T2_Ski"]
+
+[node name="CollisionShape" type="CollisionShape" parent="T2_Ski/Collision"]
+shape = SubResource( 1 )
+
+[node name="Collision" type="Area" parent="T2_Ski/Collision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.720917, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T2_Ski/Collision/Collision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00174284, -0.519446, 0.0913913 )
+shape = SubResource( 2 )

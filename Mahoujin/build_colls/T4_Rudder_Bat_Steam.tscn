@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.095, 0.05, 0.294623 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.055, 0.48, 0.165 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.02, 0.475, 0.69 )
+
+[node name="T4_Rudder_Bat_Steam" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="T4_Rudder_Bat_Steam" type="Spatial" parent="."]
+
+[node name="BuildCollision" type="Area" parent="T4_Rudder_Bat_Steam"]
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Rudder_Bat_Steam/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.048, -0.199624 )
+shape = SubResource( 1 )
+
+[node name="BuildCollision2" type="Area" parent="T4_Rudder_Bat_Steam"]
+transform = Transform( 1, 0, 0, 0, 0.931847, 0.367594, 0, -0.31008, 1.10469, 0, 0.0866416, -0.159253 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Rudder_Bat_Steam/BuildCollision2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39, 0.03 )
+shape = SubResource( 2 )
+
+[node name="Extents" type="Area" parent="T4_Rudder_Bat_Steam"]
+transform = Transform( 1, 0, 0, 0, 1.01353, 0, 0, 0, 0.68977, 0, 0.0378379, -0.199425 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Rudder_Bat_Steam/Extents"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0 )
+shape = SubResource( 3 )

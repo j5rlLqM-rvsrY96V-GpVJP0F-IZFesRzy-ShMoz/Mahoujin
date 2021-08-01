@@ -1,0 +1,180 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.1, 0.949, 0.199 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.1, 0.878, 0.199 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.1, 0.878, 0.199 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.1, 0.9875, 0.1 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 0.1, 1.32661, 0.1 )
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 0.1, 0.965, 0.2 )
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 0.1, 0.940599, 0.1 )
+
+[sub_resource type="BoxShape" id=8]
+extents = Vector3( 0.1, 0.949, 0.199 )
+
+[sub_resource type="BoxShape" id=9]
+extents = Vector3( 0.1, 0.965, 0.2 )
+
+[sub_resource type="BoxShape" id=10]
+extents = Vector3( 0.1, 0.0989543, 0.0988978 )
+
+[sub_resource type="BoxShape" id=11]
+extents = Vector3( 0.25, 0.25, 0.1 )
+
+[sub_resource type="BoxShape" id=12]
+extents = Vector3( 0.147547, 0.162245, 0.1 )
+
+[sub_resource type="BoxShape" id=13]
+extents = Vector3( 0.147547, 0.290194, 0.1 )
+
+[sub_resource type="BoxShape" id=14]
+extents = Vector3( 0.324122, 0.083768, 0.066336 )
+
+[sub_resource type="BoxShape" id=15]
+extents = Vector3( 0.311997, 0.083768, 0.066336 )
+
+[sub_resource type="BoxShape" id=16]
+extents = Vector3( 0.137733, 0.79387, 0.110145 )
+
+[sub_resource type="BoxShape" id=17]
+extents = Vector3( 0.292454, 0.780835, 0.110145 )
+
+[node name="T4_Insect_Leg" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="T4_Insect_Leg" type="Spatial" parent="."]
+
+[node name="Extents" type="Spatial" parent="T4_Insect_Leg"]
+transform = Transform( 0, 0, -1, -1, 0, 0, 0, 1, 0, 0, 0, -0.0839729 )
+
+[node name="Extents" type="Area" parent="T4_Insect_Leg/Extents"]
+transform = Transform( 0.385343, -1.01552, 0.431065, 0, 0.453248, 1.06779, -1.18597, -0.329963, 0.140061, -0.264, -0.052, -0.048 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Insect_Leg/Extents/Extents"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.849, -0.05 )
+shape = SubResource( 1 )
+
+[node name="Extents2" type="Area" parent="T4_Insect_Leg/Extents"]
+transform = Transform( 0.385343, -1.10323, 0, 0, 0, 1.16, -1.18597, -0.358459, 0, -0.264, -0.052, -0.048 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Insect_Leg/Extents/Extents2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.778, -0.05 )
+shape = SubResource( 2 )
+
+[node name="Extents3" type="Area" parent="T4_Insect_Leg/Extents"]
+transform = Transform( -0.385344, -1.10323, 0, 0, 0, 1.16, -1.18597, 0.35846, 0, -0.264, -0.052, 0.048 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Insect_Leg/Extents/Extents3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.778, -0.05 )
+shape = SubResource( 3 )
+
+[node name="Extents4" type="Area" parent="T4_Insect_Leg/Extents"]
+transform = Transform( 3.76225e-07, -1.0506, 0.491778, -2.3514e-07, 0.491778, 1.0506, -1.578, -3.45707e-07, 0, -0.208, -0.005, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Insect_Leg/Extents/Extents4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.21556e-08, 0.887, 8.4433e-05 )
+shape = SubResource( 4 )
+
+[node name="Extents5" type="Area" parent="T4_Insect_Leg/Extents"]
+transform = Transform( 0, -0.187843, 0, 0, 0, 8.95914, -3.93456, 0, 0, -1.73169, -0.131133, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Insect_Leg/Extents/Extents5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.55689e-08, 1.22663, 8.56519e-05 )
+shape = SubResource( 5 )
+
+[node name="Extents6" type="Area" parent="T4_Insect_Leg/Extents"]
+transform = Transform( 0.385344, -1.02123, -0.417377, 1.1149e-07, -0.438857, 1.07378, -1.18597, -0.331817, -0.135614, -0.264, -0.052, -0.05 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Insect_Leg/Extents/Extents6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86, -0.05 )
+shape = SubResource( 6 )
+
+[node name="Extents7" type="Area" parent="T4_Insect_Leg/Extents"]
+transform = Transform( 0, -1.0544, -0.483562, 4.7056e-08, -0.483563, 1.0544, -1.57894, -3.45707e-08, 0, -0.264191, -0.223996, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Insect_Leg/Extents/Extents7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.92469e-08, 0.840627, 8.56029e-05 )
+shape = SubResource( 7 )
+
+[node name="Extents8" type="Area" parent="T4_Insect_Leg/Extents"]
+transform = Transform( -0.385344, -1.01552, 0.431064, -1.48654e-07, 0.453248, 1.06779, -1.18597, 0.329964, -0.140061, -0.264, -0.052, 0.048 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Insect_Leg/Extents/Extents8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.849, -0.05 )
+shape = SubResource( 8 )
+
+[node name="Extents9" type="Area" parent="T4_Insect_Leg/Extents"]
+transform = Transform( -0.385344, -1.02123, -0.417378, 7.4327e-08, -0.438857, 1.07378, -1.18597, 0.331816, 0.135614, -0.264, -0.052, 0.05 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Insect_Leg/Extents/Extents9"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86, -0.05 )
+shape = SubResource( 9 )
+
+[node name="Build Collision" type="Area" parent="T4_Insect_Leg"]
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Insect_Leg/Build Collision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0010457, -0.00110245 )
+shape = SubResource( 10 )
+
+[node name="Collision" type="Area" parent="T4_Insect_Leg/Build Collision"]
+transform = Transform( 0, 0, -1.36536, -1, 0, 0, 0, 0.920284, 0, 0, 0.203106, -0.0892954 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Insect_Leg/Build Collision/Collision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04, -0.05, 0 )
+shape = SubResource( 11 )
+
+[node name="Collision2" type="Area" parent="T4_Insect_Leg/Build Collision"]
+transform = Transform( 0, 0, -1.36536, -1, 0, 0, 0, 0.920284, 0, 0, 0.775533, -0.418989 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Insect_Leg/Build Collision/Collision2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.164092, -0.133362, 0 )
+shape = SubResource( 12 )
+
+[node name="Collision3" type="Area" parent="T4_Insect_Leg/Build Collision"]
+transform = Transform( 0, 0, -1.36536, -1, 0, 0, 0, 0.920284, 0, 0, 1.37639, 0.144755 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Insect_Leg/Build Collision/Collision3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.164091, -0.00541351, 0 )
+shape = SubResource( 13 )
+
+[node name="Collision4" type="Area" parent="T4_Insect_Leg/Build Collision"]
+transform = Transform( 0.00308301, 0.00083708, -0.999995, -0.735949, -0.63536, -0.00281435, -0.705312, 0.662962, -0.00143456, 0.0358863, 1.03667, -0.326475 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Insect_Leg/Build Collision/Collision4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.20521, -0.0947639, 0.0336552 )
+shape = SubResource( 14 )
+
+[node name="Collision5" type="Area" parent="T4_Insect_Leg/Build Collision"]
+transform = Transform( 0.00301603, 0.000860758, -0.999995, -0.822839, 0.529081, -0.00197256, 0.564286, 0.771498, 0.00246841, 0.0362072, 0.498128, -0.161458 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Insect_Leg/Build Collision/Collision5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.227602, -0.102622, 0.0336459 )
+shape = SubResource( 15 )
+
+[node name="Collision6" type="Area" parent="T4_Insect_Leg/Build Collision"]
+transform = Transform( 0, 0, -2.38993, -1.00394, -0.0573597, 0, -0.0697841, 0.825196, 0, 0, 1.55983, -0.144506 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Insect_Leg/Build Collision/Collision6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22442, 0.23411, -0.00200178 )
+shape = SubResource( 16 )
+
+[node name="Collision7" type="Area" parent="T4_Insect_Leg/Build Collision"]
+transform = Transform( 0, -9.63002e-09, -1.43597, -0.602985, 0.0496499, 0, 0.0937639, 0.319293, 0, -0.0067215, 1.66526, -0.91166 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Insect_Leg/Build Collision/Collision7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.177934, 0.305603, -0.00200186 )
+shape = SubResource( 17 )

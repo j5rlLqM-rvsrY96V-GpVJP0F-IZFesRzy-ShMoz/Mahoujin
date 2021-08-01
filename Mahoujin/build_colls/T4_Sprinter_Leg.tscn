@@ -1,0 +1,78 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.32, 0.563628, 0.287864 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.235, 0.183162, 0.281401 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.2, 0.579999, 0.190846 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.23, 0.144211, 0.467585 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 0.325, 0.105, 0.275 )
+
+[sub_resource type="ConvexPolygonShape" id=6]
+points = PoolVector3Array( -1.52135, -1.49051, 1.72339, -1.52135, -1.49051, -1.72339, 1.52768, -1.49066, 1.7234, 1.52768, -1.49066, -1.7234, -6.27735, -3.71998, 1.92173, 7.61552, -6.9888, 2.65229, -8.81883, -6.98928, 2.64164, -8.81883, -6.98928, -2.677, -6.27735, -3.71998, -1.92173, 7.61552, -6.9888, -2.68766, -6.27735, -3.71998, -1.92173, -8.81867, -14.9096, -2.92259, 7.61568, -14.9096, -2.92263, -8.81867, -14.9096, 2.92259, 7.61568, -14.9096, 2.92263, 7.61552, -6.9888, -2.68766, 1.52768, -1.49066, -1.7234, -1.52135, -1.49051, -1.72339, -6.27735, -3.71998, 1.92173, -6.27735, -3.71998, -1.92173, -1.52135, -1.49051, 1.72339, -1.52135, -1.49051, -1.72339, 1.52768, -1.49066, 1.7234, 1.52768, -1.49066, -1.7234, 7.61552, -6.9888, 2.65229, 7.61552, -6.9888, -2.68766 )
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 0.295, 0.095, 0.295 )
+
+[node name="T4_Sprinter_Leg" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="T4_Sprinter_Leg" type="Spatial" parent="."]
+
+[node name="Build Collision" type="Spatial" parent="T4_Sprinter_Leg"]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="Collision" type="Area" parent="T4_Sprinter_Leg/Build Collision"]
+transform = Transform( 1, 0, 0, 0, 0.996876, 0.0789811, 0, -0.0789811, 0.996876, 0, -0.808, 0.352 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Sprinter_Leg/Build Collision/Collision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.36651e-07, 0.0794068, -0.252136 )
+shape = SubResource( 1 )
+
+[node name="Collision2" type="Area" parent="T4_Sprinter_Leg/Build Collision"]
+transform = Transform( 1, 0, 0, 0, 0.9708, -0.239889, 0, 0.239889, 0.9708, 0, -1.142, -0.051 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Sprinter_Leg/Build Collision/Collision2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.12843e-07, -0.19183, 0.414916 )
+shape = SubResource( 2 )
+
+[node name="Collision3" type="Area" parent="T4_Sprinter_Leg/Build Collision"]
+transform = Transform( 1, 0, 0, 0, 0.999781, -0.0209424, 0, 0.0209424, 0.999781, 0, -1.641, -0.331 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Sprinter_Leg/Build Collision/Collision3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.34712e-08, -0.413587, 0.483903 )
+shape = SubResource( 3 )
+
+[node name="Collision4" type="Area" parent="T4_Sprinter_Leg/Build Collision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.079, 0.166 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Sprinter_Leg/Build Collision/Collision4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.82099e-07, -0.660789, 0.151691 )
+shape = SubResource( 4 )
+
+[node name="Collision5" type="Area" parent="T4_Sprinter_Leg/Build Collision"]
+transform = Transform( -1, 3.01992e-07, 3.89414e-07, -3.01992e-07, -1, 1.176e-13, 3.89414e-07, 0, 1, 0, -0.2121, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Sprinter_Leg/Build Collision/Collision5"]
+shape = SubResource( 5 )
+
+[node name="ExtentCollider" type="Area" parent="T4_Sprinter_Leg"]
+transform = Transform( 0, 1.87904e-07, -0.2, -4.5001e-07, -0.2, -1.87904e-07, -0.2, 4.5001e-07, 0, 0, -0.1, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Sprinter_Leg/ExtentCollider"]
+shape = SubResource( 6 )
+
+[node name="AttachCollider" type="Area" parent="T4_Sprinter_Leg"]
+transform = Transform( 1, -3.89414e-07, -3.89414e-07, 3.89414e-07, 1, -1.51644e-13, 3.89414e-07, 0, 1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Sprinter_Leg/AttachCollider"]
+shape = SubResource( 7 )
