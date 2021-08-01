@@ -1,0 +1,159 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.095, 0.0393542, 0.095 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.555242, 0.5, 0.5 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.395, 0.5, 0.5 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.518387, 0.273696, 0.47 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 0.516278, 0.392195, 0.420108 )
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 0.5, 0.5, 0.350579 )
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 0.455, 0.5, 0.5 )
+
+[sub_resource type="BoxShape" id=8]
+extents = Vector3( 0.482307, 0.455466, 0.5 )
+
+[sub_resource type="BoxShape" id=9]
+extents = Vector3( 0.485, 0.5, 0.5 )
+
+[sub_resource type="BoxShape" id=10]
+extents = Vector3( 0.5, 0.5, 0.41 )
+
+[sub_resource type="BoxShape" id=11]
+extents = Vector3( 1.37512, 0.5, 0.674098 )
+
+[sub_resource type="BoxShape" id=12]
+extents = Vector3( 0.5, 0.5, 0.5 )
+
+[sub_resource type="BoxShape" id=13]
+extents = Vector3( 0.0920999, 0.14161, 0.0687988 )
+
+[sub_resource type="BoxShape" id=14]
+extents = Vector3( 0.095, 0.164867, 0.095 )
+
+[sub_resource type="BoxShape" id=15]
+extents = Vector3( 0.485, 0.5, 0.5 )
+
+[node name="T3_ElectroShield_I_Left_Steam" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="T3_ElectroShield_I_Left_Steam" type="Spatial" parent="."]
+
+[node name="Collision" type="Spatial" parent="T3_ElectroShield_I_Left_Steam"]
+
+[node name="BuildCollision1" type="Area" parent="T3_ElectroShield_I_Left_Steam/Collision"]
+
+[node name="CollisionShape" type="CollisionShape" parent="T3_ElectroShield_I_Left_Steam/Collision/BuildCollision1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0606458, -0.0100002 )
+shape = SubResource( 1 )
+
+[node name="BuildCollision" type="Area" parent="T3_ElectroShield_I_Left_Steam/Collision"]
+transform = Transform( 0.779111, 0, 0, 0, 0.0252897, 0, 0, 0, 0.36612, -0.0606499, 0.267658, 0.0885019 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T3_ElectroShield_I_Left_Steam/Collision/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.055244, -0.0799995, 0 )
+shape = SubResource( 2 )
+
+[node name="BuildCollision2" type="Area" parent="T3_ElectroShield_I_Left_Steam/Collision"]
+transform = Transform( 1.04082, 0, 0, 0, 0.026072, 0, 0, 0, 0.331378, 1.03358, 0.267721, -0.108666 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T3_ElectroShield_I_Left_Steam/Collision/BuildCollision2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, 0 )
+shape = SubResource( 3 )
+
+[node name="BuildCollision3" type="Area" parent="T3_ElectroShield_I_Left_Steam/Collision"]
+transform = Transform( 0.946716, 0, 0, 0, 0.018526, 0.16666, 0, -0.0183449, 0.168306, 0.00881958, 0.191181, -0.177505 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T3_ElectroShield_I_Left_Steam/Collision/BuildCollision3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0183861, 0.146326, -2.41329e-05 )
+shape = SubResource( 4 )
+
+[node name="BuildCollision4" type="Area" parent="T3_ElectroShield_I_Left_Steam/Collision"]
+transform = Transform( 0.85349, 0, 0, 0, 0.0188214, 0.180995, 0, -0.0180418, 0.188816, 1.14907, 0.196004, -0.386233 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T3_ElectroShield_I_Left_Steam/Collision/BuildCollision4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.016278, -0.0737936, -0.00265187 )
+shape = SubResource( 5 )
+
+[node name="BuildCollision5" type="Area" parent="T3_ElectroShield_I_Left_Steam/Collision"]
+transform = Transform( 0.902334, 0, 0, 0, 0.178784, 0, 0, 0, 0.0200988, 0.0368309, 0.0264623, -0.265062 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T3_ElectroShield_I_Left_Steam/Collision/BuildCollision5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -0.149418 )
+shape = SubResource( 6 )
+
+[node name="BuildCollision6" type="Area" parent="T3_ElectroShield_I_Left_Steam/Collision"]
+transform = Transform( 0.18709, 0, 0, 0, 0.178784, 0, 0, 0, 0.025804, 0.789852, 0.0320198, -0.473097 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T3_ElectroShield_I_Left_Steam/Collision/BuildCollision6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, 0 )
+shape = SubResource( 7 )
+
+[node name="BuildCollision7" type="Area" parent="T3_ElectroShield_I_Left_Steam/Collision"]
+transform = Transform( 0.222632, 0, 0, 0, 0.178784, 0, 0, 0, 0.0190104, 1.44324, 0.0388453, -0.468519 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T3_ElectroShield_I_Left_Steam/Collision/BuildCollision7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.017693, -0.0354662, 0 )
+shape = SubResource( 8 )
+
+[node name="BuildCollision8" type="Area" parent="T3_ElectroShield_I_Left_Steam/Collision"]
+transform = Transform( 0.198386, 0.00179593, 0.00979863, -0.00325842, 0.178771, -3.4181e-05, -0.195666, -0.00115618, 0.00993538, 0.593288, 0.0251613, -0.36983 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T3_ElectroShield_I_Left_Steam/Collision/BuildCollision8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, 0 )
+shape = SubResource( 9 )
+
+[node name="BuildCollision9" type="Area" parent="T3_ElectroShield_I_Left_Steam/Collision"]
+transform = Transform( 0.266266, 0, 0, 0, 0.0133193, 0, 0, 0, 0.233152, 1.44687, 0.266701, -0.204582 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T3_ElectroShield_I_Left_Steam/Collision/BuildCollision9"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, 0 )
+shape = SubResource( 10 )
+
+[node name="Buildcollision2" type="Area" parent="T3_ElectroShield_I_Left_Steam/Collision"]
+transform = Transform( 0.0796262, 0, -0.190378, 0, 0.0180479, 0, 0.0816528, 0, 0.185653, 0.466, 0.267346, 0.135182 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T3_ElectroShield_I_Left_Steam/Collision/Buildcollision2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.876552, -0.0800002, -0.1737 )
+shape = SubResource( 11 )
+
+[node name="Buildcollision3" type="Area" parent="T3_ElectroShield_I_Left_Steam/Collision"]
+transform = Transform( 0.0866199, 0.00023394, -0.146909, -0.000516848, 0.0150119, 0.00471861, 0.066064, -0.000189286, 0.192657, 1.46208, 0.265253, -0.0470753 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T3_ElectroShield_I_Left_Steam/Collision/Buildcollision3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, 0 )
+shape = SubResource( 12 )
+
+[node name="BuildCollision10" type="Area" parent="T3_ElectroShield_I_Left_Steam/Collision"]
+transform = Transform( 0.301312, 0, 0, 0, 0.837253, 0.183076, 0, -0.546816, 0.280316, 0, 0.0402394, -0.0944662 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T3_ElectroShield_I_Left_Steam/Collision/BuildCollision10"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00289921, 0.0416311, -0.00181889 )
+shape = SubResource( 13 )
+
+[node name="BuildCollision11" type="Area" parent="T3_ElectroShield_I_Left_Steam/Collision"]
+transform = Transform( 0.301312, 0, 0, 0, 0.975071, -0.0398007, 0, 0.221892, 0.174898, 0, 0.0413334, 0.0600405 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T3_ElectroShield_I_Left_Steam/Collision/BuildCollision11"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0648892, -0.00997765 )
+shape = SubResource( 14 )
+
+[node name="BuildCollision12" type="Area" parent="T3_ElectroShield_I_Left_Steam/Collision"]
+transform = Transform( 0.132276, 0.0826437, 0.00405679, -0.00915387, 0.142415, -0.00439529, -0.138226, 0.0696548, 0.00417323, 0.612194, 0.193241, -0.282627 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T3_ElectroShield_I_Left_Steam/Collision/BuildCollision12"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, 0 )
+shape = SubResource( 15 )

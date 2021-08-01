@@ -1,0 +1,181 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.49, 0.49, 0.49 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.49, 0.49, 0.49 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.49, 0.49, 0.49 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.49, 0.49, 0.49 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 0.49, 0.49, 0.49 )
+
+[sub_resource type="ConvexPolygonShape" id=6]
+points = PoolVector3Array( -4.27165, 1.41707, -2.94946, -2.98536, 1.27, -1.72793, -4.02105, 0.65006, -1.0087, -2.9727, 1.40974, -4.30422, -1.72071, 1.27, -2.99261, -1.00457, 0.65006, -4.01722, 0.572019, 0.65006, -4.12324, 0.609825, 1.27, -3.4585, 2.88484, 0.0998388, -4.38722, 1.88692, 1.27, -2.96189, 4.10769, 0.455334, -2.22488, 2.99905, 1.27, -1.72785, 3.46195, 1.28735, 0, 4.10769, 0.455334, 2.22488, -3.4585, 1.27, 0, -4.27165, 1.41707, -2.94946, -3.99952, -2.84217e-16, -1.96942, -2.9727, 1.40974, -4.30422, -1.97211, -2.84217e-16, -4.05076, 2.99905, 1.27, 1.72785, 1.88692, 1.27, 2.96189, 2.88484, 0.0998388, 4.38722, 0.609825, 1.27, 3.4585, 0.572019, 0.65006, 4.12324, -1.72071, 1.27, 2.99261, -1.00457, 0.65006, 4.01722, -2.9727, 1.40974, 4.30422, -2.98536, 1.27, 1.72793, -4.27165, 1.41707, 2.94946, -4.02105, 0.65006, 1.0087, -4.18032, 0.65006, 0, -2.9727, 1.40974, 4.30422, -3.99952, -2.84217e-16, 1.96942, -4.27165, 1.41707, 2.94946, -1.97211, -2.84217e-16, 4.05076, -4.02105, 0.65006, 1.0087, -1.00457, 0.65006, -4.01722, -4.02105, 0.65006, -1.0087, 4.10769, -0.455334, -2.22488, 4.10769, -0.455334, 2.22488, 2.88484, -0.0998388, 4.38722, 0.572019, -0.65006, 4.12324, -1.00457, -0.65006, 4.01722, 2.88484, -0.0998388, -4.38722, 0.572019, -0.65006, -4.12324, -1.00457, -0.65006, -4.01722, -1.97211, -2.84217e-16, -4.05076, -1.97211, -2.84217e-16, 4.05076, -1.00457, 0.65006, 4.01722, -4.02105, -0.65006, -1.0087, -2.98536, -1.27, -1.72793, -4.27165, -1.41707, -2.94946, -2.9727, -1.40974, -4.30422, -1.72071, -1.27, -2.99261, -1.00457, -0.65006, -4.01722, 0.572019, -0.65006, -4.12324, 0.609825, -1.27, -3.4585, 2.88484, -0.0998388, -4.38722, 1.88692, -1.27, -2.96189, 4.10769, -0.455334, -2.22488, 2.99905, -1.27, -1.72785, 3.46195, -1.28735, 0, -3.4585, -1.27, 0, -4.18032, -0.65006, 0, -2.9727, -1.40974, -4.30422, -3.99952, -2.84217e-16, -1.96942, -4.27165, -1.41707, -2.94946, 4.10769, -0.455334, 2.22488, 2.99905, -1.27, 1.72785, 1.88692, -1.27, 2.96189, 2.88484, -0.0998388, 4.38722, 0.609825, -1.27, 3.4585, 0.572019, -0.65006, 4.12324, -1.72071, -1.27, 2.99261, -1.00457, -0.65006, 4.01722, -2.9727, -1.40974, 4.30422, -2.98536, -1.27, 1.72793, -4.27165, -1.41707, 2.94946, -4.02105, -0.65006, 1.0087, -4.27165, -1.41707, 2.94946, -3.99952, -2.84217e-16, 1.96942, -2.9727, -1.40974, 4.30422, -4.02105, -0.65006, 1.0087, -4.02105, -0.65006, -1.0087, -4.18032, -0.65006, 0 )
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 1.95, 0.105, 0.55 )
+
+[sub_resource type="BoxShape" id=8]
+extents = Vector3( 1.13, 0.82, 0.175 )
+
+[sub_resource type="BoxShape" id=9]
+extents = Vector3( 1.13, 0.82, 0.175 )
+
+[sub_resource type="BoxShape" id=10]
+extents = Vector3( 0.795, 0.485, 0.175 )
+
+[sub_resource type="BoxShape" id=11]
+extents = Vector3( 0.795, 0.485, 0.175 )
+
+[sub_resource type="BoxShape" id=12]
+extents = Vector3( 1.545, 0.485, 0.175 )
+
+[sub_resource type="BoxShape" id=13]
+extents = Vector3( 1.545, 0.485, 0.175 )
+
+[sub_resource type="BoxShape" id=14]
+extents = Vector3( 2.5, 0.565, 0.6 )
+
+[sub_resource type="BoxShape" id=15]
+extents = Vector3( 1.125, 0.84, 0.25 )
+
+[sub_resource type="BoxShape" id=16]
+extents = Vector3( 0.5, 0.5, 0.5 )
+
+[sub_resource type="BoxShape" id=17]
+extents = Vector3( 1.125, 0.84, 0.25 )
+
+[sub_resource type="BoxShape" id=18]
+extents = Vector3( 1.125, 0.84, 0.25 )
+
+[sub_resource type="BoxShape" id=19]
+extents = Vector3( 1.125, 0.84, 0.25 )
+
+[node name="T5_Hover_Gold_Steam" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="T5_Hover_Gold_Steam" type="Spatial" parent="."]
+
+[node name="BuildCollision" type="Spatial" parent="T5_Hover_Gold_Steam"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
+
+[node name="Base" type="Area" parent="T5_Hover_Gold_Steam/BuildCollision"]
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Hover_Gold_Steam/BuildCollision/Base"]
+shape = SubResource( 1 )
+
+[node name="Base2" type="Area" parent="T5_Hover_Gold_Steam/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Hover_Gold_Steam/BuildCollision/Base2"]
+shape = SubResource( 2 )
+
+[node name="Base3" type="Area" parent="T5_Hover_Gold_Steam/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Hover_Gold_Steam/BuildCollision/Base3"]
+shape = SubResource( 3 )
+
+[node name="Base4" type="Area" parent="T5_Hover_Gold_Steam/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Hover_Gold_Steam/BuildCollision/Base4"]
+shape = SubResource( 4 )
+
+[node name="Base5" type="Area" parent="T5_Hover_Gold_Steam/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Hover_Gold_Steam/BuildCollision/Base5"]
+shape = SubResource( 5 )
+
+[node name="Cylinder" type="Area" parent="T5_Hover_Gold_Steam/BuildCollision"]
+transform = Transform( 1, -2.46407e-08, 2.31914e-08, 2.28516e-08, -0.0136986, -0.999906, 2.4956e-08, 0.999906, -0.0136986, 0, 4.762, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Hover_Gold_Steam/BuildCollision/Cylinder"]
+shape = SubResource( 6 )
+
+[node name="Collision" type="Area" parent="T5_Hover_Gold_Steam/BuildCollision"]
+transform = Transform( 1, -1.93153e-08, 2.333e-09, 1.83964e-08, 0.899699, -0.436511, 6.33235e-09, 0.436511, 0.899699, 0, 0.257001, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Hover_Gold_Steam/BuildCollision/Collision"]
+shape = SubResource( 7 )
+
+[node name="Collision (1)" type="Area" parent="T5_Hover_Gold_Steam/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.07, 2.333, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Hover_Gold_Steam/BuildCollision/Collision (1)"]
+shape = SubResource( 8 )
+
+[node name="Collision (2)" type="Area" parent="T5_Hover_Gold_Steam/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.07, 2.333, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Hover_Gold_Steam/BuildCollision/Collision (2)"]
+shape = SubResource( 9 )
+
+[node name="Collision (3)" type="Area" parent="T5_Hover_Gold_Steam/BuildCollision"]
+transform = Transform( 0.819152, -0.573576, 0, 0.573576, 0.819152, 0, 0, 0, 1, -4.202, 3.2, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Hover_Gold_Steam/BuildCollision/Collision (3)"]
+shape = SubResource( 10 )
+
+[node name="Collision (4)" type="Area" parent="T5_Hover_Gold_Steam/BuildCollision"]
+transform = Transform( 0.819152, 0.573576, 0, -0.573576, 0.819152, 0, 0, 0, 1, 4.202, 3.2, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Hover_Gold_Steam/BuildCollision/Collision (4)"]
+shape = SubResource( 11 )
+
+[node name="Collision (5)" type="Area" parent="T5_Hover_Gold_Steam/BuildCollision"]
+transform = Transform( 0.906308, -0.422618, 0, 0.422618, 0.906308, 0, 0, 0, 1, 3.541, 1.295, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Hover_Gold_Steam/BuildCollision/Collision (5)"]
+shape = SubResource( 12 )
+
+[node name="Collision (6)" type="Area" parent="T5_Hover_Gold_Steam/BuildCollision"]
+transform = Transform( 0.906308, 0.422618, 0, -0.422618, 0.906308, 0, 0, 0, 1, -3.541, 1.295, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Hover_Gold_Steam/BuildCollision/Collision (6)"]
+shape = SubResource( 13 )
+
+[node name="Collision (7)" type="Area" parent="T5_Hover_Gold_Steam/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.121, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Hover_Gold_Steam/BuildCollision/Collision (7)"]
+shape = SubResource( 14 )
+
+[node name="Collision (8)" type="Area" parent="T5_Hover_Gold_Steam/BuildCollision"]
+transform = Transform( 0.722032, 0.664589, -0.192331, -0.69186, 0.693572, -0.200718, -8.19564e-08, 0.277991, 0.960584, 2.946, 7.798, 0.956 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Hover_Gold_Steam/BuildCollision/Collision (8)"]
+shape = SubResource( 15 )
+
+[node name="Collision (9)" type="Area" parent="T5_Hover_Gold_Steam/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 6, 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Hover_Gold_Steam/BuildCollision/Collision (9)"]
+shape = SubResource( 16 )
+
+[node name="Collision (10)" type="Area" parent="T5_Hover_Gold_Steam/BuildCollision"]
+transform = Transform( 0.691862, -0.69357, 0.200718, 0.72203, 0.664591, -0.192331, 2.98023e-08, 0.277991, 0.960584, -2.946, 7.798, 0.956 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Hover_Gold_Steam/BuildCollision/Collision (10)"]
+shape = SubResource( 17 )
+
+[node name="Collision (11)" type="Area" parent="T5_Hover_Gold_Steam/BuildCollision"]
+transform = Transform( -0.691861, 0.693572, -0.200714, 0.72203, 0.664591, -0.192332, -3.20375e-06, -0.277988, -0.960585, 2.9535, 7.798, -0.955983 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Hover_Gold_Steam/BuildCollision/Collision (11)"]
+shape = SubResource( 18 )
+
+[node name="Collision (12)" type="Area" parent="T5_Hover_Gold_Steam/BuildCollision"]
+transform = Transform( -0.722032, -0.664588, 0.192335, -0.69186, 0.693572, -0.200719, -3.02494e-06, -0.277994, -0.960583, -2.9385, 7.798, -0.955983 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Hover_Gold_Steam/BuildCollision/Collision (12)"]
+shape = SubResource( 19 )

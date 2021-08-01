@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.1, 0.295, 0.1 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.295, 0.1, 0.1 )
+
+[sub_resource type="SphereShape" id=3]
+radius = 0.27
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.05, 0.325, 0.265 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 0.05, 0.325, 0.265 )
+
+[node name="T5_EMP_Module" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="T5_EMP_Module" type="Spatial" parent="."]
+
+[node name="Colliders" type="Spatial" parent="T5_EMP_Module"]
+
+[node name="Base" type="Area" parent="T5_EMP_Module/Colliders"]
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_EMP_Module/Colliders/Base"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0 )
+shape = SubResource( 1 )
+
+[node name="Base2" type="Area" parent="T5_EMP_Module/Colliders"]
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_EMP_Module/Colliders/Base2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0 )
+shape = SubResource( 2 )
+
+[node name="Sphere_Col" type="Area" parent="T5_EMP_Module/Colliders"]
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_EMP_Module/Colliders/Sphere_Col"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0 )
+shape = SubResource( 3 )
+
+[node name="Base2 (3)" type="Area" parent="T5_EMP_Module/Colliders"]
+transform = Transform( -0.707106, -0.707107, 0, 0.707107, -0.707106, 0, 0, 0, 1, 0, 0.2, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_EMP_Module/Colliders/Base2 (3)"]
+shape = SubResource( 4 )
+
+[node name="Base2 (4)" type="Area" parent="T5_EMP_Module/Colliders"]
+transform = Transform( -0.707108, 0.707105, 0, -0.707105, -0.707108, 0, 0, 0, 1, 0, 0.2, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_EMP_Module/Colliders/Base2 (4)"]
+shape = SubResource( 5 )

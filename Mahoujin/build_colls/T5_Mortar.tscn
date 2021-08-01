@@ -1,0 +1,348 @@
+[gd_scene load_steps=37 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+
+[sub_resource type="ConvexPolygonShape" id=1]
+points = PoolVector3Array( -0.16684, 0.0843632, -0.0691073, -0.16684, -0.0843632, -0.0691073, -0.127694, 0.0843632, -0.127694, -0.127694, -0.0843632, -0.127694, -0.0691075, 0.0843632, -0.16684, -0.0691075, -0.0843632, -0.16684, -9.14922e-08, 0.0843632, -0.180586, -9.14922e-08, -0.0843632, -0.180586, 0.0691073, 0.0843632, -0.16684, 0.0691073, -0.0843632, -0.16684, 0.127694, 0.0843632, -0.127694, 0.127694, -0.0843632, -0.127694, 0.16684, 0.0843632, -0.0691075, 0.16684, -0.0843632, -0.0691075, 0.180586, 0.0843632, -6.45827e-08, 0.180586, -0.0843632, -6.45827e-08, 0.16684, 0.0843632, 0.0691074, 0.16684, -0.0843632, 0.0691074, 0.127694, 0.0843632, 0.127694, 0.127694, -0.0843632, 0.127694, 0.0691074, 0.0843632, 0.16684, 0.0691074, -0.0843632, 0.16684, 2.69095e-08, 0.0843632, 0.180586, 2.69095e-08, -0.0843632, 0.180586, -0.0691074, 0.0843632, 0.16684, -0.0691074, -0.0843632, 0.16684, -0.127694, 0.0843632, 0.127694, -0.127694, -0.0843632, 0.127694, -0.16684, 0.0843632, 0.0691074, -0.16684, -0.0843632, 0.0691074, -0.180586, 0.0843632, 0, -0.180586, -0.0843632, 0, -0.16684, 0.0843632, -0.0691073, -0.16684, -0.0843632, -0.0691073, 0, -0.0843632, 0, -0.127694, -0.0843632, -0.127694, -0.16684, -0.0843632, -0.0691073, -0.0691075, -0.0843632, -0.16684, -9.14922e-08, -0.0843632, -0.180586, 0.0691073, -0.0843632, -0.16684, 0.127694, -0.0843632, -0.127694, 0.16684, -0.0843632, -0.0691075, 0.180586, -0.0843632, -6.45827e-08, 0.16684, -0.0843632, 0.0691074, 0.127694, -0.0843632, 0.127694, 0.0691074, -0.0843632, 0.16684, 2.69095e-08, -0.0843632, 0.180586, -0.0691074, -0.0843632, 0.16684, -0.127694, -0.0843632, 0.127694, -0.16684, -0.0843632, 0.0691074, -0.180586, -0.0843632, 0, 0, 0.0843632, 0, -0.16684, 0.0843632, -0.0691073, -0.127694, 0.0843632, -0.127694, -0.0691075, 0.0843632, -0.16684, -9.14922e-08, 0.0843632, -0.180586, 0.0691073, 0.0843632, -0.16684, 0.127694, 0.0843632, -0.127694, 0.16684, 0.0843632, -0.0691075, 0.180586, 0.0843632, -6.45827e-08, 0.16684, 0.0843632, 0.0691074, 0.127694, 0.0843632, 0.127694, 0.0691074, 0.0843632, 0.16684, 2.69095e-08, 0.0843632, 0.180586, -0.0691074, 0.0843632, 0.16684, -0.127694, 0.0843632, 0.127694, -0.16684, 0.0843632, 0.0691074, -0.180586, 0.0843632, 0 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.45, 0.345, 0.72 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.475, 0.495, 0.475 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.475, 0.495, 0.475 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 0.475, 0.495, 0.475 )
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 0.475, 0.495, 0.475 )
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 0.475, 0.495, 0.475 )
+
+[sub_resource type="BoxShape" id=8]
+extents = Vector3( 3.425, 0.4675, 1.505 )
+
+[sub_resource type="BoxShape" id=9]
+extents = Vector3( 3.425, 0.4675, 1.505 )
+
+[sub_resource type="BoxShape" id=10]
+extents = Vector3( 3.47, 0.4675, 1.385 )
+
+[sub_resource type="BoxShape" id=11]
+extents = Vector3( 3.47, 0.4675, 1.385 )
+
+[sub_resource type="BoxShape" id=12]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=13]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=14]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=15]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=16]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=17]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=18]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=19]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=20]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="CapsuleShape" id=21]
+radius = 1.35963
+height = 7.33798
+
+[sub_resource type="BoxShape" id=22]
+extents = Vector3( 0.220651, 2.225, 0.25 )
+
+[sub_resource type="BoxShape" id=23]
+extents = Vector3( 0.220651, 2.225, 0.25 )
+
+[sub_resource type="BoxShape" id=24]
+extents = Vector3( 0.220651, 2.225, 0.25 )
+
+[sub_resource type="BoxShape" id=25]
+extents = Vector3( 0.220651, 2.225, 0.25 )
+
+[sub_resource type="SphereShape" id=26]
+radius = 2.25
+
+[sub_resource type="BoxShape" id=27]
+extents = Vector3( 2.28, 0.532227, 0.435 )
+
+[sub_resource type="BoxShape" id=28]
+extents = Vector3( 2.3, 0.532227, 0.435 )
+
+[sub_resource type="BoxShape" id=29]
+extents = Vector3( 1.5925, 0.151295, 0.435 )
+
+[sub_resource type="BoxShape" id=30]
+extents = Vector3( 1.5925, 0.151295, 0.435 )
+
+[sub_resource type="BoxShape" id=31]
+extents = Vector3( 2.3, 0.532227, 0.435 )
+
+[sub_resource type="BoxShape" id=32]
+extents = Vector3( 0.435, 0.601829, 0.159782 )
+
+[sub_resource type="BoxShape" id=33]
+extents = Vector3( 0.435, 0.601829, 0.159782 )
+
+[sub_resource type="BoxShape" id=34]
+extents = Vector3( 0.435, 0.601829, 0.159782 )
+
+[sub_resource type="BoxShape" id=35]
+extents = Vector3( 0.435, 0.601829, 0.159782 )
+
+[node name="T5_Mortar" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="T5_Mortar" type="Spatial" parent="."]
+
+[node name="Extents" type="Spatial" parent="T5_Mortar"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
+
+[node name="RC_cylinder_sym_collision" type="Area" parent="T5_Mortar/Extents"]
+transform = Transform( 27.3556, 0, 0, 0, 36.5123, 0, 0, 0, 27.3556, 0, 3.92, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Mortar/Extents/RC_cylinder_sym_collision"]
+shape = SubResource( 1 )
+
+[node name="BuildCollision" type="Area" parent="T5_Mortar"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Mortar/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.41, -0.63 )
+shape = SubResource( 2 )
+
+[node name="ConnectionPoints" type="Area" parent="T5_Mortar/BuildCollision"]
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Mortar/BuildCollision/ConnectionPoints"]
+shape = SubResource( 3 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="T5_Mortar/BuildCollision/ConnectionPoints"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="T5_Mortar/BuildCollision/ConnectionPoints"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="T5_Mortar/BuildCollision/ConnectionPoints"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape5" type="CollisionShape" parent="T5_Mortar/BuildCollision/ConnectionPoints"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
+shape = SubResource( 7 )
+
+[node name="BaseBuildCollision" type="Area" parent="T5_Mortar/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1.35, 0, 0, 0, 1, 0, 0.166, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Mortar/BuildCollision/BaseBuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.035, 0 )
+shape = SubResource( 8 )
+
+[node name="BaseBuildCollision2" type="Area" parent="T5_Mortar/BuildCollision"]
+transform = Transform( -1.19209e-07, 0, 1, 0, 1.35, 0, -1, 0, -1.19209e-07, 0, 0.166, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Mortar/BuildCollision/BaseBuildCollision2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.035, 0 )
+shape = SubResource( 9 )
+
+[node name="BaseBuildCollision3" type="Area" parent="T5_Mortar/BuildCollision"]
+transform = Transform( 0.707107, 0, 0.707107, 0, 1.35, 0, -0.707107, 0, 0.707107, 0, 0.166, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Mortar/BuildCollision/BaseBuildCollision3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.035, 0 )
+shape = SubResource( 10 )
+
+[node name="BaseBuildCollision4" type="Area" parent="T5_Mortar/BuildCollision"]
+transform = Transform( 0.707107, 0, -0.707107, 0, 1.35, 0, 0.707107, 0, 0.707107, 0, 0.166, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Mortar/BuildCollision/BaseBuildCollision4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.035, 0 )
+shape = SubResource( 11 )
+
+[node name="BaseBuildCollision5" type="Area" parent="T5_Mortar/BuildCollision"]
+transform = Transform( -1.2666e-07, 0, -1.0625, 0, 1, 0, 1.0625, 0, -1.2666e-07, 0, 0.033, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Mortar/BuildCollision/BaseBuildCollision5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.91, 0 )
+shape = SubResource( 12 )
+
+[node name="BaseBuildCollision6" type="Area" parent="T5_Mortar/BuildCollision"]
+transform = Transform( 1.0625, 0, 0, 0, 1, 0, 0, 0, 1.0625, 0, 0.033, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Mortar/BuildCollision/BaseBuildCollision6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.91, 0 )
+shape = SubResource( 13 )
+
+[node name="BaseBuildCollision7" type="Area" parent="T5_Mortar/BuildCollision"]
+transform = Transform( 0.751301, 0, 0.751301, 0, 1, 0, -0.751301, 0, 0.751301, 0, 0.033, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Mortar/BuildCollision/BaseBuildCollision7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.91, 0 )
+shape = SubResource( 14 )
+
+[node name="BaseBuildCollision8" type="Area" parent="T5_Mortar/BuildCollision"]
+transform = Transform( -0.751301, 0, 0.751301, 0, 1, 0, -0.751301, 0, -0.751301, 0, 0.033, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Mortar/BuildCollision/BaseBuildCollision8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.91, 0 )
+shape = SubResource( 15 )
+
+[node name="BaseBuildCollision9" type="Area" parent="T5_Mortar/BuildCollision"]
+transform = Transform( 0.981622, 0, 0.406601, 0, 1, 0, -0.406601, 0, 0.981622, 0, 0.033, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Mortar/BuildCollision/BaseBuildCollision9"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.91, 0 )
+shape = SubResource( 16 )
+
+[node name="BaseBuildCollision10" type="Area" parent="T5_Mortar/BuildCollision"]
+transform = Transform( 0.981622, 0, -0.406601, 0, 1, 0, 0.406601, 0, 0.981622, 0, 0.033, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Mortar/BuildCollision/BaseBuildCollision10"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.91, 0 )
+shape = SubResource( 17 )
+
+[node name="BaseBuildCollision11" type="Area" parent="T5_Mortar/BuildCollision"]
+transform = Transform( 1.0625, 0, 0, 0, 1, 0, 0, 0, 1.0625, 0, 0.033, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Mortar/BuildCollision/BaseBuildCollision11"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.91, 0 )
+shape = SubResource( 18 )
+
+[node name="BaseBuildCollision12" type="Area" parent="T5_Mortar/BuildCollision"]
+transform = Transform( 0.406601, 0, 0.981622, 0, 1, 0, -0.981622, 0, 0.406601, 0, 0.033, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Mortar/BuildCollision/BaseBuildCollision12"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.91, 0 )
+shape = SubResource( 19 )
+
+[node name="BaseBuildCollision13" type="Area" parent="T5_Mortar/BuildCollision"]
+transform = Transform( 0.406601, 0, -0.981622, 0, 1, 0, 0.981622, 0, 0.406601, 0, 0.033, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Mortar/BuildCollision/BaseBuildCollision13"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.91, 0 )
+shape = SubResource( 20 )
+
+[node name="BarrelBuildCollision" type="Spatial" parent="T5_Mortar/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 0.5, -0.866026, 0, 0.866026, 0.5, 0, 1.98874, 0 )
+
+[node name="BarrelBuildCollisionCapsule" type="Area" parent="T5_Mortar/BuildCollision/BarrelBuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.725, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Mortar/BuildCollision/BarrelBuildCollision/BarrelBuildCollisionCapsule"]
+shape = SubResource( 21 )
+
+[node name="BarrelBuildCollision" type="Area" parent="T5_Mortar/BuildCollision/BarrelBuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.98874, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Mortar/BuildCollision/BarrelBuildCollision/BarrelBuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.49509, 4.53809, -8.34465e-07 )
+shape = SubResource( 22 )
+
+[node name="BarrelBuildCollision2" type="Area" parent="T5_Mortar/BuildCollision/BarrelBuildCollision"]
+transform = Transform( -1.19209e-07, 0, 1, 0, 1, 0, -1, 0, -1.19209e-07, 0, -1.98874, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Mortar/BuildCollision/BarrelBuildCollision/BarrelBuildCollision2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.49509, 4.53809, -8.34465e-07 )
+shape = SubResource( 23 )
+
+[node name="BarrelBuildCollision3" type="Area" parent="T5_Mortar/BuildCollision/BarrelBuildCollision"]
+transform = Transform( -1.19209e-07, 0, -1, 0, 1, 0, 1, 0, -1.19209e-07, 0, -1.98874, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Mortar/BuildCollision/BarrelBuildCollision/BarrelBuildCollision3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.49509, 4.53809, -8.34465e-07 )
+shape = SubResource( 24 )
+
+[node name="BarrelBuildCollision4" type="Area" parent="T5_Mortar/BuildCollision/BarrelBuildCollision"]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, -1.98874, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Mortar/BuildCollision/BarrelBuildCollision/BarrelBuildCollision4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.49509, 4.53809, -8.34465e-07 )
+shape = SubResource( 25 )
+
+[node name="GymbalBuildCollisionSphere" type="Area" parent="T5_Mortar/BuildCollision/BarrelBuildCollision"]
+transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, -0.333, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Mortar/BuildCollision/BarrelBuildCollision/GymbalBuildCollisionSphere"]
+shape = SubResource( 26 )
+
+[node name="GymbalBuildCollision" type="Area" parent="T5_Mortar/BuildCollision/BarrelBuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.98874, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Mortar/BuildCollision/BarrelBuildCollision/GymbalBuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.67033, 1.02818e-06 )
+shape = SubResource( 27 )
+
+[node name="GymbalBuildCollision2" type="Area" parent="T5_Mortar/BuildCollision/BarrelBuildCollision"]
+transform = Transform( -1.19209e-07, 0, 1, 0, 1, 0, -1, 0, -1.19209e-07, 0, -1.98874, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Mortar/BuildCollision/BarrelBuildCollision/GymbalBuildCollision2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.67033, 1.02818e-06 )
+shape = SubResource( 28 )
+
+[node name="GymbalBuildCollision3" type="Area" parent="T5_Mortar/BuildCollision/BarrelBuildCollision"]
+transform = Transform( -1.19209e-07, 2.10734e-08, 1, 2.10734e-08, 1, -2.10734e-08, -1, 2.10734e-08, -1.19209e-07, 0, -1.98874, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Mortar/BuildCollision/BarrelBuildCollision/GymbalBuildCollision3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.69131e-05, 3.02802, -6.38051e-08 )
+shape = SubResource( 29 )
+
+[node name="GymbalBuildCollision4" type="Area" parent="T5_Mortar/BuildCollision/BarrelBuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.98874, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Mortar/BuildCollision/BarrelBuildCollision/GymbalBuildCollision4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.69131e-05, 3.02802, -6.38051e-08 )
+shape = SubResource( 30 )
+
+[node name="GymbalBuildCollision5" type="Area" parent="T5_Mortar/BuildCollision/BarrelBuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.98874, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Mortar/BuildCollision/BarrelBuildCollision/GymbalBuildCollision5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.67033, 1.02818e-06 )
+shape = SubResource( 31 )
+
+[node name="GymbalBuildCollision6" type="Area" parent="T5_Mortar/BuildCollision/BarrelBuildCollision"]
+transform = Transform( 1, 0, 0, 0, 0.809017, -0.587785, 0, 0.587785, 0.809017, 0, -1.98874, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Mortar/BuildCollision/BarrelBuildCollision/GymbalBuildCollision6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.03604, -2.99734 )
+shape = SubResource( 32 )
+
+[node name="GymbalBuildCollision7" type="Area" parent="T5_Mortar/BuildCollision/BarrelBuildCollision"]
+transform = Transform( -2.38419e-07, 0.587785, 0.809017, 0, 0.809017, -0.587785, -1, -1.19209e-07, -2.38419e-07, 0, -1.98874, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Mortar/BuildCollision/BarrelBuildCollision/GymbalBuildCollision7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.03604, -2.99734 )
+shape = SubResource( 33 )
+
+[node name="GymbalBuildCollision8" type="Area" parent="T5_Mortar/BuildCollision/BarrelBuildCollision"]
+transform = Transform( -1, -1.91525e-07, -2.63611e-07, 7.10543e-15, 0.809017, -0.587785, 3.25841e-07, -0.587785, -0.809017, 0, -1.98874, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Mortar/BuildCollision/BarrelBuildCollision/GymbalBuildCollision8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.03604, -2.99734 )
+shape = SubResource( 34 )
+
+[node name="GymbalBuildCollision9" type="Area" parent="T5_Mortar/BuildCollision/BarrelBuildCollision"]
+transform = Transform( -2.38419e-07, -0.587785, -0.809017, 0, 0.809017, -0.587785, 1, -1.19209e-07, -2.38419e-07, 0, -1.98874, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T5_Mortar/BuildCollision/BarrelBuildCollision/GymbalBuildCollision9"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.03604, -2.99734 )
+shape = SubResource( 35 )
