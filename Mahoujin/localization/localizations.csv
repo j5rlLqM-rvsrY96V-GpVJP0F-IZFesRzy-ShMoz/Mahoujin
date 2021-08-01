@@ -1,0 +1,31 @@
+keys,en,ja
+KEY_NAME,EN,JP
+KEY_PLAY,Play,演奏する
+KEY_BACK,Back,バック
+KEY_QUIT,Quit,終了する
+KEY_APPLY,Apply,適用する
+KEY_PLACEHOLDER_EXAMPLE,"My name is {{NAME}}, and I'm {{OLD}}  years old.",私の名前は{{NAME}}で、{{OLD}}歳です。
+KEY_NEW,New,新着
+KEY_LOAD,Load,負荷
+KEY_FILENAME,Filename,ファイル名
+KEY_BOTNAME,Botname,ボットネーム
+KEY_VIEW,View,見る
+KEY_SAVE,Save,セーブ
+KEY_BOBOTEXT,"If you'd like to use the auto-triforcing feature you'll have to load a macro here. \nThe bot should be downloaded to your local machine, the tool Rcbup will aid you in this.\nYou may preview the bot by clicking 'View', when you're ready to specify how the bot should be triforced, click 'Load'\nAll chassis blocks will be ignored when you load it.",自動トリフォーシング機能を使用する場合は、ここにマクロをロードする必要があります。 
+KEY_ABOUT,Visualisation tool made for triforcing in Bobo.\n\nIdk what you expected to find here.,ボボでのトライフォーシング用に作成された視覚化ツール。\n\nここで期待したものを確認してください。
+KEY_TEXT,"Basic visualisation tool capabilities, note that saves created from here can not use the auto-triforce functionality.\nSaves loaded will inherit the Basic/Bobo features.\nClick 'Load' to load an existing save, click 'New' to start a fresh.",基本的な視覚化ツールの機能。ここから作成された保存では自動トライフォース機能を使用できないことに注意してください。\n読み込まれた保存は基本/ボボ機能を継承します。\n [読み込み]をクリックして既存の保存を読み込み、[新規]をクリックして新しい保存を開始します。
+KEY_PUSHFORCE,Push,押す
+KEY_PULLFORCE,Pull,引く
+KEY_SNAPFORCE,Snap,スナップ
+KEY_NODESCALE,Scale,規模
+KEY_TRIFORCE,Triforce,トライフォース
+KEY_PLANNERHELP,Place node: Right click\nRemove node: Shift/Esc + Click (L/R)\nConnect: Left click\nCancel connect: Shift/Esc\nDisconnect: Shift/Esc + Click (on textbox)\nPlace snap: Middle click\nRemove snap: Shift/Esc + Middle click,ノードの配置：右クリック\nノードの削除：Shift / Esc +クリック（L / R）\n接続：左クリック\n接続のキャンセル：Shift / Esc \n切断：Shift / Esc +クリック（テキストボックス上）\nスナップの配置：中クリック\n
+KEY_FREECAM,Freecam:,無料カメラ:
+KEY_THREADCOUNT,Threads,スレッド
+KEY_RAMTARGET,RAM (GB),RAM（GB）
+KEY_RAMTARGET_TOOLTIP,The target RAM allocation when checking for collisions. ,衝突をチェックするときのターゲットRAM割り当て。
+KEY_OVERWRITE_CONFIRM,"File exists, overwrite?",ファイルが存在します、上書きしますか？
+KEY_OVERWRITE_INSTRUCTIONS,(Click save again),（もう一度[保存]をクリックします）
+KEY_INVALID_LENGTH,Some lengths are invalidand and have been changed.,一部の長さは無効であり、変更されています。
+KEY_INCOMPATIBLE_DATA,Incompatible triforcing data!\nTry loading data that corresponds\nto this bot.,互換性のないトライフォーシングデータ！\nこのボットに対応するデータをロードしてみてください。
+KEY_DO_COLLISIONS,Collisions:,衝突:
