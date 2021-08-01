@@ -1,0 +1,130 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+[ext_resource path="res://models/weapons/RC_Laser_mk5_V_arrows-3650143705042766424.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://models/weapons/Chaingun_Huge_Base7020961051087470102.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://models/weapons/Chaingun_Huge_Vert_Pivot_16082969428810147856.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://models/weapons/Chaingun_Huge_Vert_Pivot_27824365097459902763.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://models/weapons/Chaingun_Huge_Hor_Pivot-6268967048071466209.obj" type="ArrayMesh" id=6]
+[ext_resource path="res://models/weapons/Chaingun_Huge_Barrel8014563040927456040.obj" type="ArrayMesh" id=7]
+
+[sub_resource type="ConvexPolygonShape" id=1]
+points = PoolVector3Array( -0.213388, 0.0956708, -0.0883887, -0.16332, 0.0956708, -0.16332, -0.23097, 0, -0.0956702, -0.176777, 0, -0.176776, -0.0883884, 0.0956708, -0.213389, -0.095671, 0, -0.230969, -1.14441e-07, 0.0956708, -0.230969, -1.14441e-07, 0, -0.25, 0.0883882, 0.0956708, -0.213389, 0.0956707, 0, -0.23097, 0.16332, 0.0956708, -0.16332, 0.176777, 0, -0.176777, 0.213388, 0.0956708, -0.0883887, 0.23097, 0, -0.0956714, 0.23097, 0.0956708, 0, 0.25, 0, 0, 0.213388, 0.0956708, 0.0883887, 0.23097, 0, 0.0956714, 0.16332, 0.0956708, 0.16332, 0.176777, 0, 0.176776, 0.0883884, 0.0956708, 0.213389, 0.0956709, 0, 0.23097, 3.8147e-08, 0.0956708, 0.23097, 3.8147e-08, 0, 0.25, -0.0883883, 0.0956708, 0.213389, -0.0956708, 0, 0.23097, -0.16332, 0.0956708, 0.16332, -0.176777, 0, 0.176776, -0.213388, 0.0956708, 0.0883887, -0.23097, 0, 0.0956714, -0.23097, 0.0956708, 0, -0.25, 0, 0, -0.213388, 0.0956708, -0.0883887, -0.23097, 0, -0.0956702, 0.0676495, 0.176777, 0.16332, 3.8147e-08, 0.176777, 0.176776, -0.0676495, 0.176777, 0.16332, -0.125, 0.176777, 0.125, -0.16332, 0.176777, 0.0676489, -0.176777, 0.176777, 0, -0.176777, 0.176777, 0, -0.16332, 0.176777, -0.0676489, 0, 0.23097, 0.0956714, 0.0366117, 0.23097, 0.0883887, 0.125, 0.176777, 0.125, 0.16332, 0.176777, 0.0676489, 0.176777, 0.176777, 0, 0.16332, 0.176777, -0.0676501, 0.176777, 0.176777, 0, 0.125, 0.176777, -0.125, 0.0676494, 0.176777, -0.16332, -7.62939e-08, 0.176777, -0.176776, -0.0676496, 0.176777, -0.16332, -0.125, 0.176777, -0.125, -0.16332, 0.176777, -0.0676489, -0.0676495, 0.23097, -0.0676489, -0.0883884, 0.23097, -0.0366113, -0.0366117, 0.23097, -0.0883887, -3.8147e-08, 0.23097, -0.0956714, 0.0366116, 0.23097, -0.0883887, 0.0676495, 0.23097, -0.0676501, 0.0883883, 0.23097, -0.0366113, 0.0956708, 0.23097, 0, 0.176777, 0.176777, 0, 0.0883884, 0.23097, 0.0366113, 0.0676495, 0.23097, 0.0676489, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, -0.0366116, 0.23097, 0.0883887, -0.0676495, 0.23097, 0.0676489, -0.0883884, 0.23097, 0.0366113, -0.0956708, 0.23097, 0, -0.176777, 0.176777, 0, -0.0883884, 0.23097, -0.0366113, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, -0.176777, -0.0784903, -0.176776, -0.23097, -0.0784903, -0.0956702, -0.095671, -0.0784903, -0.230969, -1.14441e-07, -0.0784903, -0.25, 0.0956707, -0.0784903, -0.23097, 0.176777, -0.0784903, -0.176777, 0.23097, -0.0784903, -0.0956714, 0.25, -0.0784903, 0, 0.23097, -0.0784903, 0.0956714, 0.176777, -0.0784903, 0.176776, 0.0956709, -0.0784903, 0.23097, 3.8147e-08, -0.0784903, 0.25, -0.0956708, -0.0784903, 0.23097, -0.176777, -0.0784903, 0.176776, -0.23097, -0.0784903, 0.0956714, -0.25, -0.0784903, 0, -0.23097, -0.0784903, -0.0956702 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.95, 1.54063, 0.542601 )
+
+[sub_resource type="CapsuleShape" id=3]
+radius = 0.73
+height = 9.69336
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.565, 0.884669, 1.76039 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 2.245, 0.764567, 1.19105 )
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 0.91, 0.382877, 0.94 )
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 0.485, 0.485, 0.485 )
+
+[node name="T4_Chaingun" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="T4_Chaingun" type="Spatial" parent="."]
+
+[node name="Extents" type="Spatial" parent="T4_Chaingun"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5967e-07, 0.37442, 4.7684e-07 )
+
+[node name="RC_HemispherePlus_Collision" type="Area" parent="T4_Chaingun/Extents"]
+transform = Transform( 5.96, 0, 0, 0, 6.86208, 1.36769e-05, 0, -1.5747e-05, 5.96, -5.08613e-08, 0.28, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Chaingun/Extents/RC_HemispherePlus_Collision"]
+shape = SubResource( 1 )
+
+[node name="BuildCollision" type="Spatial" parent="T4_Chaingun"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
+
+[node name="Middle" type="Area" parent="T4_Chaingun/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 0.74536, 0.666663, 0, -0.666663, 0.74536, 0, -0.5, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Chaingun/BuildCollision/Middle"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.45735, 1.20679 )
+shape = SubResource( 2 )
+
+[node name="Barrel" type="Area" parent="T4_Chaingun/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 2.92, -0.75 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Chaingun/BuildCollision/Barrel"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.29, 0 )
+shape = SubResource( 3 )
+
+[node name="Body1" type="Area" parent="T4_Chaingun/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.47, -0.709991 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Chaingun/BuildCollision/Body1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.483094, 0.850377 )
+shape = SubResource( 4 )
+
+[node name="Vents" type="Area" parent="T4_Chaingun/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.47, -0.71 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Chaingun/BuildCollision/Vents"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.612282, 1.19713 )
+shape = SubResource( 5 )
+
+[node name="Base" type="Area" parent="T4_Chaingun/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Chaingun/BuildCollision/Base"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.43643, 0 )
+shape = SubResource( 6 )
+
+[node name="ConnectionPoint" type="Area" parent="T4_Chaingun/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Chaingun/BuildCollision/ConnectionPoint"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0 )
+shape = SubResource( 7 )
+
+[node name="chaingun_huge" type="MeshInstance" parent="T4_Chaingun"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, -0.1, 0 )
+cast_shadow = 0
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="Chaingun_Huge_Hor_Pivot" type="MeshInstance" parent="T4_Chaingun/chaingun_huge"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00199551, 1.50101, 0.00110153 )
+cast_shadow = 0
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="Chaingun_Huge_Vert_Pivot_1" type="MeshInstance" parent="T4_Chaingun/chaingun_huge/Chaingun_Huge_Hor_Pivot"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199551, 0.352783, -7.49075e-05 )
+cast_shadow = 0
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="Chaingun_Huge_Vert_Pivot_2" type="MeshInstance" parent="T4_Chaingun/chaingun_huge/Chaingun_Huge_Hor_Pivot/Chaingun_Huge_Vert_Pivot_1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.47464, -1.35775 )
+cast_shadow = 0
+mesh = ExtResource( 5 )
+material/0 = null
+material/1 = null
+
+[node name="Chaingun_Huge_Barrel" type="MeshInstance" parent="T4_Chaingun/chaingun_huge/Chaingun_Huge_Hor_Pivot/Chaingun_Huge_Vert_Pivot_1/Chaingun_Huge_Vert_Pivot_2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0603226, 4.78723 )
+cast_shadow = 0
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="RC_Laser_mk5_VerticalMount_arrows" type="Spatial" parent="T4_Chaingun"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.02516, -0.00200331, -0.1, -0.00200367 )
+
+[node name="RC_Laser_mk5_V_arrows" type="MeshInstance" parent="T4_Chaingun/RC_Laser_mk5_VerticalMount_arrows"]
+transform = Transform( 0.38, 0, 0, 0, 0.408, 0, 0, 0, 0.38, 0, 0.145, 0 )
+cast_shadow = 0
+mesh = ExtResource( 2 )
+material/0 = null

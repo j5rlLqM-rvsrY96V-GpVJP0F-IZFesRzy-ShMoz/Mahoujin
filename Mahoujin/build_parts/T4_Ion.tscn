@@ -1,0 +1,107 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+[ext_resource path="res://models/weapons/RC_Laser_mk5_V_arrows-3650143705042766424.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://models/weapons/Ion_Destabiliser_Barrel-6200900268344182171.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://models/weapons/Ion_Destabiliser_Base-5171801398003473409.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://models/weapons/Ion_Destabiliser_Arms-9205119783520080347.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://models/weapons/Ion_Destabiliser_Body5618486649856920906.obj" type="ArrayMesh" id=6]
+
+[sub_resource type="ConvexPolygonShape" id=1]
+points = PoolVector3Array( -0.213388, 0.0956708, -0.0883887, -0.16332, 0.0956708, -0.16332, -0.23097, 0, -0.0956702, -0.176777, 0, -0.176776, -0.0883884, 0.0956708, -0.213389, -0.095671, 0, -0.230969, -1.14441e-07, 0.0956708, -0.230969, -1.14441e-07, 0, -0.25, 0.0883882, 0.0956708, -0.213389, 0.0956707, 0, -0.23097, 0.16332, 0.0956708, -0.16332, 0.176777, 0, -0.176777, 0.213388, 0.0956708, -0.0883887, 0.23097, 0, -0.0956714, 0.23097, 0.0956708, 0, 0.25, 0, 0, 0.213388, 0.0956708, 0.0883887, 0.23097, 0, 0.0956714, 0.16332, 0.0956708, 0.16332, 0.176777, 0, 0.176776, 0.0883884, 0.0956708, 0.213389, 0.0956709, 0, 0.23097, 3.8147e-08, 0.0956708, 0.23097, 3.8147e-08, 0, 0.25, -0.0883883, 0.0956708, 0.213389, -0.0956708, 0, 0.23097, -0.16332, 0.0956708, 0.16332, -0.176777, 0, 0.176776, -0.213388, 0.0956708, 0.0883887, -0.23097, 0, 0.0956714, -0.23097, 0.0956708, 0, -0.25, 0, 0, -0.213388, 0.0956708, -0.0883887, -0.23097, 0, -0.0956702, 0.0676495, 0.176777, 0.16332, 3.8147e-08, 0.176777, 0.176776, -0.0676495, 0.176777, 0.16332, -0.125, 0.176777, 0.125, -0.16332, 0.176777, 0.0676489, -0.176777, 0.176777, 0, -0.176777, 0.176777, 0, -0.16332, 0.176777, -0.0676489, 0, 0.23097, 0.0956714, 0.0366117, 0.23097, 0.0883887, 0.125, 0.176777, 0.125, 0.16332, 0.176777, 0.0676489, 0.176777, 0.176777, 0, 0.16332, 0.176777, -0.0676501, 0.176777, 0.176777, 0, 0.125, 0.176777, -0.125, 0.0676494, 0.176777, -0.16332, -7.62939e-08, 0.176777, -0.176776, -0.0676496, 0.176777, -0.16332, -0.125, 0.176777, -0.125, -0.16332, 0.176777, -0.0676489, -0.0676495, 0.23097, -0.0676489, -0.0883884, 0.23097, -0.0366113, -0.0366117, 0.23097, -0.0883887, -3.8147e-08, 0.23097, -0.0956714, 0.0366116, 0.23097, -0.0883887, 0.0676495, 0.23097, -0.0676501, 0.0883883, 0.23097, -0.0366113, 0.0956708, 0.23097, 0, 0.176777, 0.176777, 0, 0.0883884, 0.23097, 0.0366113, 0.0676495, 0.23097, 0.0676489, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, -0.0366116, 0.23097, 0.0883887, -0.0676495, 0.23097, 0.0676489, -0.0883884, 0.23097, 0.0366113, -0.0956708, 0.23097, 0, -0.176777, 0.176777, 0, -0.0883884, 0.23097, -0.0366113, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, 0, 0.25, 0, -0.176777, -0.0784903, -0.176776, -0.23097, -0.0784903, -0.0956702, -0.095671, -0.0784903, -0.230969, -1.14441e-07, -0.0784903, -0.25, 0.0956707, -0.0784903, -0.23097, 0.176777, -0.0784903, -0.176777, 0.23097, -0.0784903, -0.0956714, 0.25, -0.0784903, 0, 0.23097, -0.0784903, 0.0956714, 0.176777, -0.0784903, 0.176776, 0.0956709, -0.0784903, 0.23097, 3.8147e-08, -0.0784903, 0.25, -0.0956708, -0.0784903, 0.23097, -0.176777, -0.0784903, 0.176776, -0.23097, -0.0784903, 0.0956714, -0.25, -0.0784903, 0, -0.23097, -0.0784903, -0.0956702 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.475, 0.475, 0.475 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 1.135, 0.685, 1.26 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.435, 0.44, 1.385 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 0.19, 1.17, 2.435 )
+
+[sub_resource type="CapsuleShape" id=6]
+radius = 0.85
+height = 5.97
+
+[node name="T4_Ion" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="T4_Ion" type="Spatial" parent="."]
+
+[node name="Extents" type="Spatial" parent="T4_Ion"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0.124, 0 )
+
+[node name="RC_HemispherePlus_Collision" type="Area" parent="T4_Ion/Extents"]
+transform = Transform( 13.5065, 0, 0, 0, 13.5065, 0, 0, 0, 13.5065, 7.2413e-08, 1.6157, -0.0032654 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Ion/Extents/RC_HemispherePlus_Collision"]
+shape = SubResource( 1 )
+
+[node name="BuildCollision" type="Spatial" parent="T4_Ion"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, -0.08, 0 )
+
+[node name="connectionpoint_COL" type="Area" parent="T4_Ion/BuildCollision"]
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Ion/BuildCollision/connectionpoint_COL"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0 )
+shape = SubResource( 2 )
+
+[node name="arms_COL" type="Area" parent="T4_Ion/BuildCollision"]
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Ion/BuildCollision/arms_COL"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, -1.48 )
+shape = SubResource( 3 )
+
+[node name="body_COL " type="Area" parent="T4_Ion/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 0.586089, -0.810246, 0, 0.810246, 0.586089, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Ion/BuildCollision/body_COL "]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.66, -2.44 )
+shape = SubResource( 4 )
+
+[node name="sight_COL" type="Area" parent="T4_Ion/BuildCollision"]
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Ion/BuildCollision/sight_COL"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.59, -0.1 )
+shape = SubResource( 5 )
+
+[node name="barrel_COL" type="Area" parent="T4_Ion/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, -0.00746262, 0.999972, 0, -0.999972, -0.00746262, 0, 3.505, 0.09 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Ion/BuildCollision/barrel_COL"]
+shape = SubResource( 6 )
+
+[node name="Ion_Destabiliser" type="MeshInstance" parent="T4_Ion"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, -0.0999999, 0 )
+cast_shadow = 0
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="Ion_Destabiliser_Body" type="MeshInstance" parent="T4_Ion/Ion_Destabiliser"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33227e-17, 1, 0 )
+cast_shadow = 0
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="Ion_Destabiliser_Arms" type="MeshInstance" parent="T4_Ion/Ion_Destabiliser/Ion_Destabiliser_Body"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.22045e-17, 1.37926, -1.23084 )
+cast_shadow = 0
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="Ion_Destabiliser_Barrel" type="MeshInstance" parent="T4_Ion/Ion_Destabiliser/Ion_Destabiliser_Body/Ion_Destabiliser_Arms"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0361219, -2.37926, 1.23084 )
+cast_shadow = 0
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="RC_Laser_mk5_VerticalMount_arrows" type="Spatial" parent="T4_Ion"]
+transform = Transform( 0.182928, 0, 0, 0, 0.182928, 0, 0, 0, 0.182928, 1.4482e-08, 0.27152, -0.0006535 )
+
+[node name="RC_Laser_mk5_V_arrows" type="MeshInstance" parent="T4_Ion/RC_Laser_mk5_VerticalMount_arrows"]
+cast_shadow = 0
+mesh = ExtResource( 2 )
+material/0 = null

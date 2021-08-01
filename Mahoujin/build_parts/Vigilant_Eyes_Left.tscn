@@ -1,0 +1,214 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+[ext_resource path="res://models/cosmetic/RC_Human_Eye_Eyeball_L3372294939889494804.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://models/cosmetic/RC_ Human_Eye_Pivot_L6925406822343867863.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://models/cosmetic/RC_ Human_Eye_EyelidTop_L-4838991695314565913.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://models/cosmetic/RC_ Human_Eye_Base_L-7465850986165823989.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://models/cosmetic/RC_ Human_Eye_EyelidBottom_L5393598872347414816.obj" type="ArrayMesh" id=6]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.0985, 0.0985, 0.0985 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=8]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=9]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=10]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=11]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=12]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=13]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=14]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=15]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=16]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[sub_resource type="BoxShape" id=17]
+extents = Vector3( 2.8, 0.64, 0.545 )
+
+[node name="Vigilant_Eyes_Left" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Vigilant_Eyes_Left" type="Spatial" parent="."]
+
+[node name="RC_ Human_Eye_Base_L" type="Spatial" parent="Vigilant_Eyes_Left"]
+transform = Transform( 0, 0, 0.2, 0.2, 0, 0, 0, 0.2, 0, 0, -0.1, 0 )
+
+[node name="RC_ Human_Eye_Base_L" type="MeshInstance" parent="Vigilant_Eyes_Left/RC_ Human_Eye_Base_L"]
+cast_shadow = 0
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="RC_ Human_Eye_Pivot_L" type="MeshInstance" parent="Vigilant_Eyes_Left/RC_ Human_Eye_Base_L/RC_ Human_Eye_Base_L"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.549651, -0.123894, 0.0935628 )
+cast_shadow = 0
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="RC_ Human_Eye_EyelidBottom_L" type="MeshInstance" parent="Vigilant_Eyes_Left/RC_ Human_Eye_Base_L/RC_ Human_Eye_Base_L/RC_ Human_Eye_Pivot_L"]
+cast_shadow = 0
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="RC_ Human_Eye_EyelidTop_L" type="MeshInstance" parent="Vigilant_Eyes_Left/RC_ Human_Eye_Base_L/RC_ Human_Eye_Base_L/RC_ Human_Eye_Pivot_L"]
+cast_shadow = 0
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="Eyeball" type="Spatial" parent="Vigilant_Eyes_Left/RC_ Human_Eye_Base_L/RC_ Human_Eye_Base_L/RC_ Human_Eye_Pivot_L"]
+transform = Transform( 0, 0, 1, -1, 0, 0, 0, -1, 0, -0.0496505, 0.055894, 0.0874374 )
+
+[node name="RC_Human_Eye_Eyeball_L" type="MeshInstance" parent="Vigilant_Eyes_Left/RC_ Human_Eye_Base_L/RC_ Human_Eye_Base_L/RC_ Human_Eye_Pivot_L/Eyeball"]
+transform = Transform( 0, 0, -1, 0, 1, 0, 1, 0, 0, -0.038361, 0.145308, -0.0793495 )
+cast_shadow = 0
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="Collision" type="Area" parent="Vigilant_Eyes_Left"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Vigilant_Eyes_Left/Collision"]
+shape = SubResource( 1 )
+
+[node name="Collision (56)" type="Area" parent="Vigilant_Eyes_Left"]
+transform = Transform( 0.0309289, 0, -0.0803053, 0, 0.10309, 0, 0.0746691, 0, 0.0332635, 0.0261001, 0.0991, 0.00469999 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Vigilant_Eyes_Left/Collision (56)"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 2 )
+
+[node name="Collision (57)" type="Area" parent="Vigilant_Eyes_Left"]
+transform = Transform( 0.030929, 0, 0.0803054, 0, 0.10309, 0, -0.0746692, 0, 0.0332636, 0.0261001, 0.0991, 0.00469999 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Vigilant_Eyes_Left/Collision (57)"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 3 )
+
+[node name="Collision (58)" type="Area" parent="Vigilant_Eyes_Left"]
+transform = Transform( 0.0803052, 0, -0.030929, 0, 0.10309, 0, 0.0332635, 0, 0.0746691, 0.0261001, 0.0991, 0.00469999 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Vigilant_Eyes_Left/Collision (58)"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 4 )
+
+[node name="Collision (59)" type="Area" parent="Vigilant_Eyes_Left"]
+transform = Transform( 0.0803052, 0, 0.030929, 0, 0.10309, 0, -0.0332635, 0, 0.0746691, 0.0261, 0.0991, 0.0047 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Vigilant_Eyes_Left/Collision (59)"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 5 )
+
+[node name="Collision (60)" type="Area" parent="Vigilant_Eyes_Left"]
+transform = Transform( -0.0571492, 0, 0.061463, 0, 0.10309, 0, -0.0571493, 0, -0.061463, 0.0261001, 0.0991, 0.00469999 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Vigilant_Eyes_Left/Collision (60)"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 6 )
+
+[node name="Collision (61)" type="Area" parent="Vigilant_Eyes_Left"]
+transform = Transform( 0.0571493, 0, 0.061463, 0, 0.10309, 0, -0.0571492, 0, 0.061463, 0.0261001, 0.0991, 0.00469999 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Vigilant_Eyes_Left/Collision (61)"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 7 )
+
+[node name="Collision (62)" type="Area" parent="Vigilant_Eyes_Left"]
+transform = Transform( 0.0869218, 0, 0, 0, 0.10309, 0, 0, 0, 0.0808212, 0.0261001, 0.0991, 0.00469999 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Vigilant_Eyes_Left/Collision (62)"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 8 )
+
+[node name="Collision (63)" type="Area" parent="Vigilant_Eyes_Left"]
+transform = Transform( 0, 0, -0.0869219, 0, 0.10309, 0, 0.0808213, 0, 0, 0.0269586, 0.0991, 0.00609999 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Vigilant_Eyes_Left/Collision (63)"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 9 )
+
+[node name="Collision (64)" type="Area" parent="Vigilant_Eyes_Left"]
+transform = Transform( 0, 0, -0.0896001, 0, 0.084, 0, 0.0896001, 0, 0, 0.012585, -0.0178, 0.00929277 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Vigilant_Eyes_Left/Collision (64)"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 10 )
+
+[node name="Collision (65)" type="Area" parent="Vigilant_Eyes_Left"]
+transform = Transform( 0.0896, 0, 0, 0, 0.084, 0, 0, 0, 0.0896, 0.0117001, -0.0178, 0.00774099 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Vigilant_Eyes_Left/Collision (65)"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 11 )
+
+[node name="Collision (66)" type="Area" parent="Vigilant_Eyes_Left"]
+transform = Transform( 0.0633568, 0, 0.0633568, 0, 0.084, 0, -0.0633568, 0, 0.0633568, 0.0117001, -0.0178, 0.00774099 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Vigilant_Eyes_Left/Collision (66)"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 12 )
+
+[node name="Collision (67)" type="Area" parent="Vigilant_Eyes_Left"]
+transform = Transform( -0.0633568, 0, 0.0633568, 0, 0.084, 0, -0.0633568, 0, -0.0633568, 0.0117001, -0.0178, 0.00774099 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Vigilant_Eyes_Left/Collision (67)"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 13 )
+
+[node name="Collision (68)" type="Area" parent="Vigilant_Eyes_Left"]
+transform = Transform( 0.0827796, 0, 0.0342884, 0, 0.084, 0, -0.0342884, 0, 0.0827796, 0.0117001, -0.0178, 0.00774099 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Vigilant_Eyes_Left/Collision (68)"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 14 )
+
+[node name="Collision (69)" type="Area" parent="Vigilant_Eyes_Left"]
+transform = Transform( 0.0827796, 0, -0.0342884, 0, 0.084, 0, 0.0342884, 0, 0.0827796, 0.0117001, -0.0178, 0.00774099 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Vigilant_Eyes_Left/Collision (69)"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 15 )
+
+[node name="Collision (70)" type="Area" parent="Vigilant_Eyes_Left"]
+transform = Transform( 0.0342885, 0, 0.0827797, 0, 0.084, 0, -0.0827797, 0, 0.0342885, 0.0117001, -0.0178, 0.00774099 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Vigilant_Eyes_Left/Collision (70)"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 16 )
+
+[node name="Collision (71)" type="Area" parent="Vigilant_Eyes_Left"]
+transform = Transform( 0.0342884, 0, -0.0827796, 0, 0.084, 0, 0.0827796, 0, 0.0342884, 0.0117001, -0.0178, 0.00774099 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Vigilant_Eyes_Left/Collision (71)"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162453, 0, 0.049105 )
+shape = SubResource( 17 )

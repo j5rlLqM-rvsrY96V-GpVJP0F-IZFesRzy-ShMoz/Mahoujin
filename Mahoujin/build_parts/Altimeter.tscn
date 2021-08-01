@@ -1,0 +1,75 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+[ext_resource path="res://models/cosmetic/RC_Cube_Altimeter-3772158422822819849.obj" type="ArrayMesh" id=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.099, 0.025, 0.099 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.0375, 0.035, -0.125 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.015, 0.08, -0.125 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.01, 0.07, -0.125 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 0.01, 0.07, -0.125 )
+
+[node name="Altimeter" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Altimeter" type="Spatial" parent="."]
+
+[node name="RC_Altimeter" type="Spatial" parent="Altimeter"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, -0.1, 0 )
+
+[node name="RC_Cube_Altimeter" type="MeshInstance" parent="Altimeter/RC_Altimeter"]
+cast_shadow = 0
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="Panel" type="Spatial" parent="Altimeter/RC_Altimeter"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0601196, 0 )
+
+[node name="Label RobotName" type="Spatial" parent="Altimeter/RC_Altimeter/Panel"]
+transform = Transform( 0, -0.00517813, -0.60446, 0, 0.00392899, -0.796635, 0.0065, 0, 0, 0.07, 0.534, 0 )
+
+[node name="BuildCollision" type="Spatial" parent="Altimeter"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0 )
+
+[node name="Base" type="Area" parent="Altimeter/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0256988, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Altimeter/BuildCollision/Base"]
+shape = SubResource( 1 )
+
+[node name="Volume" type="Area" parent="Altimeter/BuildCollision"]
+transform = Transform( 0.819783, -0.572674, 0, 0.572674, 0.819783, 0, 0, 0, 1, 0.0713263, -0.0076215, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Altimeter/BuildCollision/Volume"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07, 0 )
+shape = SubResource( 2 )
+
+[node name="Volume2" type="Area" parent="Altimeter/BuildCollision"]
+transform = Transform( 0.604766, -0.796403, 0, 0.796403, 0.604766, 0, 0, 0, 1, 0.0438271, 0.0790354, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Altimeter/BuildCollision/Volume2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07, 0 )
+shape = SubResource( 3 )
+
+[node name="Volume3" type="Area" parent="Altimeter/BuildCollision"]
+transform = Transform( 0.570792, -0.794035, -0.209057, 0.78318, 0.602968, -0.151848, 0.246628, -0.0770556, 0.966042, 0.0482073, 0.0757087, -0.146781 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Altimeter/BuildCollision/Volume3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07, 0 )
+shape = SubResource( 4 )
+
+[node name="Volume4" type="Area" parent="Altimeter/BuildCollision"]
+transform = Transform( 0.592166, -0.794036, 0.137282, 0.79591, 0.602967, 0.0543923, -0.125966, 0.0770548, 0.989037, 0.0437441, 0.0790986, 0.159616 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Altimeter/BuildCollision/Volume4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07, 0 )
+shape = SubResource( 5 )

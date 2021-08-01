@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+[ext_resource path="res://models/movement/RC_HoverBlade_T9_Blades733022189945745566.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://models/movement/RC_HoverBlade_T9_Body2297031681063015456.obj" type="ArrayMesh" id=3]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.45, 0.155, 0.45 )
+
+[sub_resource type="ConvexPolygonShape" id=2]
+points = PoolVector3Array( -0.884073, 0, 0, -0.76563, 0.442036, 0, 0, 0, 0, -0.442036, 0.76563, 0, -0.765629, -0.442037, 0, -0.442036, -0.76563, 0, 4.11016e-07, -0.884073, 0, 0.442037, -0.765629, 0, 0.76563, -0.442036, 0, 0.884073, 1.33491e-07, 0, 0.76563, 0.442037, 0, 0.442037, 0.76563, 0, 3.86441e-08, 0.884073, 0, -0.442036, 0.76563, 0, -0.884073, 0, 0.837216, -0.76563, 0.442036, 0.837216, -0.884073, 0, 0, -0.76563, 0.442036, 0, -0.442036, 0.76563, 0.837216, -0.442036, 0.76563, 0, -0.765629, -0.442037, 0, -0.765629, -0.442037, 0.837216, -0.442036, -0.76563, 0, -0.442036, -0.76563, 0.837216, 4.11016e-07, -0.884073, 0, 4.11016e-07, -0.884073, 0.837216, 0.442037, -0.765629, 0, 0.442037, -0.765629, 0.837216, 0.76563, -0.442036, 0, 0.76563, -0.442036, 0.837216, 0.884073, 1.33491e-07, 0, 0.884073, 1.33491e-07, 0.837216, 0.76563, 0.442037, 0, 0.76563, 0.442037, 0.837216, 0.442037, 0.76563, 0, 0.442037, 0.76563, 0.837216, 3.86441e-08, 0.884073, 0, 3.86441e-08, 0.884073, 0.837216, -0.442036, 0.76563, 0, -0.442036, 0.76563, 0.837216, -0.76563, 0.442036, 0.837216, -0.884073, 0, 0.837216, 0, 0, 0.837216, -0.442036, 0.76563, 0.837216, -0.765629, -0.442037, 0.837216, -0.442036, -0.76563, 0.837216, 4.11016e-07, -0.884073, 0.837216, 0.442037, -0.765629, 0.837216, 0.76563, -0.442036, 0.837216, 0.884073, 1.33491e-07, 0.837216, 0.76563, 0.442037, 0.837216, 0.442037, 0.76563, 0.837216, 3.86441e-08, 0.884073, 0.837216, -0.442036, 0.76563, 0.837216 )
+
+[node name="T4_Hover_Steam" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="T4_Hover_Steam" type="Spatial" parent="."]
+
+[node name="BuildCollision" type="Spatial" parent="T4_Hover_Steam"]
+
+[node name="Base" type="Area" parent="T4_Hover_Steam/BuildCollision"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Hover_Steam/BuildCollision/Base"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.33, 0 )
+shape = SubResource( 1 )
+
+[node name="Cylinder" type="Area" parent="T4_Hover_Steam/BuildCollision/Base"]
+transform = Transform( 0, 1.5, 0, -1.5, 0, 0, 0, 0, 0.8, 0, 1.35048, -0.338164 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Hover_Steam/BuildCollision/Base/Cylinder"]
+shape = SubResource( 2 )
+
+[node name="RC_HoverBlade_T9" type="MeshInstance" parent="T4_Hover_Steam"]
+transform = Transform( 0, 0, -0.2, -0.2, 0, 0, 0, 0.2, 0, 0, -0.0999997, 0 )
+cast_shadow = 0
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="RC_HoverBlade_T9_Blades" type="MeshInstance" parent="T4_Hover_Steam/RC_HoverBlade_T9"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.84115, 0.0111703, 0 )
+cast_shadow = 0
+mesh = ExtResource( 2 )
+material/0 = null

@@ -1,0 +1,131 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+[ext_resource path="res://models/movement/M3_Base2961255582003298208.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://models/movement/M3_mechleg_arrows-3733462509972623435.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://models/movement/M3_foot1204366864400584787.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://models/movement/M3_leg1-120228983040868473.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://models/movement/M3_leg32664190224818294028.obj" type="ArrayMesh" id=6]
+[ext_resource path="res://models/movement/M3_leg2-8636869264848911264.obj" type="ArrayMesh" id=7]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.455, 0.26, 0.24 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.49, 0.195, 0.185 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.43, 0.21, 0.21 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.325, 0.15, 0.335 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 0.22, 0.105, 0.115 )
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 0.16, 0.18, 0.21 )
+
+[sub_resource type="ConvexPolygonShape" id=7]
+points = PoolVector3Array( -8.71568, -7.52018, 2.90188, 7.28432, -7.75889, 2.9484, -6.17398, -4.15746, 2.14208, -1.52452, -2.0043, 1.52449, 1.52452, -2.0043, 1.52449, -1.52452, -2.0043, 1.52449, 1.52452, -2.0043, 1.52449, -1.52452, -2.0043, -1.52452, 1.52452, -2.0043, -1.52452, -8.71568, -7.52018, -2.9019, -6.17398, -4.15746, -2.1421, 7.28432, -7.75889, -2.94843, -1.52452, -2.0043, -1.52452, 1.52452, -2.0043, -1.52452, -6.17398, -4.15746, 2.14208, -6.17398, -4.15746, -2.1421, -8.71568, -7.52018, 2.90188, -8.71568, -7.52018, -2.9019, -1.52452, -2.0043, 1.52449, -1.52452, -2.0043, -1.52452, -6.17398, -4.15746, 2.14208, -6.17398, -4.15746, -2.1421, 1.52452, -2.0043, -1.52452, 1.52452, -2.0043, 1.52449, 7.28432, -7.75889, -2.94843, 7.28432, -7.75889, 2.9484, 7.28432, -12.7373, 3.47506, -8.71568, -12.907, 3.47506, 7.28432, -12.7373, -3.47509, -8.71568, -12.907, -3.47509, 7.28432, -12.7373, -3.47509, -8.71568, -12.907, -3.47509, 7.28432, -7.75889, -2.94843, -8.71568, -7.52018, -2.9019, -8.71568, -12.907, -3.47509, -8.71568, -12.907, 3.47506, -8.71568, -7.52018, -2.9019, -8.71568, -7.52018, 2.90188, -8.71568, -12.907, 3.47506, 7.28432, -12.7373, 3.47506, -8.71568, -7.52018, 2.90188, 7.28432, -7.75889, 2.9484, 7.28432, -12.7373, 3.47506, 7.28432, -12.7373, -3.47509, 7.28432, -7.75889, 2.9484, 7.28432, -7.75889, -2.94843 )
+
+[sub_resource type="BoxShape" id=8]
+extents = Vector3( 0.095, 0.095, 0.095 )
+
+[node name="T1_Mech_Leg" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="T1_Mech_Leg" type="Spatial" parent="."]
+
+[node name="Build Collision" type="Spatial" parent="T1_Mech_Leg"]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="Collision" type="Area" parent="T1_Mech_Leg/Build Collision"]
+transform = Transform( 5.36442e-07, 0, -1, -0.700493, 0.71366, -3.8743e-07, 0.71366, 0.700493, 3.57628e-07, 0, -0.619, 0.115 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T1_Mech_Leg/Build Collision/Collision"]
+shape = SubResource( 1 )
+
+[node name="Collision2" type="Area" parent="T1_Mech_Leg/Build Collision"]
+transform = Transform( 2.38419e-07, -4.02331e-07, -1, 0.345967, 0.938247, -2.98023e-07, 0.938247, -0.345967, 3.57628e-07, 0, -0.976, -0.112 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T1_Mech_Leg/Build Collision/Collision2"]
+shape = SubResource( 2 )
+
+[node name="Collision3" type="Area" parent="T1_Mech_Leg/Build Collision"]
+transform = Transform( 4.76837e-07, 1.78814e-07, -1, -0.901326, 0.433142, -3.57628e-07, 0.433142, 0.901326, 3.57628e-07, 0, -1.355, -0.3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T1_Mech_Leg/Build Collision/Collision3"]
+shape = SubResource( 3 )
+
+[node name="Collision4" type="Area" parent="T1_Mech_Leg/Build Collision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.7, -0.028 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T1_Mech_Leg/Build Collision/Collision4"]
+shape = SubResource( 4 )
+
+[node name="Collision5" type="Area" parent="T1_Mech_Leg/Build Collision"]
+transform = Transform( -1, 3.01992e-07, 3.89414e-07, -3.01992e-07, -1, 1.176e-13, 3.89414e-07, 0, 1, 0, -0.212, 0.014 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T1_Mech_Leg/Build Collision/Collision5"]
+shape = SubResource( 5 )
+
+[node name="Collision6" type="Area" parent="T1_Mech_Leg/Build Collision"]
+transform = Transform( 5.36442e-07, 2.98023e-08, -1, -0.700493, 0.713659, -3.57628e-07, 0.713659, 0.700493, 3.57628e-07, 0, -0.3497, -0.1364 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T1_Mech_Leg/Build Collision/Collision6"]
+shape = SubResource( 6 )
+
+[node name="ExtentCollider" type="Area" parent="T1_Mech_Leg"]
+transform = Transform( 0, 1.45292e-07, -0.154645, -3.47959e-07, -0.154645, -1.45292e-07, -0.154645, 3.47959e-07, 0, 0, -0.15, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T1_Mech_Leg/ExtentCollider"]
+shape = SubResource( 7 )
+
+[node name="AttachCollider" type="Area" parent="T1_Mech_Leg"]
+transform = Transform( 1, -3.89414e-07, -3.89414e-07, 3.89414e-07, 1, -1.51644e-13, 3.89414e-07, 0, 1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T1_Mech_Leg/AttachCollider"]
+shape = SubResource( 8 )
+
+[node name="arrows" type="Spatial" parent="T1_Mech_Leg"]
+
+[node name="RC_Leg_Arrows_T7" type="MeshInstance" parent="T1_Mech_Leg/arrows"]
+transform = Transform( 0, 0, -0.2, -1.74846e-08, -0.2, 0, -0.2, 1.74846e-08, 0, 0, -0.1, 0 )
+cast_shadow = 0
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="base" type="MeshInstance" parent="T1_Mech_Leg"]
+transform = Transform( 5.96046e-08, 7.78829e-08, -0.2, 2.27374e-14, -0.2, -7.78829e-08, -0.2, 0, -7.15256e-08, 0, -0.1, 0 )
+cast_shadow = 0
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="hip" type="Spatial" parent="T1_Mech_Leg/base"]
+
+[node name="leg1" type="MeshInstance" parent="T1_Mech_Leg/base/hip"]
+transform = Transform( 0.487555, -0.873092, 2.24805e-06, 0.873092, 0.487555, -4.25189e-11, -1.09601e-06, 1.96278e-06, 1, 0.00202179, -2.29331, 3.79524e-05 )
+cast_shadow = 0
+mesh = ExtResource( 5 )
+material/0 = null
+material/1 = null
+
+[node name="leg2" type="MeshInstance" parent="T1_Mech_Leg/base/hip/leg1"]
+transform = Transform( -0.208833, -0.977951, -6.79807e-08, 0.977951, -0.208833, 9.79944e-08, -1.1003e-07, -4.60173e-08, 1, -2.80545, -0.384417, 0 )
+cast_shadow = 0
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="leg3" type="MeshInstance" parent="T1_Mech_Leg/base/hip/leg1/leg2"]
+transform = Transform( -0.137894, 0.990447, -1.4742e-07, -0.990447, -0.137894, -7.87505e-08, -9.83265e-08, 1.35152e-07, 1, -2.70082, 0.524804, 0 )
+cast_shadow = 0
+mesh = ExtResource( 6 )
+material/0 = null
+material/1 = null
+
+[node name="foot" type="MeshInstance" parent="T1_Mech_Leg/base/hip/leg1/leg2/leg3"]
+transform = Transform( 0.423441, 0.905924, -6.08882e-08, -0.905924, 0.423441, -6.0842e-08, -2.93357e-08, 8.0923e-08, 1, -2.86585, -0.464683, 0 )
+cast_shadow = 0
+mesh = ExtResource( 4 )
+material/0 = null

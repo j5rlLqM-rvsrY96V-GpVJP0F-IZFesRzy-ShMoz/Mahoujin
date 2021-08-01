@@ -1,0 +1,95 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+[ext_resource path="res://models/movement/Wheel_Steer_Huge_Wheel_Cardlife-4739856257291299608.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://models/movement/Wheel_L5_steer_arrow-7216299158669304135.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://models/movement/wheel_Steer_huge_suspension_Cardlife2160869064157945081.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://models/movement/Cylinder01-8798578952691787519.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://models/movement/Wheel_Steer_Huge_Base_Cardlife2528151646009225290.obj" type="ArrayMesh" id=6]
+[ext_resource path="res://models/movement/Wheel_L1Powered_straight_arrow6902201871406389299.obj" type="ArrayMesh" id=7]
+
+[sub_resource type="ConvexPolygonShape" id=1]
+points = PoolVector3Array( -0.884073, 0, 0, -0.76563, 0.442036, 0, 0, 0, 0, -0.442036, 0.76563, 0, -0.765629, -0.442037, 0, -0.442036, -0.76563, 0, 4.11016e-07, -0.884073, 0, 0.442037, -0.765629, 0, 0.76563, -0.442036, 0, 0.884073, 1.33491e-07, 0, 0.76563, 0.442037, 0, 0.442037, 0.76563, 0, 3.86441e-08, 0.884073, 0, -0.442036, 0.76563, 0, -0.884073, 0, 0.837216, -0.76563, 0.442036, 0.837216, -0.884073, 0, 0, -0.76563, 0.442036, 0, -0.442036, 0.76563, 0.837216, -0.442036, 0.76563, 0, -0.765629, -0.442037, 0, -0.765629, -0.442037, 0.837216, -0.442036, -0.76563, 0, -0.442036, -0.76563, 0.837216, 4.11016e-07, -0.884073, 0, 4.11016e-07, -0.884073, 0.837216, 0.442037, -0.765629, 0, 0.442037, -0.765629, 0.837216, 0.76563, -0.442036, 0, 0.76563, -0.442036, 0.837216, 0.884073, 1.33491e-07, 0, 0.884073, 1.33491e-07, 0.837216, 0.76563, 0.442037, 0, 0.76563, 0.442037, 0.837216, 0.442037, 0.76563, 0, 0.442037, 0.76563, 0.837216, 3.86441e-08, 0.884073, 0, 3.86441e-08, 0.884073, 0.837216, -0.442036, 0.76563, 0, -0.442036, 0.76563, 0.837216, -0.76563, 0.442036, 0.837216, -0.884073, 0, 0.837216, 0, 0, 0.837216, -0.442036, 0.76563, 0.837216, -0.765629, -0.442037, 0.837216, -0.442036, -0.76563, 0.837216, 4.11016e-07, -0.884073, 0.837216, 0.442037, -0.765629, 0.837216, 0.76563, -0.442036, 0.837216, 0.884073, 1.33491e-07, 0.837216, 0.76563, 0.442037, 0.837216, 0.442037, 0.76563, 0.837216, 3.86441e-08, 0.884073, 0.837216, -0.442036, 0.76563, 0.837216 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.085, 0.085, 0.230007 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.45, 0.700431, 0.45 )
+
+[sub_resource type="ConvexPolygonShape" id=4]
+points = PoolVector3Array( -0.884073, 0, 0, -0.76563, 0.442036, 0, 0, 0, 0, -0.442036, 0.76563, 0, -0.765629, -0.442037, 0, -0.442036, -0.76563, 0, 4.11016e-07, -0.884073, 0, 0.442037, -0.765629, 0, 0.76563, -0.442036, 0, 0.884073, 1.33491e-07, 0, 0.76563, 0.442037, 0, 0.442037, 0.76563, 0, 3.86441e-08, 0.884073, 0, -0.442036, 0.76563, 0, -0.884073, 0, 0.837216, -0.76563, 0.442036, 0.837216, -0.884073, 0, 0, -0.76563, 0.442036, 0, -0.442036, 0.76563, 0.837216, -0.442036, 0.76563, 0, -0.765629, -0.442037, 0, -0.765629, -0.442037, 0.837216, -0.442036, -0.76563, 0, -0.442036, -0.76563, 0.837216, 4.11016e-07, -0.884073, 0, 4.11016e-07, -0.884073, 0.837216, 0.442037, -0.765629, 0, 0.442037, -0.765629, 0.837216, 0.76563, -0.442036, 0, 0.76563, -0.442036, 0.837216, 0.884073, 1.33491e-07, 0, 0.884073, 1.33491e-07, 0.837216, 0.76563, 0.442037, 0, 0.76563, 0.442037, 0.837216, 0.442037, 0.76563, 0, 0.442037, 0.76563, 0.837216, 3.86441e-08, 0.884073, 0, 3.86441e-08, 0.884073, 0.837216, -0.442036, 0.76563, 0, -0.442036, 0.76563, 0.837216, -0.76563, 0.442036, 0.837216, -0.884073, 0, 0.837216, 0, 0, 0.837216, -0.442036, 0.76563, 0.837216, -0.765629, -0.442037, 0.837216, -0.442036, -0.76563, 0.837216, 4.11016e-07, -0.884073, 0.837216, 0.442037, -0.765629, 0.837216, 0.76563, -0.442036, 0.837216, 0.884073, 1.33491e-07, 0.837216, 0.76563, 0.442037, 0.837216, 0.442037, 0.76563, 0.837216, 3.86441e-08, 0.884073, 0.837216, -0.442036, 0.76563, 0.837216 )
+
+[node name="T4_Steering_Wheel_Cardlife_Steam" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="T4_Steering_Wheel_Cardlife_Steam" type="Spatial" parent="."]
+
+[node name="WheelSteerHuge_Cardlife" type="Spatial" parent="T4_Steering_Wheel_Cardlife_Steam"]
+transform = Transform( -0.2, 1.74846e-08, -6.03748e-12, 0, 6.90579e-05, 0.2, 1.74846e-08, 0.2, -6.9046e-05, 0, -0.1, 0 )
+
+[node name="Wheel_Steer_Huge_Base_Cardlife" type="MeshInstance" parent="T4_Steering_Wheel_Cardlife_Steam/WheelSteerHuge_Cardlife"]
+cast_shadow = 0
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="wheel_Steer_huge_suspension_Cardlife" type="MeshInstance" parent="T4_Steering_Wheel_Cardlife_Steam/WheelSteerHuge_Cardlife/Wheel_Steer_Huge_Base_Cardlife"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.49467e-16, 0, 1.01211 )
+cast_shadow = 0
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="Wheel_Steer_Huge_Wheel_Cardlife" type="MeshInstance" parent="T4_Steering_Wheel_Cardlife_Steam/WheelSteerHuge_Cardlife/Wheel_Steer_Huge_Base_Cardlife/wheel_Steer_huge_suspension_Cardlife"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000862274, 0, 2.18262 )
+cast_shadow = 0
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="Wheel_Extent" type="MeshInstance" parent="T4_Steering_Wheel_Cardlife_Steam"]
+transform = Transform( 0.665907, 1.16431e-07, 0, 0, 0, 1.26429, 1.16431e-07, -0.665907, 0, 0, -0.09, 0 )
+cast_shadow = 0
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Steering_Wheel_Cardlife_Steam/Wheel_Extent"]
+shape = SubResource( 1 )
+
+[node name="BuildCollision" type="Area" parent="T4_Steering_Wheel_Cardlife_Steam"]
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Steering_Wheel_Cardlife_Steam/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.105, -0.15 )
+shape = SubResource( 2 )
+
+[node name="Base" type="Area" parent="T4_Steering_Wheel_Cardlife_Steam/BuildCollision"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Steering_Wheel_Cardlife_Steam/BuildCollision/Base"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.200431, 0 )
+shape = SubResource( 3 )
+
+[node name="Wheel" type="MeshInstance" parent="T4_Steering_Wheel_Cardlife_Steam/BuildCollision"]
+transform = Transform( 0.64011, 1.1192e-07, 0, 0, 0, 1.02292, 1.1192e-07, -0.64011, 0, 0, 0.125, 0 )
+cast_shadow = 0
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Steering_Wheel_Cardlife_Steam/BuildCollision/Wheel"]
+shape = SubResource( 4 )
+
+[node name="Steering_Arrow" type="Spatial" parent="T4_Steering_Wheel_Cardlife_Steam"]
+transform = Transform( 2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 0.256529, 0 )
+
+[node name="wheel_L5_steer_arrow" type="MeshInstance" parent="T4_Steering_Wheel_Cardlife_Steam/Steering_Arrow"]
+transform = Transform( -0.2, 6.66134e-17, -6.25818e-10, -6.25818e-10, -4.76837e-08, 0.2, -6.66134e-17, 0.2, 5.96046e-08, 0, -0.236028, 0 )
+cast_shadow = 0
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="Straight_Arrow" type="Spatial" parent="T4_Steering_Wheel_Cardlife_Steam"]
+transform = Transform( 2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 0, 0 )
+
+[node name="wheel_L1_powered_arrow" type="MeshInstance" parent="T4_Steering_Wheel_Cardlife_Steam/Straight_Arrow"]
+transform = Transform( 0.2, 0, 0, 0, 0, -0.2, 0, 0.2, 0, 0, 0.614199, 0 )
+cast_shadow = 0
+mesh = ExtResource( 7 )
+material/0 = null

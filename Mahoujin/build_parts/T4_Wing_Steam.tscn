@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+[ext_resource path="res://models/movement/Wing_Eagle_Arrow-3417003323059620177.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://models/movement/Wing_Eagle_Base-7702988973024283458.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://models/movement/Wing_Eagle_Tip-952151241410121314.obj" type="ArrayMesh" id=4]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.0999999, 0.02, 0.294835 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.07, 1.01196, 0.289395 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.025, 0.775, 0.69 )
+
+[node name="T4_Wing_Steam" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="T4_Wing_Steam" type="Spatial" parent="."]
+
+[node name="Wing_Eagle_Base" type="MeshInstance" parent="T4_Wing_Steam"]
+transform = Transform( 0, -0.2, -1.74846e-08, -0.2, 0, 0, 0, 1.74846e-08, -0.2, 0, -0.1, 0 )
+cast_shadow = 0
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="Wing_Eagle_Arrow" type="MeshInstance" parent="T4_Wing_Steam/Wing_Eagle_Base"]
+cast_shadow = 0
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="Wing_Eagle_Tip" type="MeshInstance" parent="T4_Wing_Steam/Wing_Eagle_Base"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.37118, 0, -0.5 )
+cast_shadow = 0
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="BuildCollision" type="Area" parent="T4_Wing_Steam"]
+transform = Transform( 0.99, 0, 0, 0, 0.99, 0, 0, 0, 0.99, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Wing_Steam/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, 0.000619407 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="T4_Wing_Steam/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.933042, 0.000604957 )
+shape = SubResource( 2 )
+
+[node name="Extents" type="Area" parent="T4_Wing_Steam"]
+transform = Transform( 1, 0, 0, 0, 1.38689, 0, 0, 0, 0.692603, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Wing_Steam/Extents"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.71, 0 )
+shape = SubResource( 3 )

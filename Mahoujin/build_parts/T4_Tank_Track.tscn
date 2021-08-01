@@ -1,0 +1,201 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+[ext_resource path="res://models/movement/wheelBottomRight-1633505379898625710.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://models/movement/wheelTopRight7310196990002977646.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://models/movement/wheelBottomLeft3268267741817980334.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://models/movement/suspensionLeft-2259203664768127205.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://models/movement/leftArm4015607386551195127.obj" type="ArrayMesh" id=6]
+[ext_resource path="res://models/movement/wheelLeft-5098724051376942045.obj" type="ArrayMesh" id=7]
+[ext_resource path="res://models/movement/suspensionRight1832654257885542737.obj" type="ArrayMesh" id=8]
+[ext_resource path="res://models/movement/RC_Cube_TankTrack_T7-7699625984550520705.obj" type="ArrayMesh" id=9]
+[ext_resource path="res://models/movement/rightArm-4628942550611279265.obj" type="ArrayMesh" id=10]
+[ext_resource path="res://models/movement/wheelRight-3960811191231495785.obj" type="ArrayMesh" id=11]
+[ext_resource path="res://models/movement/wheelTopLeft-18225003786845799.obj" type="ArrayMesh" id=12]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.4, 0.4975, 0.4 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.4, 0.4975, 0.4 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.4975, 0.4, 0.4 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.4975, 0.4, 0.4 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 0.4, 0.4975, 0.4 )
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 0.4, 0.4975, 0.4 )
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 0.8, 2.18, 5.85 )
+
+[sub_resource type="BoxShape" id=8]
+extents = Vector3( 0.775, 2.18, 2.5 )
+
+[sub_resource type="BoxShape" id=9]
+extents = Vector3( 0.775, 2.18, 2.5 )
+
+[sub_resource type="BoxShape" id=10]
+extents = Vector3( 1.8, 2.25, 2.23 )
+
+[node name="T4_Tank_Track" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="T4_Tank_Track" type="Spatial" parent="."]
+
+[node name="Colliders" type="Spatial" parent="T4_Tank_Track"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
+
+[node name="Base" type="Area" parent="T4_Tank_Track/Colliders"]
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Tank_Track/Colliders/Base"]
+shape = SubResource( 1 )
+
+[node name="Base2" type="Area" parent="T4_Tank_Track/Colliders"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Tank_Track/Colliders/Base2"]
+shape = SubResource( 2 )
+
+[node name="Base3" type="Area" parent="T4_Tank_Track/Colliders"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Tank_Track/Colliders/Base3"]
+shape = SubResource( 3 )
+
+[node name="Base4" type="Area" parent="T4_Tank_Track/Colliders"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Tank_Track/Colliders/Base4"]
+shape = SubResource( 4 )
+
+[node name="Base5" type="Area" parent="T4_Tank_Track/Colliders"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Tank_Track/Colliders/Base5"]
+shape = SubResource( 5 )
+
+[node name="Base6" type="Area" parent="T4_Tank_Track/Colliders"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Tank_Track/Colliders/Base6"]
+shape = SubResource( 6 )
+
+[node name="BuildSize" type="Area" parent="T4_Tank_Track/Colliders"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.66924, 2, 1.00892 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Tank_Track/Colliders/BuildSize"]
+shape = SubResource( 7 )
+
+[node name="BuildSize2" type="Area" parent="T4_Tank_Track/Colliders"]
+transform = Transform( 0.891727, 3.37739e-08, -0.452574, 1.26726e-09, 1, 7.71232e-08, 0.452574, -6.93463e-08, 0.891727, -0.523705, 1.93688, 4.44242 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Tank_Track/Colliders/BuildSize2"]
+shape = SubResource( 8 )
+
+[node name="BuildSize3" type="Area" parent="T4_Tank_Track/Colliders"]
+transform = Transform( 0.891727, 0, 0.452574, 0, 1, 0, -0.452574, 0, 0.891727, -0.523705, 1.93688, -2.42144 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Tank_Track/Colliders/BuildSize3"]
+shape = SubResource( 9 )
+
+[node name="BuildSize4" type="Area" parent="T4_Tank_Track/Colliders"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.647392, 2, 1.00892 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Tank_Track/Colliders/BuildSize4"]
+shape = SubResource( 10 )
+
+[node name="RC_Cube_TankTrack_T7" type="MeshInstance" parent="T4_Tank_Track"]
+transform = Transform( 0, 0.2, 0, -0.2, 0, 0, 0, 0, 0.2, 0, -0.0999999, 0 )
+cast_shadow = 0
+mesh = ExtResource( 9 )
+material/0 = null
+
+[node name="T7_Rig" type="Spatial" parent="T4_Tank_Track/RC_Cube_TankTrack_T7"]
+transform = Transform( -0.968591, 0.00864741, 0.248509, 0.00892747, 0.99996, 0, -0.248499, 0.00221856, -0.96863, -2.5, 5.68434e-16, 1 )
+
+[node name="joint_leftBottom" type="Spatial" parent="T4_Tank_Track/RC_Cube_TankTrack_T7/T7_Rig"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25242, -1.61157, -0.927756 )
+
+[node name="suspensionLeft" type="MeshInstance" parent="T4_Tank_Track/RC_Cube_TankTrack_T7/T7_Rig/joint_leftBottom"]
+transform = Transform( -0.968591, 0.00892747, -0.248499, 0.00864741, 0.99996, 0.00221856, 0.248509, 0, -0.96863, 0.0182966, 0.631999, -0.00321617 )
+cast_shadow = 0
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="wheelBottomLeft" type="MeshInstance" parent="T4_Tank_Track/RC_Cube_TankTrack_T7/T7_Rig/joint_leftBottom/suspensionLeft"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.10352e-07, -0.632137, 1.46484e-05 )
+cast_shadow = 0
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="joint_leftMiddle" type="Spatial" parent="T4_Tank_Track/RC_Cube_TankTrack_T7/T7_Rig"]
+transform = Transform( 0.911724, -0.278161, -0.302302, 0.292631, 0.956222, 0.0026989, 0.288317, -0.0909237, 0.953208, -0.639735, -0.0866595, -2.49042 )
+
+[node name="joint_leftMiddleEnd" type="Spatial" parent="T4_Tank_Track/RC_Cube_TankTrack_T7/T7_Rig/joint_leftMiddle"]
+transform = Transform( -0.808907, 0.300759, -0.505186, 0.255097, 0.9537, 0.159316, 0.529711, 0, -0.848178, -1.65941, -0.9906, -2.05699 )
+
+[node name="leftArm" type="MeshInstance" parent="T4_Tank_Track/RC_Cube_TankTrack_T7/T7_Rig/joint_leftMiddle"]
+transform = Transform( -0.808907, 0.300759, -0.505186, 0.255097, 0.9537, 0.159316, 0.529711, 0, -0.848178, 0.0105606, -0.0033304, -0.0069156 )
+cast_shadow = 0
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="wheelLeft" type="MeshInstance" parent="T4_Tank_Track/RC_Cube_TankTrack_T7/T7_Rig/joint_leftMiddle/leftArm"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.44382, 2.42519 )
+cast_shadow = 0
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="joint_rightBottom" type="Spatial" parent="T4_Tank_Track/RC_Cube_TankTrack_T7/T7_Rig"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.223609, -1.61582, 0.927765 )
+
+[node name="suspensionRight" type="MeshInstance" parent="T4_Tank_Track/RC_Cube_TankTrack_T7/T7_Rig/joint_rightBottom"]
+transform = Transform( -0.968591, 0.00892747, -0.248499, 0.00864741, 0.99996, 0.00221856, 0.248509, 0, -0.96863, 0.0183586, 0.640304, -0.00326346 )
+cast_shadow = 0
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="wheelBottomRight" type="MeshInstance" parent="T4_Tank_Track/RC_Cube_TankTrack_T7/T7_Rig/joint_rightBottom/suspensionRight"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.10352e-07, -0.640442, -4.88281e-06 )
+cast_shadow = 0
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="joint_rightMiddle" type="Spatial" parent="T4_Tank_Track/RC_Cube_TankTrack_T7/T7_Rig"]
+transform = Transform( -0.906353, 0.295189, 0.302302, 0.308863, 0.951103, -0.0026989, -0.288317, 0.0909238, -0.953208, 0.638085, -0.0980676, 2.49042 )
+
+[node name="joint_rightMiddleEnd" type="Spatial" parent="T4_Tank_Track/RC_Cube_TankTrack_T7/T7_Rig/joint_rightMiddle"]
+transform = Transform( -0.906353, 0.308863, -0.288317, 0.295189, 0.951103, 0.0909238, 0.302302, -0.0026989, -0.953208, -1.65941, -0.9906, -2.05699 )
+
+[node name="rightArm" type="MeshInstance" parent="T4_Tank_Track/RC_Cube_TankTrack_T7/T7_Rig/joint_rightMiddle"]
+transform = Transform( 0.808907, 0.300759, 0.505186, -0.255097, 0.9537, -0.159316, -0.529712, 0, 0.848178, -0.0105606, 0.0033304, 0.00691561 )
+cast_shadow = 0
+mesh = ExtResource( 10 )
+material/0 = null
+
+[node name="wheelRight" type="MeshInstance" parent="T4_Tank_Track/RC_Cube_TankTrack_T7/T7_Rig/joint_rightMiddle/rightArm"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.44382, -2.42519 )
+cast_shadow = 0
+mesh = ExtResource( 11 )
+material/0 = null
+
+[node name="track" type="Spatial" parent="T4_Tank_Track/RC_Cube_TankTrack_T7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5, -2.5, 3.5 )
+
+[node name="wheelTopLeft" type="MeshInstance" parent="T4_Tank_Track/RC_Cube_TankTrack_T7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.51306, -0.0923672, 3.57107 )
+cast_shadow = 0
+mesh = ExtResource( 12 )
+material/0 = null
+
+[node name="wheelTopRight" type="MeshInstance" parent="T4_Tank_Track/RC_Cube_TankTrack_T7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.51306, -0.0923672, -1.57107 )
+cast_shadow = 0
+mesh = ExtResource( 3 )
+material/0 = null

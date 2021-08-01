@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+[ext_resource path="res://models/movement/Skid_Steering_Suspension-3405189626288194752.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://models/movement/Skid_Steering_Turn1610052046836733986.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://models/movement/Skid_Steering_Hinge4102384836171289585.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://models/movement/Skid_Steering_Skid-4562725627201912435.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://models/movement/Skid_Steering_T56438185096707371924.obj" type="ArrayMesh" id=6]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.091889, 0.144363, 0.0984626 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.108565, 0.0593634, 0.525951 )
+
+[node name="T2_Steering_Ski" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="T2_Steering_Ski" type="Spatial" parent="."]
+
+[node name="Skid_Steering_Arrows_T5" type="Spatial" parent="T2_Steering_Ski"]
+transform = Transform( -0.2, 1.74846e-08, 0, -1.74846e-08, -0.2, 0, 0, 0, 0.2, 0, -0.1, 0 )
+
+[node name="Collision" type="Area" parent="T2_Steering_Ski"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.140548, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T2_Steering_Ski/Collision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00181866, -0.0945387, -0.000527859 )
+shape = SubResource( 1 )
+
+[node name="Collision" type="Area" parent="T2_Steering_Ski/Collision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.569729, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T2_Steering_Ski/Collision/Collision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00412703, -0.484399, 0.0629191 )
+shape = SubResource( 2 )
+
+[node name="Skid_Steering_T5" type="MeshInstance" parent="T2_Steering_Ski"]
+transform = Transform( -0.2, 1.74846e-08, 0, -1.74846e-08, -0.2, 0, 0, 0, 0.2, 0, -0.1, 0 )
+cast_shadow = 0
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="Skid_Steering_Turn" type="MeshInstance" parent="T2_Steering_Ski/Skid_Steering_T5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.83105e-06, -0.13362, 3.66211e-06 )
+cast_shadow = 0
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="Skid_Steering_Suspension" type="MeshInstance" parent="T2_Steering_Ski/Skid_Steering_T5/Skid_Steering_Turn"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.83105e-06, 0.13362, -3.66211e-06 )
+cast_shadow = 0
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="Skid_Steering_Hinge" type="MeshInstance" parent="T2_Steering_Ski/Skid_Steering_T5/Skid_Steering_Turn/Skid_Steering_Suspension"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.54903, 0 )
+cast_shadow = 0
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="Skid_Steering_Skid" type="MeshInstance" parent="T2_Steering_Ski/Skid_Steering_T5/Skid_Steering_Turn/Skid_Steering_Suspension/Skid_Steering_Hinge"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.54903, 0 )
+cast_shadow = 0
+mesh = ExtResource( 5 )
+material/0 = null

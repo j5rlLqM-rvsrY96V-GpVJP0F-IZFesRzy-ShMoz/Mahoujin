@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+[ext_resource path="res://models/cosmetic/RC_Vaportrail_L1_Cylinder-6450721452903373725.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://models/cosmetic/RC_Vaportrail_L1_Base2122096628776107317.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://models/cosmetic/RC_Vaportrail_L1_Fin-6606290333651410565.obj" type="ArrayMesh" id=4]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.09, 0.1, 0.09 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.04, 0.04, 0.25 )
+
+[node name="Vapor_Trail_Single" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Vapor_Trail_Single" type="Spatial" parent="."]
+
+[node name="BuildCollision" type="Area" parent="Vapor_Trail_Single"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Vapor_Trail_Single/BuildCollision"]
+shape = SubResource( 1 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="Vapor_Trail_Single/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08, -0.24 )
+shape = SubResource( 2 )
+
+[node name="RC_Vaportrail_L1" type="MeshInstance" parent="Vapor_Trail_Single"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, -0.1, 0 )
+cast_shadow = 0
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="RC_Vaportrail_L1_Fin" type="MeshInstance" parent="Vapor_Trail_Single/RC_Vaportrail_L1"]
+cast_shadow = 0
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="RC_Vaportrail_L1_Cylinder" type="MeshInstance" parent="Vapor_Trail_Single/RC_Vaportrail_L1/RC_Vaportrail_L1_Fin"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.862289, 0, 0, -1.42109e-16 )
+cast_shadow = 0
+mesh = ExtResource( 2 )
+material/0 = null

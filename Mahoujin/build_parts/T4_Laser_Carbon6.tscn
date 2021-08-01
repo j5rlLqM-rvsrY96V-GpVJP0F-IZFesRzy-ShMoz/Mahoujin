@@ -1,0 +1,88 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+[ext_resource path="res://models/weapons/RC_Laser_mk5_V_arrows-3650143705042766424.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://models/weapons/C6_SMG_Barrel_T10-1531585388984983197.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://models/weapons/C6_SMG_Inner_Barrel_T107915508645471057913.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://models/weapons/C6_SMG_Arm_T101419268217625731333.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://models/weapons/C6_SMG_Base_T10-5285130204009298675.obj" type="ArrayMesh" id=6]
+
+[sub_resource type="ConvexPolygonShape" id=1]
+points = PoolVector3Array( 0.010077, 0.0138697, 0.0242597, 7.49392e-10, 0.0171441, 0.0242597, 0, 4.95484e-21, 0.0298303, 0.0163049, 0.0224419, 0.00967633, 1.21252e-09, 0.0277394, 0.00967633, 0.0263818, 0.00857205, 0.00967633, 0.0163049, 0.00529779, 0.0242597, 0, 4.95484e-21, 0.0298303, 0.0263818, -0.00857204, 0.00967633, 0.0163049, -0.00529779, 0.0242597, 0, 4.95484e-21, 0.0298303, 0.0163049, -0.0224419, 0.00967632, 0.010077, -0.0138697, 0.0242597, 0, 4.95484e-21, 0.0298303, -3.30789e-10, -0.0277394, 0.00967633, -2.0444e-10, -0.0171441, 0.0242597, 0, 4.95484e-21, 0.0298303, -0.0163049, -0.0224419, 0.00967632, -0.010077, -0.0138697, 0.0242597, 0, 4.95484e-21, 0.0298303, -0.0263818, -0.00857202, 0.00967633, -0.0163049, -0.00529777, 0.0242597, 0, 4.95484e-21, 0.0298303, -0.0263818, 0.00857205, 0.00967633, -0.0163049, 0.00529783, 0.0242597, 0, 4.95484e-21, 0.0298303, -0.0163049, 0.0224419, 0.00967633, -0.010077, 0.0138697, 0.0242597, 0, 4.95484e-21, 0.0298303, 1.21252e-09, 0.0277394, 0.00967633, 7.49392e-10, 0.0171441, 0.0242597, 0, 4.95484e-21, 0.0298303, -0.0263818, -0.00857202, 0.0010745, -0.0163049, -0.0224419, 0.0010745, -0.0263818, 0.00857205, 0.0010745, -0.0163049, 0.0224419, 0.0010745, 1.21252e-09, 0.0277394, 0.0010745, -0.0263818, -0.00857202, 0.0010745, -0.0263818, -0.00857202, 0.0010745, -0.0163049, -0.0224419, 0.0010745, -3.30789e-10, -0.0277394, 0.0010745, -3.30789e-10, -0.0277394, 0.0010745, 0.0163049, -0.0224419, 0.0010745, 0.0263818, -0.00857204, 0.0010745, 0.0263818, 0.00857205, 0.0010745, 0.0163049, 0.0224419, 0.0010745, 1.21252e-09, 0.0277394, 0.0010745, 0.0163049, 0.0224419, 0.0010745, 0.0163049, 0.0224419, 0.0010745, 1.21252e-09, 0.0277394, 0.0010745, 1.21252e-09, 0.0277394, 0.0010745, 0.0263818, 0.00857205, 0.0010745, 0.0163049, 0.0224419, 0.0010745, 0.0263818, -0.00857205, 0.0010745, 0.0163049, -0.0224419, 0.0010745, 0.0163049, -0.0224419, 0.0010745, 0.0263818, -0.00857204, 0.0010745, -3.30789e-10, -0.0277394, 0.0010745, -0.0263818, 0.00857205, 0.0010745, -0.0263818, -0.00857202, 0.0010745, -0.0163049, 0.0224419, 0.0010745, -0.0163049, 0.0224419, 0.0010745, 1.21252e-09, 0.0277394, 0.0010745, 1.21252e-09, 0.0277394, 0.0010745, 1.21252e-09, 0.0277394, 0.0010745, 0.0163049, 0.0224419, 0.0010745, 0, -1.53264e-19, 0.0010745, 0.0163049, 0.0224419, 0.0010745, 0.0263818, 0.00857205, 0.0010745, 0, -1.53264e-19, 0.0010745, 0.0263818, 0.00857205, 0.0010745, 0.0263818, -0.00857205, 0.0010745, 0, -1.53264e-19, 0.0010745, 0.0263818, -0.00857205, 0.0010745, 0.0163049, -0.0224419, 0.0010745, 0, -1.53264e-19, 0.0010745, 0.0163049, -0.0224419, 0.0010745, -3.30789e-10, -0.0277394, 0.0010745, 0, -1.53264e-19, 0.0010745, -3.30789e-10, -0.0277394, 0.0010745, -0.0163049, -0.0224419, 0.0010745, 0, -1.53264e-19, 0.0010745, -0.0163049, -0.0224419, 0.0010745, -0.0263818, -0.00857202, 0.0010745, 0, -1.53264e-19, 0.0010745, -0.0263818, -0.00857202, 0.0010745, -0.0263818, 0.00857205, 0.0010745, 0, -1.53264e-19, 0.0010745, -0.0263818, 0.00857205, 0.0010745, -0.0163049, 0.0224419, 0.0010745, 0, -1.53264e-19, 0.0010745, -0.0163049, 0.0224419, 0.0010745, 1.21252e-09, 0.0277394, 0.0010745, 0, -1.53264e-19, 0.0010745 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.595, 0.7, 1.8 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.45, 0.183971, 0.45 )
+
+[sub_resource type="CapsuleShape" id=4]
+radius = 0.4
+height = 3.54
+
+[node name="T4_Laser_Carbon6" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="T4_Laser_Carbon6" type="Spatial" parent="."]
+
+[node name="Extents" type="Spatial" parent="T4_Laser_Carbon6"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
+
+[node name="RC_HemispherePlus_Collision" type="Area" parent="T4_Laser_Carbon6/Extents"]
+transform = Transform( 115, 0, 0, 0, 0, 120, 0, -115, 0, 0, 0.204158, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Laser_Carbon6/Extents/RC_HemispherePlus_Collision"]
+shape = SubResource( 1 )
+
+[node name="BuildCollision" type="Area" parent="T4_Laser_Carbon6"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Laser_Carbon6/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, -0.3 )
+shape = SubResource( 2 )
+
+[node name="Base" type="Area" parent="T4_Laser_Carbon6/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.021, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Laser_Carbon6/BuildCollision/Base"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.333971, 0 )
+shape = SubResource( 3 )
+
+[node name="Barrel" type="Area" parent="T4_Laser_Carbon6/BuildCollision"]
+transform = Transform( 1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, -0.788044 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T4_Laser_Carbon6/BuildCollision/Barrel"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.79, -1 )
+shape = SubResource( 4 )
+
+[node name="RC_Laser_mk5_VerticalMount_arrows" type="Spatial" parent="T4_Laser_Carbon6"]
+transform = Transform( 0.18, 0, 0, 0, 0.2, 0, 0, 0, 0.18, 0, -0.1, 0 )
+
+[node name="RC_Laser_mk5_V_arrows" type="MeshInstance" parent="T4_Laser_Carbon6/RC_Laser_mk5_VerticalMount_arrows"]
+cast_shadow = 0
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="C6_SMG_T10" type="MeshInstance" parent="T4_Laser_Carbon6"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, -0.1, 0 )
+cast_shadow = 0
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="C6_SMG_Arm_T10" type="MeshInstance" parent="T4_Laser_Carbon6/C6_SMG_T10"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.130195, -3.66211e-06 )
+cast_shadow = 0
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="C6_SMG_Barrel_T10" type="MeshInstance" parent="T4_Laser_Carbon6/C6_SMG_T10/C6_SMG_Arm_T10"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.16921, -0.86911 )
+cast_shadow = 0
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="C6_SMG_Inner_Barrel_T10" type="MeshInstance" parent="T4_Laser_Carbon6/C6_SMG_T10/C6_SMG_Arm_T10/C6_SMG_Barrel_T10"]
+transform = Transform( 0, 0, -0.539188, 0, 0.539188, 0, 0.539188, 0, 0, 0, 0.200595, 1.14275 )
+cast_shadow = 0
+mesh = ExtResource( 4 )
+material/0 = null

@@ -1,0 +1,212 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://cube_implementation.gd" type="Script" id=1]
+[ext_resource path="res://models/movement/Heli_Base_5-7980548594101317363.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://models/movement/Heli_Arrow_T64934643942804984454.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://models/movement/Heli_blades_54753083631815423214.obj" type="ArrayMesh" id=4]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.1, 0.225, 0.1 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.04, 0.96, 0.15 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 1, 0.02, 0.275 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 1, 0.02, 0.275 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 1, 0.02, 0.275 )
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 1, 0.02, 0.275 )
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 1, 0.02, 0.275 )
+
+[sub_resource type="BoxShape" id=8]
+extents = Vector3( 1, 0.02, 0.275 )
+
+[sub_resource type="BoxShape" id=9]
+extents = Vector3( 1, 0.02, 0.275 )
+
+[sub_resource type="BoxShape" id=10]
+extents = Vector3( 1, 0.02, 0.275 )
+
+[sub_resource type="BoxShape" id=11]
+extents = Vector3( 1, 0.02, 0.275 )
+
+[sub_resource type="BoxShape" id=12]
+extents = Vector3( 1, 0.02, 0.275 )
+
+[sub_resource type="BoxShape" id=13]
+extents = Vector3( 1, 0.02, 0.275 )
+
+[sub_resource type="BoxShape" id=14]
+extents = Vector3( 1, 0.02, 0.275 )
+
+[sub_resource type="BoxShape" id=15]
+extents = Vector3( 0.975, 0.04, 0.27 )
+
+[sub_resource type="BoxShape" id=16]
+extents = Vector3( 0.975, 0.04, 0.27 )
+
+[sub_resource type="BoxShape" id=17]
+extents = Vector3( 0.975, 0.04, 0.27 )
+
+[sub_resource type="BoxShape" id=18]
+extents = Vector3( 0.975, 0.04, 0.27 )
+
+[sub_resource type="BoxShape" id=19]
+extents = Vector3( 0.975, 0.04, 0.27 )
+
+[sub_resource type="BoxShape" id=20]
+extents = Vector3( 0.975, 0.04, 0.27 )
+
+[node name="T2_Rotor" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="T2_Rotor" type="Spatial" parent="."]
+
+[node name="Collision" type="Area" parent="T2_Rotor"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T2_Rotor/Collision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.225, 0 )
+shape = SubResource( 1 )
+
+[node name="Collision" type="Area" parent="T2_Rotor/Collision"]
+transform = Transform( 2.32458e-06, 1, 0, -1, 2.32458e-06, 0, 0, 0, 1, 0, 0.4262, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T2_Rotor/Collision/Collision"]
+shape = SubResource( 2 )
+
+[node name="Blade Collision extents" type="Spatial" parent="T2_Rotor/Collision"]
+transform = Transform( 1.07657, 0, 0, 0, 1, 0, 0, 0, 1.07657, 4.76837e-07, 0.447, -4.76837e-07 )
+
+[node name="Blade collision1" type="Area" parent="T2_Rotor/Collision/Blade Collision extents"]
+transform = Transform( 0.988493, -0.151265, 0, 0.151265, 0.988493, 0, 0, 0, 1, -4.7684e-07, 0, 4.7684e-07 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T2_Rotor/Collision/Blade Collision extents/Blade collision1"]
+shape = SubResource( 3 )
+
+[node name="Blade collision2" type="Area" parent="T2_Rotor/Collision/Blade Collision extents"]
+transform = Transform( 0.856061, -0.130999, -0.499999, 0.151265, 0.988493, 0, 0.494246, -0.0756324, 0.866026, -4.7684e-07, 0, 4.7684e-07 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T2_Rotor/Collision/Blade Collision extents/Blade collision2"]
+shape = SubResource( 4 )
+
+[node name="Blade collision3" type="Area" parent="T2_Rotor/Collision/Blade Collision extents"]
+transform = Transform( 0.85606, -0.130999, 0.5, 0.151264, 0.988493, 7.93487e-07, -0.494247, 0.0756315, 0.866025, -4.7684e-07, 0, 4.7684e-07 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T2_Rotor/Collision/Blade Collision extents/Blade collision3"]
+shape = SubResource( 5 )
+
+[node name="Blade collision4" type="Area" parent="T2_Rotor/Collision/Blade Collision extents"]
+transform = Transform( 0.494247, -0.0756329, 0.866026, 0.151264, 0.988493, 1.05798e-06, -0.856061, 0.130998, 0.5, -4.7684e-07, 0, 4.7684e-07 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T2_Rotor/Collision/Blade Collision extents/Blade collision4"]
+shape = SubResource( 6 )
+
+[node name="Blade collision5" type="Area" parent="T2_Rotor/Collision/Blade Collision extents"]
+transform = Transform( 0.494247, -0.0756313, -0.866025, 0.151264, 0.988493, 1.05798e-06, 0.85606, -0.130999, 0.5, -4.7684e-07, 0, 4.7684e-07 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T2_Rotor/Collision/Blade Collision extents/Blade collision5"]
+shape = SubResource( 7 )
+
+[node name="Blade collision6" type="Area" parent="T2_Rotor/Collision/Blade Collision extents"]
+transform = Transform( 2.38419e-07, 1.57207e-06, -1, 0.151264, 0.988493, 1.60187e-06, 0.988494, -0.151264, 0, -4.7684e-07, 0, 4.7684e-07 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T2_Rotor/Collision/Blade Collision extents/Blade collision6"]
+shape = SubResource( 8 )
+
+[node name="Blade collision7" type="Area" parent="T2_Rotor/Collision/Blade Collision extents"]
+transform = Transform( -4.64916e-06, -7.52509e-07, 1, 0.151264, 0.988493, 1.44541e-06, -0.988493, 0.151264, -4.52995e-06, -4.7684e-07, 0, 4.7684e-07 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T2_Rotor/Collision/Blade Collision extents/Blade collision7"]
+shape = SubResource( 9 )
+
+[node name="Blade collision8" type="Area" parent="T2_Rotor/Collision/Blade Collision extents"]
+transform = Transform( -0.494251, 0.075631, 0.866023, 0.151264, 0.988493, 1.78814e-06, -0.856058, 0.130999, -0.500004, -4.7684e-07, 0, 4.7684e-07 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T2_Rotor/Collision/Blade Collision extents/Blade collision8"]
+shape = SubResource( 10 )
+
+[node name="Blade collision9" type="Area" parent="T2_Rotor/Collision/Blade Collision extents"]
+transform = Transform( -0.494242, 0.0756326, -0.866028, 0.151265, 0.988493, 1.04308e-06, 0.856063, -0.130999, -0.499996, -4.7684e-07, 0, 4.7684e-07 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T2_Rotor/Collision/Blade Collision extents/Blade collision9"]
+shape = SubResource( 11 )
+
+[node name="Blade collision10" type="Area" parent="T2_Rotor/Collision/Blade Collision extents"]
+transform = Transform( -0.856058, 0.130999, -0.500003, 0.151264, 0.988493, 1.07661e-06, 0.49425, -0.0756315, -0.866023, -4.7684e-07, 0, 4.7684e-07 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T2_Rotor/Collision/Blade Collision extents/Blade collision10"]
+shape = SubResource( 12 )
+
+[node name="Blade collision11" type="Area" parent="T2_Rotor/Collision/Blade Collision extents"]
+transform = Transform( -0.856063, 0.130999, 0.499995, 0.151264, 0.988493, 9.49949e-07, -0.494242, 0.0756323, -0.866028, -4.7684e-07, 0, 4.7684e-07 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T2_Rotor/Collision/Blade Collision extents/Blade collision11"]
+shape = SubResource( 13 )
+
+[node name="Blade collision12" type="Area" parent="T2_Rotor/Collision/Blade Collision extents"]
+transform = Transform( -0.988493, 0.151265, -4.52946e-06, 0.151265, 0.988493, 4.37141e-08, 4.48395e-06, -6.41937e-07, -1, -4.7684e-07, 0, 4.7684e-07 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T2_Rotor/Collision/Blade Collision extents/Blade collision12"]
+shape = SubResource( 14 )
+
+[node name="Blade collision13" type="Area" parent="T2_Rotor/Collision/Blade Collision extents"]
+
+[node name="CollisionShape" type="CollisionShape" parent="T2_Rotor/Collision/Blade Collision extents/Blade collision13"]
+shape = SubResource( 15 )
+
+[node name="Blade collision1 (1)" type="Area" parent="T2_Rotor/Collision/Blade Collision extents"]
+transform = Transform( 2.32458e-06, 0, 1, 0, 1, 0, -1, 0, 2.32458e-06, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T2_Rotor/Collision/Blade Collision extents/Blade collision1 (1)"]
+shape = SubResource( 16 )
+
+[node name="Blade collision1 (2)" type="Area" parent="T2_Rotor/Collision/Blade Collision extents"]
+transform = Transform( 0.500001, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.500001, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T2_Rotor/Collision/Blade Collision extents/Blade collision1 (2)"]
+shape = SubResource( 17 )
+
+[node name="Blade collision1 (3)" type="Area" parent="T2_Rotor/Collision/Blade Collision extents"]
+transform = Transform( 0.866026, 0, 0.499999, 0, 1, 0, -0.499999, 0, 0.866026, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T2_Rotor/Collision/Blade Collision extents/Blade collision1 (3)"]
+shape = SubResource( 18 )
+
+[node name="Blade collision1 (4)" type="Area" parent="T2_Rotor/Collision/Blade Collision extents"]
+transform = Transform( -0.499997, 0, 0.866027, 0, 1, 0, -0.866027, 0, -0.499997, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T2_Rotor/Collision/Blade Collision extents/Blade collision1 (4)"]
+shape = SubResource( 19 )
+
+[node name="Blade collision1 (5)" type="Area" parent="T2_Rotor/Collision/Blade Collision extents"]
+transform = Transform( -0.866023, 0, 0.500004, 0, 1, 0, -0.500004, 0, -0.866023, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="T2_Rotor/Collision/Blade Collision extents/Blade collision1 (5)"]
+shape = SubResource( 20 )
+
+[node name="Rotor_t05" type="MeshInstance" parent="T2_Rotor"]
+transform = Transform( 0, 0, -0.2, 0, 0.2, 0, 0.2, 0, 0, 0, -0.1, 0 )
+cast_shadow = 0
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="Heli_blades_05" type="MeshInstance" parent="T2_Rotor/Rotor_t05"]
+transform = Transform( 0, 0, 1, 0, 1, 0, -1, 0, 0, 0, 0, 0 )
+cast_shadow = 0
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="Rotor_Arrows_t6_" type="MeshInstance" parent="T2_Rotor"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, -0.1, 0 )
+cast_shadow = 0
+mesh = ExtResource( 3 )
+material/0 = null
