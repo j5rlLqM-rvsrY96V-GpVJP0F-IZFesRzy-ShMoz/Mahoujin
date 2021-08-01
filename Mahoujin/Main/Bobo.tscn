@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Planner/BLoader.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Main/_handlemenucalls.gd" type="Script" id=2]
+
+[node name="Bobo" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -245.526, -26.4227 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BLoader" parent="." instance=ExtResource( 1 )]
+anchor_left = 0.64
+anchor_top = 0.45
+anchor_bottom = 0.85
+
+[node name="Back" type="Button" parent="."]
+anchor_top = 0.45
+anchor_bottom = 0.45
+text = "Back"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Link" type="LinkButton" parent="."]
+anchor_top = 0.45
+anchor_bottom = 0.45
+margin_left = 6.0
+margin_top = 34.0
+margin_right = 40.0
+margin_bottom = 14.0
+focus_mode = 2
+text = "https://github.com/NGnius/rcbup"
+underline = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="RichTextLabel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 0.4
+bbcode_enabled = true
+text = "If you'd like to use the auto-triforcing feature you'll have to load a macro here. 
+The bot should be downloaded to your local machine, the tool Rcbup will aid you in this.
+You may preview the bot by clicking 'View', when you're ready to specify how the bot should be triforced, click 'Load'
+All chassis blocks will be ignored when you load it."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Back" to="." method="_on_Back"]
+[connection signal="pressed" from="Link" to="." method="_on_Link"]
