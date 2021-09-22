@@ -2,6 +2,8 @@ extends Spatial
 #extends "res://build_cube_transforms.gd"
 #tool
 #
+## ! Notice: This script crashes Godot once run. (Memory leak) !
+#
 ##[name, [pos, rot, scale], [extra properties], [children]]
 #
 ##Extra properties:
